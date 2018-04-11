@@ -9,6 +9,7 @@ tlacitka = button
 combobox
 
 good luck
+change2
 
 prehlady
 	-zamestnancov - pridat hladanie
