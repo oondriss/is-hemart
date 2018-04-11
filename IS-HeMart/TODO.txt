@@ -8,7 +8,7 @@ na editovacie polia = textbox
 tlacitka = button
 combobox
 
-
+good luck
 
 prehlady
 	-zamestnancov - pridat hladanie
