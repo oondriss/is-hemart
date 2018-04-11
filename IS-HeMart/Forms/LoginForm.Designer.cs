@@ -28,83 +28,91 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.NameText = new System.Windows.Forms.TextBox();
-			this.PassText = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.SuspendLayout();
-			// 
-			// NameText
-			// 
-			this.NameText.Location = new System.Drawing.Point(67, 41);
-			this.NameText.Name = "NameText";
-			this.NameText.Size = new System.Drawing.Size(172, 22);
-			this.NameText.TabIndex = 0;
-			// 
-			// PassText
-			// 
-			this.PassText.Location = new System.Drawing.Point(67, 75);
-			this.PassText.Name = "PassText";
-			this.PassText.Size = new System.Drawing.Size(172, 22);
-			this.PassText.TabIndex = 1;
-			// 
-			// button1
-			// 
-			this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.button1.Location = new System.Drawing.Point(87, 113);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 2;
-			this.button1.Text = "Prihlás";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(12, 44);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(47, 17);
-			this.label1.TabIndex = 3;
-			this.label1.Text = "Meno:";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(12, 78);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(48, 17);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Heslo:";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(12, 9);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(227, 17);
-			this.label3.TabIndex = 5;
-			this.label3.Text = "Prosím zadajte prihlasovacie údaje";
-			// 
-			// LoginForm
-			// 
-			this.AcceptButton = this.button1;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(257, 151);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.PassText);
-			this.Controls.Add(this.NameText);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			this.Name = "LoginForm";
-			this.Text = "Prihlásenie";
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.NameText = new System.Windows.Forms.TextBox();
+            this.PassText = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // NameText
+            // 
+            this.NameText.Location = new System.Drawing.Point(50, 33);
+            this.NameText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameText.Name = "NameText";
+            this.NameText.Size = new System.Drawing.Size(130, 20);
+            this.NameText.TabIndex = 0;
+            // 
+            // PassText
+            // 
+            this.PassText.Location = new System.Drawing.Point(50, 61);
+            this.PassText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PassText.Name = "PassText";
+            this.PassText.PasswordChar = '*';
+            this.PassText.Size = new System.Drawing.Size(130, 20);
+            this.PassText.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Location = new System.Drawing.Point(65, 92);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 19);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Prihlás";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Meno:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Heslo:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 7);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(171, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Prosím zadajte prihlasovacie údaje";
+            // 
+            // LoginForm
+            // 
+            this.AcceptButton = this.button1;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(193, 123);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PassText);
+            this.Controls.Add(this.NameText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "LoginForm";
+            this.Text = "Prihlásenie";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 

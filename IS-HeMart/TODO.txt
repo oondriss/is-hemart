@@ -1,0 +1,32 @@
+﻿spravit design vsetkych okien
+formborderstyle = fixedtoolwindow
+
+
+na tabulky = datagridview
+na popisy = label
+na editovacie polia = textbox
+tlacitka = button
+combobox
+
+
+
+prehlady
+	-zamestnancov - pridat hladanie
+	-faktury
+	-lieky
+	-ukony
+	-recepty
+	-poistovne
+
+info
+
+novy 
+	-pacient
+	-faktura
+	-liek
+	-ukon
+	-recept
+	-ukonpacient
+	-zamestnanec
+	-poistovne
+	-ziadanka

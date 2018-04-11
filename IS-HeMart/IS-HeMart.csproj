@@ -89,11 +89,77 @@
     <Compile Include="Forms\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FakturyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FakturyForm.Designer.cs">
+      <DependentUpon>FakturyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LiekyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LiekyForm.Designer.cs">
+      <DependentUpon>LiekyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovaFakturaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovaFakturaForm.Designer.cs">
+      <DependentUpon>NovaFakturaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovaPoistovnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovaPoistovnaForm.Designer.cs">
+      <DependentUpon>NovaPoistovnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovaZiadankaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovaZiadankaForm.Designer.cs">
+      <DependentUpon>NovaZiadankaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyLiekForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyLiekForm.Designer.cs">
+      <DependentUpon>NovyLiekForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyPacientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyPacientForm.Designer.cs">
+      <DependentUpon>NovyPacientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyReceptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyReceptForm.Designer.cs">
+      <DependentUpon>NovyReceptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyUkonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyUkonForm.Designer.cs">
+      <DependentUpon>NovyUkonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyUkonPacientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewForms\NovyUkonPacientForm.Designer.cs">
+      <DependentUpon>NovyUkonPacientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PacientDetailForm.cs">
       <SubType>Form</SubType>
@@ -104,6 +170,30 @@
     <Compile Include="Forms\Parameters\LoginParameters.cs" />
     <Compile Include="Forms\Parameters\PacientDetailParameters.cs" />
     <Compile Include="Forms\Parameters\Parameters.cs" />
+    <Compile Include="Forms\PoistovneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PoistovneForm.Designer.cs">
+      <DependentUpon>PoistovneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReceptyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReceptyForm.Designer.cs">
+      <DependentUpon>ReceptyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UkonyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UkonyForm.Designer.cs">
+      <DependentUpon>UkonyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ZamestnanciForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ZamestnanciForm.Designer.cs">
+      <DependentUpon>ZamestnanciForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Faktura.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PacientDetailForm.resx">
+      <DependentUpon>PacientDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Faktura.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -178,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TODO.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
