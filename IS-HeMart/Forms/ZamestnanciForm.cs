@@ -16,5 +16,15 @@ namespace IS_HeMart.Forms
         {
             InitializeComponent();
         }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

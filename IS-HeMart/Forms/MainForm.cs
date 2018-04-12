@@ -67,5 +67,10 @@ namespace IS_HeMart
 			});
 			frm.Show();
 		}
-	}
+
+        private void pacientGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
 }

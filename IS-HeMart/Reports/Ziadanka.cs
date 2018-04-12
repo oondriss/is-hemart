@@ -16,14 +16,14 @@ namespace IS_HeMart.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Faktura : ReportClass {
+    public class Ziadanka : ReportClass {
         
-        public Faktura() {
+        public Ziadanka() {
         }
         
         public override string ResourceName {
             get {
-                return "Faktura.rpt";
+                return "Ziadanka.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace IS_HeMart.Reports {
         
         public override string FullResourceName {
             get {
-                return "IS_HeMart.Reports.Faktura.rpt";
+                return "IS_HeMart.Reports.Ziadanka.rpt";
             }
             set {
                 // Do nothing
@@ -87,20 +87,12 @@ namespace IS_HeMart.Reports {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_PocetBodov {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedFaktura : Component, ICachedReport {
+    public class CachedZiadanka : Component, ICachedReport {
         
-        public CachedFaktura() {
+        public CachedZiadanka() {
         }
         
         [Browsable(false)]
@@ -137,7 +129,7 @@ namespace IS_HeMart.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Faktura rpt = new Faktura();
+            Ziadanka rpt = new Ziadanka();
             rpt.Site = this.Site;
             return rpt;
         }

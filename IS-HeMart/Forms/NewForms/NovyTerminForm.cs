@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IS_HeMart.Forms.NewForms
 {
-    public partial class NovyUkonForm : BaseForm
+    public partial class NovyTerminForm : BaseForm
     {
-        public NovyUkonForm()
+        public NovyTerminForm()
         {
             InitializeComponent();
         }

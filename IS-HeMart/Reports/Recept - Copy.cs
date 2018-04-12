@@ -16,14 +16,14 @@ namespace IS_HeMart.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Faktura : ReportClass {
+    public class Recept : ReportClass {
         
-        public Faktura() {
+        public Recept() {
         }
         
         public override string ResourceName {
             get {
-                return "Faktura.rpt";
+                return "Recept.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace IS_HeMart.Reports {
         
         public override string FullResourceName {
             get {
-                return "IS_HeMart.Reports.Faktura.rpt";
+                return "IS_HeMart.Reports.Recept.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace IS_HeMart.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_PocetBodov {
+        public CrystalDecisions.Shared.IParameterField Parameter_ReceptID {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,9 +98,9 @@ namespace IS_HeMart.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedFaktura : Component, ICachedReport {
+    public class CachedRecept : Component, ICachedReport {
         
-        public CachedFaktura() {
+        public CachedRecept() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace IS_HeMart.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Faktura rpt = new Faktura();
+            Recept rpt = new Recept();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IS_HeMart.Forms.NewForms
+namespace IS_HeMart.Forms
 {
-    public partial class NovyLiekForm : BaseForm
+    public partial class TerminyForm : BaseForm
     {
-        public NovyLiekForm()
+        public TerminyForm()
         {
             InitializeComponent();
         }
