@@ -31,9 +31,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.kod_ukText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.vyhladajButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.kod_ukText);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(-1, 444);
             this.groupBox1.Name = "groupBox1";
@@ -66,6 +66,13 @@
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vyhľadávanie ";
+            // 
+            // kod_ukText
+            // 
+            this.kod_ukText.Location = new System.Drawing.Point(184, 23);
+            this.kod_ukText.Name = "kod_ukText";
+            this.kod_ukText.Size = new System.Drawing.Size(187, 20);
+            this.kod_ukText.TabIndex = 1;
             // 
             // label1
             // 
@@ -76,28 +83,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kód úkonu :";
             // 
-            // textBox1
+            // vyhladajButton
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(527, 454);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 45);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Vyhľadaj úkon ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.vyhladajButton.Location = new System.Drawing.Point(527, 454);
+            this.vyhladajButton.Name = "vyhladajButton";
+            this.vyhladajButton.Size = new System.Drawing.Size(202, 45);
+            this.vyhladajButton.TabIndex = 31;
+            this.vyhladajButton.Text = "Vyhľadaj úkon ";
+            this.vyhladajButton.UseVisualStyleBackColor = true;
             // 
             // UkonyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 512);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.vyhladajButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dataGridView1);
@@ -117,7 +117,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox kod_ukText;
+        private System.Windows.Forms.Button vyhladajButton;
     }
 }

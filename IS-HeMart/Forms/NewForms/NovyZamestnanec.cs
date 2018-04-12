@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace IS_HeMart.Forms.NewForms
 {
-    public partial class NovaZiadankaForm : BaseForm
+    public partial class NovyZamestnanec : BaseForm
     {
-        public NovaZiadankaForm()
+        public NovyZamestnanec()
         {
             InitializeComponent();
-        }
-
-        private void NovaZiadankaForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

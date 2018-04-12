@@ -1,6 +1,6 @@
-﻿namespace IS_HeMart.Forms
+﻿namespace IS_HeMart.Forms.NewForms
 {
-    partial class ZamestnanciForm
+    partial class NovyZamestnanec
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label11 = new System.Windows.Forms.Label();
-            this.pridatButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.zmazanyCheck = new System.Windows.Forms.CheckBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.hesloText = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.opravnenieText = new System.Windows.Forms.TextBox();
             this.tel_cisText = new System.Windows.Forms.TextBox();
@@ -61,39 +59,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ulozitButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kodText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pridatButton = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.kodText = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(260, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 25);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "Zamestnanci";
-            // 
-            // pridatButton
-            // 
-            this.pridatButton.Location = new System.Drawing.Point(700, 302);
-            this.pridatButton.Name = "pridatButton";
-            this.pridatButton.Size = new System.Drawing.Size(75, 38);
-            this.pridatButton.TabIndex = 28;
-            this.pridatButton.Text = "Pridať zamestnanca";
-            this.pridatButton.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.kodText);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.zmazanyCheck);
             this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.hesloText);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.opravnenieText);
             this.groupBox1.Controls.Add(this.tel_cisText);
@@ -122,35 +100,33 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(2, 218);
+            this.groupBox1.Location = new System.Drawing.Point(1, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(681, 273);
-            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detaily";
             // 
-            // zmazanyCheck
+            // label11
             // 
-            this.zmazanyCheck.AutoSize = true;
-            this.zmazanyCheck.Location = new System.Drawing.Point(544, 247);
-            this.zmazanyCheck.Name = "zmazanyCheck";
-            this.zmazanyCheck.Size = new System.Drawing.Size(15, 14);
-            this.zmazanyCheck.TabIndex = 32;
-            this.zmazanyCheck.UseVisualStyleBackColor = true;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(61, 213);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Heslo :";
             // 
-            // label17
+            // hesloText
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(479, 247);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 13);
-            this.label17.TabIndex = 31;
-            this.label17.Text = "Zmazaný : ";
+            this.hesloText.Location = new System.Drawing.Point(109, 210);
+            this.hesloText.Name = "hesloText";
+            this.hesloText.Size = new System.Drawing.Size(185, 20);
+            this.hesloText.TabIndex = 33;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(48, 217);
+            this.label16.Location = new System.Drawing.Point(35, 243);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(68, 13);
             this.label16.TabIndex = 30;
@@ -158,45 +134,43 @@
             // 
             // opravnenieText
             // 
-            this.opravnenieText.Location = new System.Drawing.Point(122, 214);
+            this.opravnenieText.Location = new System.Drawing.Point(109, 240);
             this.opravnenieText.Name = "opravnenieText";
             this.opravnenieText.Size = new System.Drawing.Size(185, 20);
             this.opravnenieText.TabIndex = 29;
             // 
             // tel_cisText
             // 
-            this.tel_cisText.Location = new System.Drawing.Point(430, 214);
+            this.tel_cisText.Location = new System.Drawing.Point(426, 214);
             this.tel_cisText.Name = "tel_cisText";
             this.tel_cisText.Size = new System.Drawing.Size(185, 20);
             this.tel_cisText.TabIndex = 28;
             // 
             // cislo_ucText
             // 
-            this.cislo_ucText.Location = new System.Drawing.Point(429, 181);
+            this.cislo_ucText.Location = new System.Drawing.Point(425, 181);
             this.cislo_ucText.Name = "cislo_ucText";
             this.cislo_ucText.Size = new System.Drawing.Size(186, 20);
             this.cislo_ucText.TabIndex = 27;
             // 
             // ulicaText
             // 
-            this.ulicaText.Location = new System.Drawing.Point(430, 81);
+            this.ulicaText.Location = new System.Drawing.Point(426, 81);
             this.ulicaText.Name = "ulicaText";
             this.ulicaText.Size = new System.Drawing.Size(185, 20);
             this.ulicaText.TabIndex = 26;
-            this.ulicaText.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // mestoText
             // 
-            this.mestoText.Location = new System.Drawing.Point(430, 46);
+            this.mestoText.Location = new System.Drawing.Point(426, 46);
             this.mestoText.Name = "mestoText";
             this.mestoText.Size = new System.Drawing.Size(185, 20);
             this.mestoText.TabIndex = 25;
-            this.mestoText.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(324, 217);
+            this.label15.Location = new System.Drawing.Point(357, 217);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(57, 13);
             this.label15.TabIndex = 24;
@@ -205,7 +179,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(350, 152);
+            this.label14.Location = new System.Drawing.Point(383, 152);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(31, 13);
             this.label14.TabIndex = 23;
@@ -214,17 +188,16 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(343, 16);
+            this.label13.Location = new System.Drawing.Point(376, 16);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 13);
             this.label13.TabIndex = 22;
             this.label13.Text = "Email :";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(344, 84);
+            this.label12.Location = new System.Drawing.Point(377, 84);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(37, 13);
             this.label12.TabIndex = 21;
@@ -232,64 +205,63 @@
             // 
             // pscText
             // 
-            this.pscText.Location = new System.Drawing.Point(429, 149);
+            this.pscText.Location = new System.Drawing.Point(425, 149);
             this.pscText.Name = "pscText";
             this.pscText.Size = new System.Drawing.Size(186, 20);
             this.pscText.TabIndex = 20;
             // 
             // cisloText
             // 
-            this.cisloText.Location = new System.Drawing.Point(429, 114);
+            this.cisloText.Location = new System.Drawing.Point(425, 114);
             this.cisloText.Name = "cisloText";
             this.cisloText.Size = new System.Drawing.Size(186, 20);
             this.cisloText.TabIndex = 19;
             // 
             // loginText
             // 
-            this.loginText.Location = new System.Drawing.Point(122, 181);
+            this.loginText.Location = new System.Drawing.Point(109, 181);
             this.loginText.Name = "loginText";
             this.loginText.Size = new System.Drawing.Size(185, 20);
             this.loginText.TabIndex = 17;
             // 
             // emailText
             // 
-            this.emailText.Location = new System.Drawing.Point(429, 13);
+            this.emailText.Location = new System.Drawing.Point(425, 13);
             this.emailText.Name = "emailText";
             this.emailText.Size = new System.Drawing.Size(186, 20);
             this.emailText.TabIndex = 16;
             // 
             // rod_cisText
             // 
-            this.rod_cisText.Location = new System.Drawing.Point(122, 149);
+            this.rod_cisText.Location = new System.Drawing.Point(109, 149);
             this.rod_cisText.Name = "rod_cisText";
             this.rod_cisText.Size = new System.Drawing.Size(185, 20);
             this.rod_cisText.TabIndex = 15;
-            this.rod_cisText.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(122, 114);
+            this.textBox4.Location = new System.Drawing.Point(109, 114);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(185, 20);
             this.textBox4.TabIndex = 14;
             // 
             // priezviskoText
             // 
-            this.priezviskoText.Location = new System.Drawing.Point(122, 81);
+            this.priezviskoText.Location = new System.Drawing.Point(109, 81);
             this.priezviskoText.Name = "priezviskoText";
             this.priezviskoText.Size = new System.Drawing.Size(185, 20);
             this.priezviskoText.TabIndex = 13;
             // 
             // menoText
             // 
-            this.menoText.Location = new System.Drawing.Point(122, 46);
+            this.menoText.Location = new System.Drawing.Point(109, 46);
             this.menoText.Name = "menoText";
             this.menoText.Size = new System.Drawing.Size(185, 20);
             this.menoText.TabIndex = 12;
             // 
             // titulText
             // 
-            this.titulText.Location = new System.Drawing.Point(122, 13);
+            this.titulText.Location = new System.Drawing.Point(109, 13);
             this.titulText.Name = "titulText";
             this.titulText.Size = new System.Drawing.Size(185, 20);
             this.titulText.TabIndex = 11;
@@ -297,7 +269,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(320, 184);
+            this.label10.Location = new System.Drawing.Point(353, 184);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 13);
             this.label10.TabIndex = 10;
@@ -306,7 +278,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(344, 117);
+            this.label9.Location = new System.Drawing.Point(377, 117);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 9;
@@ -315,7 +287,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(339, 49);
+            this.label8.Location = new System.Drawing.Point(372, 49);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 13);
             this.label8.TabIndex = 8;
@@ -324,7 +296,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(74, 186);
+            this.label6.Location = new System.Drawing.Point(61, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 6;
@@ -333,7 +305,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 117);
+            this.label5.Location = new System.Drawing.Point(6, 117);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 13);
             this.label5.TabIndex = 5;
@@ -342,7 +314,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 152);
+            this.label4.Location = new System.Drawing.Point(32, 152);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 4;
@@ -351,7 +323,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 84);
+            this.label3.Location = new System.Drawing.Point(42, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 3;
@@ -360,7 +332,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 49);
+            this.label2.Location = new System.Drawing.Point(63, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 2;
@@ -369,60 +341,60 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 16);
+            this.label1.Location = new System.Drawing.Point(70, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Titul :";
             // 
-            // ulozitButton
-            // 
-            this.ulozitButton.Location = new System.Drawing.Point(700, 357);
-            this.ulozitButton.Name = "ulozitButton";
-            this.ulozitButton.Size = new System.Drawing.Size(75, 46);
-            this.ulozitButton.TabIndex = 26;
-            this.ulozitButton.Text = "Uložiť zmeny";
-            this.ulozitButton.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 37);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(796, 175);
-            this.dataGridView1.TabIndex = 25;
-            // 
-            // kodText
-            // 
-            this.kodText.Location = new System.Drawing.Point(122, 244);
-            this.kodText.Name = "kodText";
-            this.kodText.Size = new System.Drawing.Size(186, 20);
-            this.kodText.TabIndex = 38;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 247);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(230, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 13);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Kód zamestnanca :";
+            this.label7.Size = new System.Drawing.Size(225, 25);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Pridanie zamestnanca\r\n";
             // 
-            // ZamestnanciForm
+            // pridatButton
+            // 
+            this.pridatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pridatButton.Location = new System.Drawing.Point(261, 329);
+            this.pridatButton.Name = "pridatButton";
+            this.pridatButton.Size = new System.Drawing.Size(165, 38);
+            this.pridatButton.TabIndex = 43;
+            this.pridatButton.Text = "Pridať zamestnanca";
+            this.pridatButton.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(316, 243);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(98, 13);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "Kód zamestnanca :";
+            // 
+            // kodText
+            // 
+            this.kodText.Location = new System.Drawing.Point(425, 240);
+            this.kodText.Name = "kodText";
+            this.kodText.Size = new System.Drawing.Size(186, 20);
+            this.kodText.TabIndex = 36;
+            // 
+            // NovyZamestnanec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 493);
-            this.Controls.Add(this.label11);
+            this.ClientSize = new System.Drawing.Size(687, 381);
             this.Controls.Add(this.pridatButton);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.ulozitButton);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "ZamestnanciForm";
-            this.Text = "ZamestnanciForm";
+            this.Name = "NovyZamestnanec";
+            this.Text = "NovyZamestnanec";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,9 +402,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button pridatButton;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox opravnenieText;
+        private System.Windows.Forms.TextBox tel_cisText;
+        private System.Windows.Forms.TextBox cislo_ucText;
+        private System.Windows.Forms.TextBox ulicaText;
+        private System.Windows.Forms.TextBox mestoText;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox pscText;
         private System.Windows.Forms.TextBox cisloText;
         private System.Windows.Forms.TextBox loginText;
@@ -451,21 +431,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button ulozitButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tel_cisText;
-        private System.Windows.Forms.TextBox cislo_ucText;
-        private System.Windows.Forms.TextBox ulicaText;
-        private System.Windows.Forms.TextBox mestoText;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox opravnenieText;
-        private System.Windows.Forms.CheckBox zmazanyCheck;
-        private System.Windows.Forms.TextBox kodText;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox hesloText;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button pridatButton;
+        private System.Windows.Forms.TextBox kodText;
+        private System.Windows.Forms.Label label17;
     }
 }

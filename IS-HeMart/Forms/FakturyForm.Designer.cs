@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.fakturaGrid = new System.Windows.Forms.DataGridView();
-            this.Vytvor_fakturu = new System.Windows.Forms.Button();
+            this.vytvorButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fakturaGrid)).BeginInit();
             this.SuspendLayout();
@@ -42,15 +42,15 @@
             this.fakturaGrid.Size = new System.Drawing.Size(650, 422);
             this.fakturaGrid.TabIndex = 0;
             // 
-            // Vytvor_fakturu
+            // vytvorButton
             // 
-            this.Vytvor_fakturu.Location = new System.Drawing.Point(655, 47);
-            this.Vytvor_fakturu.Name = "Vytvor_fakturu";
-            this.Vytvor_fakturu.Size = new System.Drawing.Size(120, 43);
-            this.Vytvor_fakturu.TabIndex = 1;
-            this.Vytvor_fakturu.Text = "Vytvor faktúru";
-            this.Vytvor_fakturu.UseVisualStyleBackColor = true;
-            this.Vytvor_fakturu.Click += new System.EventHandler(this.button1_Click);
+            this.vytvorButton.Location = new System.Drawing.Point(253, 475);
+            this.vytvorButton.Name = "vytvorButton";
+            this.vytvorButton.Size = new System.Drawing.Size(120, 43);
+            this.vytvorButton.TabIndex = 1;
+            this.vytvorButton.Text = "Vytvor faktúru";
+            this.vytvorButton.UseVisualStyleBackColor = true;
+            this.vytvorButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -66,13 +66,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 466);
+            this.ClientSize = new System.Drawing.Size(651, 522);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Vytvor_fakturu);
+            this.Controls.Add(this.vytvorButton);
             this.Controls.Add(this.fakturaGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FakturyForm";
             this.Text = "FakturyForm";
+            this.Load += new System.EventHandler(this.FakturyForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fakturaGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -82,7 +83,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView fakturaGrid;
-        private System.Windows.Forms.Button Vytvor_fakturu;
+        private System.Windows.Forms.Button vytvorButton;
         private System.Windows.Forms.Label label1;
     }
 }

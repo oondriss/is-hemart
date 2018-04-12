@@ -70,7 +70,7 @@
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ulozitButton = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.zmazanyCheck = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -226,7 +226,7 @@
             // 
             this.Dat_narText.Location = new System.Drawing.Point(343, 45);
             this.Dat_narText.Name = "Dat_narText";
-            this.Dat_narText.Size = new System.Drawing.Size(100, 20);
+            this.Dat_narText.Size = new System.Drawing.Size(121, 20);
             this.Dat_narText.TabIndex = 16;
             // 
             // zpCombo
@@ -304,14 +304,14 @@
             // 
             this.dat_pos_zmText.Location = new System.Drawing.Point(343, 71);
             this.dat_pos_zmText.Name = "dat_pos_zmText";
-            this.dat_pos_zmText.Size = new System.Drawing.Size(100, 20);
+            this.dat_pos_zmText.Size = new System.Drawing.Size(121, 20);
             this.dat_pos_zmText.TabIndex = 27;
             // 
             // dat_vytText
             // 
             this.dat_vytText.Location = new System.Drawing.Point(343, 97);
             this.dat_vytText.Name = "dat_vytText";
-            this.dat_vytText.Size = new System.Drawing.Size(100, 20);
+            this.dat_vytText.Size = new System.Drawing.Size(121, 20);
             this.dat_vytText.TabIndex = 28;
             // 
             // mestoText
@@ -435,7 +435,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.ulozitButton);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.zmazanyCheck);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.pscText);
             this.groupBox1.Controls.Add(this.cisloText);
@@ -477,14 +477,14 @@
             this.ulozitButton.Text = "Uložiť zmeny";
             this.ulozitButton.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // zmazanyCheck
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(637, 131);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 34;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.zmazanyCheck.AutoSize = true;
+            this.zmazanyCheck.Location = new System.Drawing.Point(637, 131);
+            this.zmazanyCheck.Name = "zmazanyCheck";
+            this.zmazanyCheck.Size = new System.Drawing.Size(15, 14);
+            this.zmazanyCheck.TabIndex = 34;
+            this.zmazanyCheck.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -581,7 +581,7 @@
         private System.Windows.Forms.TabPage terminy;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button ulozitButton;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox zmazanyCheck;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPage1;

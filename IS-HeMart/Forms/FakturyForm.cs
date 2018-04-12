@@ -21,5 +21,10 @@ namespace IS_HeMart.Forms
         {
 
         }
+
+        private void FakturyForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

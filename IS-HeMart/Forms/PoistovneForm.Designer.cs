@@ -39,19 +39,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.nazovText = new System.Windows.Forms.TextBox();
+            this.mestoText = new System.Windows.Forms.TextBox();
+            this.ulicaText = new System.Windows.Forms.TextBox();
+            this.cisloText = new System.Windows.Forms.TextBox();
+            this.pscText = new System.Windows.Forms.TextBox();
+            this.kod_zpText = new System.Windows.Forms.TextBox();
+            this.icoText = new System.Windows.Forms.TextBox();
+            this.dicText = new System.Windows.Forms.TextBox();
+            this.ic_dphText = new System.Windows.Forms.TextBox();
+            this.cislo_ucText = new System.Windows.Forms.TextBox();
+            this.ulozitButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pridatButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -156,98 +156,99 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Číslo účtu :";
             // 
-            // textBox1
+            // nazovText
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 20);
-            this.textBox1.TabIndex = 11;
+            this.nazovText.Location = new System.Drawing.Point(91, 34);
+            this.nazovText.Name = "nazovText";
+            this.nazovText.Size = new System.Drawing.Size(238, 20);
+            this.nazovText.TabIndex = 11;
             // 
-            // textBox2
+            // mestoText
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(238, 20);
-            this.textBox2.TabIndex = 12;
+            this.mestoText.Location = new System.Drawing.Point(91, 66);
+            this.mestoText.Name = "mestoText";
+            this.mestoText.Size = new System.Drawing.Size(238, 20);
+            this.mestoText.TabIndex = 12;
             // 
-            // textBox3
+            // ulicaText
             // 
-            this.textBox3.Location = new System.Drawing.Point(91, 99);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(238, 20);
-            this.textBox3.TabIndex = 13;
+            this.ulicaText.Location = new System.Drawing.Point(91, 99);
+            this.ulicaText.Name = "ulicaText";
+            this.ulicaText.Size = new System.Drawing.Size(238, 20);
+            this.ulicaText.TabIndex = 13;
             // 
-            // textBox4
+            // cisloText
             // 
-            this.textBox4.Location = new System.Drawing.Point(91, 132);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(238, 20);
-            this.textBox4.TabIndex = 14;
+            this.cisloText.Location = new System.Drawing.Point(91, 132);
+            this.cisloText.Name = "cisloText";
+            this.cisloText.Size = new System.Drawing.Size(238, 20);
+            this.cisloText.TabIndex = 14;
             // 
-            // textBox5
+            // pscText
             // 
-            this.textBox5.Location = new System.Drawing.Point(91, 162);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(238, 20);
-            this.textBox5.TabIndex = 15;
+            this.pscText.Location = new System.Drawing.Point(91, 162);
+            this.pscText.Name = "pscText";
+            this.pscText.Size = new System.Drawing.Size(238, 20);
+            this.pscText.TabIndex = 15;
             // 
-            // textBox6
+            // kod_zpText
             // 
-            this.textBox6.Location = new System.Drawing.Point(416, 33);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(234, 20);
-            this.textBox6.TabIndex = 16;
+            this.kod_zpText.Location = new System.Drawing.Point(416, 33);
+            this.kod_zpText.Name = "kod_zpText";
+            this.kod_zpText.Size = new System.Drawing.Size(234, 20);
+            this.kod_zpText.TabIndex = 16;
             // 
-            // textBox7
+            // icoText
             // 
-            this.textBox7.Location = new System.Drawing.Point(416, 66);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(234, 20);
-            this.textBox7.TabIndex = 17;
+            this.icoText.Location = new System.Drawing.Point(416, 66);
+            this.icoText.Name = "icoText";
+            this.icoText.Size = new System.Drawing.Size(234, 20);
+            this.icoText.TabIndex = 17;
             // 
-            // textBox8
+            // dicText
             // 
-            this.textBox8.Location = new System.Drawing.Point(416, 99);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(234, 20);
-            this.textBox8.TabIndex = 18;
+            this.dicText.Location = new System.Drawing.Point(416, 99);
+            this.dicText.Name = "dicText";
+            this.dicText.Size = new System.Drawing.Size(234, 20);
+            this.dicText.TabIndex = 18;
+            this.dicText.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
-            // textBox9
+            // ic_dphText
             // 
-            this.textBox9.Location = new System.Drawing.Point(416, 132);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(234, 20);
-            this.textBox9.TabIndex = 19;
+            this.ic_dphText.Location = new System.Drawing.Point(416, 132);
+            this.ic_dphText.Name = "ic_dphText";
+            this.ic_dphText.Size = new System.Drawing.Size(234, 20);
+            this.ic_dphText.TabIndex = 19;
             // 
-            // textBox10
+            // cislo_ucText
             // 
-            this.textBox10.Location = new System.Drawing.Point(416, 162);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(234, 20);
-            this.textBox10.TabIndex = 20;
+            this.cislo_ucText.Location = new System.Drawing.Point(416, 162);
+            this.cislo_ucText.Name = "cislo_ucText";
+            this.cislo_ucText.Size = new System.Drawing.Size(234, 20);
+            this.cislo_ucText.TabIndex = 20;
             // 
-            // button1
+            // ulozitButton
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.No;
-            this.button1.Location = new System.Drawing.Point(713, 397);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 46);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Uložiť zmeny";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ulozitButton.Cursor = System.Windows.Forms.Cursors.No;
+            this.ulozitButton.Location = new System.Drawing.Point(713, 397);
+            this.ulozitButton.Name = "ulozitButton";
+            this.ulozitButton.Size = new System.Drawing.Size(75, 46);
+            this.ulozitButton.TabIndex = 21;
+            this.ulozitButton.Text = "Uložiť zmeny";
+            this.ulozitButton.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cislo_ucText);
+            this.groupBox1.Controls.Add(this.ic_dphText);
+            this.groupBox1.Controls.Add(this.dicText);
+            this.groupBox1.Controls.Add(this.icoText);
+            this.groupBox1.Controls.Add(this.kod_zpText);
+            this.groupBox1.Controls.Add(this.pscText);
+            this.groupBox1.Controls.Add(this.cisloText);
+            this.groupBox1.Controls.Add(this.ulicaText);
+            this.groupBox1.Controls.Add(this.mestoText);
+            this.groupBox1.Controls.Add(this.nazovText);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -266,15 +267,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detaily";
             // 
-            // button2
+            // pridatButton
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.No;
-            this.button2.Location = new System.Drawing.Point(713, 343);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 38);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Pridať poisťovňu";
-            this.button2.UseVisualStyleBackColor = true;
+            this.pridatButton.Cursor = System.Windows.Forms.Cursors.No;
+            this.pridatButton.Location = new System.Drawing.Point(713, 343);
+            this.pridatButton.Name = "pridatButton";
+            this.pridatButton.Size = new System.Drawing.Size(75, 38);
+            this.pridatButton.TabIndex = 23;
+            this.pridatButton.Text = "Pridať poisťovňu";
+            this.pridatButton.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -293,9 +294,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 493);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.pridatButton);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ulozitButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "PoistovneForm";
             this.Text = "PoistovneForm";
@@ -320,19 +321,19 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox nazovText;
+        private System.Windows.Forms.TextBox mestoText;
+        private System.Windows.Forms.TextBox ulicaText;
+        private System.Windows.Forms.TextBox cisloText;
+        private System.Windows.Forms.TextBox pscText;
+        private System.Windows.Forms.TextBox kod_zpText;
+        private System.Windows.Forms.TextBox icoText;
+        private System.Windows.Forms.TextBox dicText;
+        private System.Windows.Forms.TextBox ic_dphText;
+        private System.Windows.Forms.TextBox cislo_ucText;
+        private System.Windows.Forms.Button ulozitButton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button pridatButton;
         private System.Windows.Forms.Label label11;
     }
 }

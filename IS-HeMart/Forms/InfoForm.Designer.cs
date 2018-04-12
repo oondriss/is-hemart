@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(218, 133);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 65);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Informačný systém spoločnosti Hemart s.r.o.\r\n\r\n             Dátum vytvorenia : X." +
+    "X.2018\r\n\r\n                 Autor : Bc. Peter Floch";
             // 
             // InfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(647, 377);
+            this.Controls.Add(this.label1);
             this.Name = "InfoForm";
             this.Text = "InfoForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

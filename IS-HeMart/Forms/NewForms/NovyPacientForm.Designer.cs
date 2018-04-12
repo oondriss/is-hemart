@@ -30,6 +30,7 @@
         {
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dat_narDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.pscText = new System.Windows.Forms.TextBox();
             this.cisloText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,16 +42,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.zpCombo = new System.Windows.Forms.ComboBox();
-            this.telcText = new System.Windows.Forms.TextBox();
-            this.rcText = new System.Windows.Forms.TextBox();
+            this.tel_cisText = new System.Windows.Forms.TextBox();
+            this.rod_cisText = new System.Windows.Forms.TextBox();
             this.priezviskoText = new System.Windows.Forms.TextBox();
             this.menoText = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.ulozitButton = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pridatButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +67,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dat_narDateTimePicker);
             this.groupBox1.Controls.Add(this.pscText);
             this.groupBox1.Controls.Add(this.cisloText);
             this.groupBox1.Controls.Add(this.label3);
@@ -79,8 +79,8 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.zpCombo);
-            this.groupBox1.Controls.Add(this.telcText);
-            this.groupBox1.Controls.Add(this.rcText);
+            this.groupBox1.Controls.Add(this.tel_cisText);
+            this.groupBox1.Controls.Add(this.rod_cisText);
             this.groupBox1.Controls.Add(this.priezviskoText);
             this.groupBox1.Controls.Add(this.menoText);
             this.groupBox1.Controls.Add(this.label5);
@@ -93,6 +93,13 @@
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detaily";
+            // 
+            // dat_narDateTimePicker
+            // 
+            this.dat_narDateTimePicker.Location = new System.Drawing.Point(343, 46);
+            this.dat_narDateTimePicker.Name = "dat_narDateTimePicker";
+            this.dat_narDateTimePicker.Size = new System.Drawing.Size(150, 20);
+            this.dat_narDateTimePicker.TabIndex = 33;
             // 
             // pscText
             // 
@@ -185,19 +192,19 @@
             this.zpCombo.Size = new System.Drawing.Size(121, 21);
             this.zpCombo.TabIndex = 17;
             // 
-            // telcText
+            // tel_cisText
             // 
-            this.telcText.Location = new System.Drawing.Point(85, 97);
-            this.telcText.Name = "telcText";
-            this.telcText.Size = new System.Drawing.Size(100, 20);
-            this.telcText.TabIndex = 15;
+            this.tel_cisText.Location = new System.Drawing.Point(85, 97);
+            this.tel_cisText.Name = "tel_cisText";
+            this.tel_cisText.Size = new System.Drawing.Size(100, 20);
+            this.tel_cisText.TabIndex = 15;
             // 
-            // rcText
+            // rod_cisText
             // 
-            this.rcText.Location = new System.Drawing.Point(85, 71);
-            this.rcText.Name = "rcText";
-            this.rcText.Size = new System.Drawing.Size(100, 20);
-            this.rcText.TabIndex = 14;
+            this.rod_cisText.Location = new System.Drawing.Point(85, 71);
+            this.rod_cisText.Name = "rod_cisText";
+            this.rod_cisText.Size = new System.Drawing.Size(100, 20);
+            this.rod_cisText.TabIndex = 14;
             // 
             // priezviskoText
             // 
@@ -249,29 +256,22 @@
             this.label14.TabIndex = 7;
             this.label14.Text = "Meno :";
             // 
-            // ulozitButton
+            // pridatButton
             // 
-            this.ulozitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ulozitButton.Location = new System.Drawing.Point(259, 203);
-            this.ulozitButton.Name = "ulozitButton";
-            this.ulozitButton.Size = new System.Drawing.Size(152, 39);
-            this.ulozitButton.TabIndex = 35;
-            this.ulozitButton.Text = "Pridať pacienta";
-            this.ulozitButton.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(343, 46);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(150, 20);
-            this.dateTimePicker1.TabIndex = 33;
+            this.pridatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pridatButton.Location = new System.Drawing.Point(259, 203);
+            this.pridatButton.Name = "pridatButton";
+            this.pridatButton.Size = new System.Drawing.Size(152, 39);
+            this.pridatButton.TabIndex = 35;
+            this.pridatButton.Text = "Pridať pacienta";
+            this.pridatButton.UseVisualStyleBackColor = true;
             // 
             // NovyPacientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 255);
-            this.Controls.Add(this.ulozitButton);
+            this.Controls.Add(this.pridatButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label11);
             this.Name = "NovyPacientForm";
@@ -298,15 +298,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox zpCombo;
-        private System.Windows.Forms.TextBox telcText;
-        private System.Windows.Forms.TextBox rcText;
+        private System.Windows.Forms.TextBox tel_cisText;
+        private System.Windows.Forms.TextBox rod_cisText;
         private System.Windows.Forms.TextBox priezviskoText;
         private System.Windows.Forms.TextBox menoText;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button ulozitButton;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button pridatButton;
+        private System.Windows.Forms.DateTimePicker dat_narDateTimePicker;
     }
 }
