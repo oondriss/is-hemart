@@ -25,6 +25,24 @@ namespace IS_HeMart.ServiceManagers
 			return ctx;
 		}
 
+		public IQueryable<TerminVysetrenia> GetTerminy()
+		{
+			return GetContext()
+					.TerminVysetrenia;
+		}
+
+		public IQueryable<ZoznamUkonov> GetUkony()
+		{
+			return GetContext()
+					.ZoznamUkonov;
+		}
+
+		public IQueryable<ZdravotnaPoistovna> GetPoistovne()
+		{
+			return GetContext()
+					.ZdravotnaPoistovna;
+		}
+
 		public List<ZamestnanecDTO> GetZamestnanecDTO()
 		{
 			var dat = GetContext()

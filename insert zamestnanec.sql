@@ -1,0 +1,1 @@
+﻿insert into zamestnanec values (1,	'zam1',	'6e017b5464f820a6c1bb5e9f6d711a667a80d8ea',	'1989-11-07 00:00:00.000',	'tadanaio@gmail.com',	'10',	'Ondrej',	'Tadanai',	'0948948719',	'0',	'Ing.',	'Komárno',	'Železničná',	'7',	'94501',	'891107/6856',	'21152652106165/1123',	0);

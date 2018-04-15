@@ -14,9 +14,11 @@ namespace IS_HeMart.Forms
 {
     public partial class FakturyForm : BaseForm
     {
+		private DataManager _dataManager;
         public FakturyForm()
         {
             InitializeComponent();
+			_dataManager = new DataManager();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,8 +29,8 @@ namespace IS_HeMart.Forms
 
         private void FakturyForm_Load(object sender, EventArgs e)
         {
-			var data = (new DataManager()).GetFaktury().ToList();
-			fakturaGrid.DataSource = data;
-        }
+			var data = _dataManager.GetFaktury();
+			fakturyBindingSource.DataSource = data.ToList(); 
+		}
     }
 }

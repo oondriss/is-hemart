@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IS_HeMart.ServiceManagers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace IS_HeMart.Forms
 {
     public partial class TerminyForm : BaseForm
     {
+		private DataManager _dataManager;
         public TerminyForm()
         {
             InitializeComponent();
+			_dataManager = new DataManager();
+			terminVysetreniaBindingSource.DataSource = _dataManager.GetTerminy().ToList();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IS_HeMart.ServiceManagers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace IS_HeMart.Forms
 {
     public partial class ZamestnanciForm : BaseForm
     {
+		private DataManager _dataManager;
         public ZamestnanciForm()
         {
             InitializeComponent();
+			_dataManager = new DataManager();
+			zamestnanecBindingSource.DataSource = _dataManager.GetZamestnanec();
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)

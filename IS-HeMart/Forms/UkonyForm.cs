@@ -13,9 +13,12 @@ namespace IS_HeMart.Forms
 {
     public partial class UkonyForm : BaseForm
     {
+		private DataManager _dataManager;
         public UkonyForm()
         {
             InitializeComponent();
+			_dataManager = new DataManager();
+			zoznamUkonovBindingSource.DataSource = _dataManager.GetUkony().ToList();
         }
 
         private void button2_Click(object sender, EventArgs e)
