@@ -4,6 +4,9 @@ using IS_HeMart.DataModel.DTO;
 using IS_HeMart.Utils;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.Entity;
+//using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,16 +16,30 @@ namespace IS_HeMart.ServiceManagers
 {
 	public class DataManager
 	{
-		private static DbContext ctx = null;
+		private static HemartContext ctx = null;
 
-		private DbContext GetContext()
+		private HemartContext GetContext()
 		{
 			if (ctx == null)
 			{
-				ctx = new DbContext();
+				ctx = new HemartContext();
 				return ctx;
 			}
 			return ctx;
+		}
+
+		public BindingList<ZoznamLiekov> GetZoznamLiekovBindingSource()
+		{
+			var data = GetContext();
+			data.ZoznamLiekov.Load();
+			return data.ZoznamLiekov.Local.ToBindingList();
+		}
+
+		public BindingList<TerminVysetrenia> GetTerminyBindingSource()
+		{
+			var data = GetContext();
+			data.TerminVysetrenia.Load();
+			return data.TerminVysetrenia.Local.ToBindingList();
 		}
 
 		public IQueryable<TerminVysetrenia> GetTerminy()

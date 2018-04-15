@@ -18,7 +18,7 @@ namespace IS_HeMart.Forms
         {
             InitializeComponent();
 			_dataManager = new DataManager();
-			terminVysetreniaBindingSource.DataSource = _dataManager.GetTerminy().ToList();
+			terminVysetreniaBindingSource.DataSource = _dataManager.GetTerminyBindingSource();
         }
     }
 }

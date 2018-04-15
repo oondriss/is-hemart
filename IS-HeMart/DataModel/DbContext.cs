@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace IS_HeMart.DataModel
 {
-	public class DbContext : System.Data.Entity.DbContext
+	public class HemartContext : System.Data.Entity.DbContext
 	{
 
-		public DbContext() : base("mssql")
+		public HemartContext() : base("mssql")
 		{
 		}
 
