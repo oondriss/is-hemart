@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IS_HeMart.Forms.NewForms;
+using IS_HeMart.ServiceManagers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +21,14 @@ namespace IS_HeMart.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+			var frm = FormManager.Current.CreateForm<NovaFakturaForm>();
+			frm.ShowDialog();
         }
 
         private void FakturyForm_Load(object sender, EventArgs e)
         {
-
+			var data = (new DataManager()).GetFaktury().ToList();
+			fakturaGrid.DataSource = data;
         }
     }
 }

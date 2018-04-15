@@ -33,6 +33,19 @@ namespace IS_HeMart.ServiceManagers
 			return dat.Select(i => Mapper.Map<ZamestnanecDTO>(i)).ToList();
 		}
 
+		public IQueryable<Recepty> GetPacientRecept(Pacient pacient)
+		{
+			return GetContext()
+					.Recepty
+					.Where(i => i.Pacient == pacient);
+		}
+
+		public IQueryable<Faktury> GetFaktury()
+		{
+			return GetContext()
+					.Faktury;
+		}
+
 		public ZamestnanecDTO GetZamestnanecDTO(int ID)
 		{
 			return GetContext()
@@ -40,6 +53,20 @@ namespace IS_HeMart.ServiceManagers
 					.Where(i => i.ZamestnanecID == ID)
 					.Select(i => Mapper.Map<ZamestnanecDTO>(i))
 					.SingleOrDefault();
+		}
+
+		public IQueryable<Ziadanky> GetPacientZiadanky(Pacient pacient)
+		{
+			return GetContext()
+					.Ziadanky
+					.Where(i => i.Pacient == pacient);
+		}
+
+		public IQueryable<UkonyPacienta> GetPacientUkony(Pacient pacient)
+		{
+			return GetContext()
+					.UkonyPacienta
+					.Where(i => i.Pacient == pacient);
 		}
 
 		public List<Zamestnanec> GetZamestnanec()
@@ -83,12 +110,11 @@ namespace IS_HeMart.ServiceManagers
 					.ToList();
 		}
 
-		public PacientDTO GetPacient(int ID)
+		public Pacient GetPacient(int ID)
 		{
 			return GetContext()
 					.Pacient
 					.Where(i => i.PacientID == ID)
-					.Select(i => Mapper.Map<PacientDTO>(i))
 					.SingleOrDefault();
 		}
 
