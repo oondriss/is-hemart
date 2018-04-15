@@ -20,9 +20,9 @@ namespace IS_HeMart.DataModel.DTO
 		public DateTime DatumNarodenia { get; set; }
 		public DateTime DatumVytvorenia { get; set; }
 		public bool Zmazany { get; set; }
-		public virtual ICollection<Recept> Recepty { get; set; }
-		public virtual ICollection<Ukon> Ukony { get; set; }
-		public virtual ICollection<Faktura> Faktury { get; set; }
+		public virtual ICollection<Recepty> Recepty { get; set; }
+		public virtual ICollection<ZoznamUkonov> Ukony { get; set; }
+		public virtual ICollection<Faktury> Faktury { get; set; }
 		public virtual Zamestnanec EvidujuciZamestnanec { get; set; }
 	}
 }

@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace IS_HeMart.DataModel
 {
-	public class LiekNaRecepte
+	public class UkonyNaFakture
 	{
 		[Key]
-		public int ID { get; set; }
-		public int Mnozstvo { get; set; }
-		public virtual Recept Recept { get; set; }
-		public virtual Liek Liek { get; set; }
+		public int UkonyNaFaktureID { get; set; }
+		public virtual UkonyPacienta UkonPaciet { get; set; }
+		public virtual Faktury Faktura { get; set; }
 	}
 }

@@ -5,16 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IS_HeMart.DataModel.DTO
+namespace IS_HeMart.DataModel
 {
-	public class LiekDTO
+	public class ZoznamLiekov
 	{
-		public int LiekID { get; set; }
-		public string Sukl { get; set; }
+		[Key]
+		public int ZoznamLiekovID { get; set; }
+		public string Sukl_kod { get; set; }
 		public string Nazov { get; set; }
-		public string Poznamka { get; set; }
-		public string Davkovanie { get; set; }
-		public bool Zmazany { get; set; }
+		public string Doplnok { get; set; }
 		public virtual Zamestnanec Zamestnanec { get; set; }
 		public virtual ICollection<LiekyNaRecepte> Recepty { get; set; }
 	}

@@ -72,5 +72,45 @@ namespace IS_HeMart
         {
 
         }
-    }
+
+		private void zamestnancovToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<ZamestnanciForm>();
+			frm.ShowDialog();
+		}
+
+		private void faktúrToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<FakturyForm>();
+			frm.ShowDialog();
+		}
+
+		private void liekovToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<LiekyForm>();
+			frm.ShowDialog();
+		}
+
+		private void úkonovToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<UkonyForm>();
+			frm.ShowDialog();
+		}
+
+		private void receptovToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void koniecToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void informácieToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<InfoForm>();
+			frm.ShowDialog();
+		}
+	}
 }

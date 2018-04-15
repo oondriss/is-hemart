@@ -7,16 +7,14 @@ using System.Threading.Tasks;
 
 namespace IS_HeMart.DataModel
 {
-	public class UkonPacient
+	public class ZoznamUkonov
 	{
 		[Key]
-		public int ID { get; set; }
-		public DateTime DatumVytvorenia { get; set; }
-		public double Pocetnost { get; set; }
+		public int ZoznamUkonovID { get; set; }
+		public string Nazov { get; set; }
 		public string Popis { get; set; }
+		public int Body { get; set; }
 		public virtual Zamestnanec Zamestnanec { get; set; }
-		public virtual Pacient Pacient { get; set; }
-		public virtual Ukon Ukon { get; set; }
-
+		public virtual ICollection<UkonyPacienta> UkonyPacienta { get; set; }
 	}
 }

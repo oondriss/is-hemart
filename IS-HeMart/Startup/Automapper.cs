@@ -15,12 +15,12 @@ namespace IS_HeMart.Startup
 		{
 			Mapper.Initialize(cfg =>
 			{
-				cfg.CreateMap<Faktura, FakturaDTO>();
-				cfg.CreateMap<Liek, LiekDTO>();
-				cfg.CreateMap<LiekNaRecepte, LiekNaRecepteDTO>();
+				cfg.CreateMap<Faktury, FakturaDTO>();
+				cfg.CreateMap<ZoznamLiekov, LiekDTO>();
+				cfg.CreateMap<LiekyNaRecepte, LiekNaRecepteDTO>();
 				cfg.CreateMap<Pacient, PacientDTO>();
-				cfg.CreateMap<Ukon, UkonDTO>();
-				cfg.CreateMap<UkonPacient, UkonPacientDTO>();
+				cfg.CreateMap<ZoznamUkonov, UkonDTO>();
+				cfg.CreateMap<UkonyPacienta, UkonPacientDTO>();
 				cfg.CreateMap<Zamestnanec, ZamestnanecDTO>();
 			});
 		}

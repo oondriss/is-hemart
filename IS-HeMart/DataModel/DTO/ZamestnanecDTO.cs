@@ -19,10 +19,10 @@ namespace IS_HeMart.DataModel.DTO
 		public DateTime DatumNarodenia { get; set; }
 		public DateTime DatumNastupu { get; set; }
 		public virtual ICollection<Pacient> ZaevidovanyPacienti { get; set; }
-		public virtual ICollection<Recept> ZaevidovaneRecepty { get; set; }
-		public virtual ICollection<Liek> ZaevidovaneLieky { get; set; }
-		public virtual ICollection<Faktura> ZaevidovaneFaktury { get; set; }
-		public virtual ICollection<Ukon> ZaevidovaneUkony { get; set; }
-		public virtual ICollection<UkonPacient> ZaevidovaneUkonyPacientov { get; set; }
+		public virtual ICollection<Recepty> ZaevidovaneRecepty { get; set; }
+		public virtual ICollection<ZoznamLiekov> ZaevidovaneLieky { get; set; }
+		public virtual ICollection<Faktury> ZaevidovaneFaktury { get; set; }
+		public virtual ICollection<ZoznamUkonov> ZaevidovaneUkony { get; set; }
+		public virtual ICollection<UkonyPacienta> ZaevidovaneUkonyPacientov { get; set; }
 	}
 }

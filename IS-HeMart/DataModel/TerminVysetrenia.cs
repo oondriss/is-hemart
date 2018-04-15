@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace IS_HeMart.DataModel
 {
-	public class Recept
+	public class TerminVysetrenia
 	{
-		public int ReceptID { get; set; }
-		public DateTime DatumVytvorenia { get; set; }
-		public DateTime DatumPlatnosti { get; set; }
-		public bool Zmazany { get; set; }
+		[Key]
+		public int TerminVysetreniaID { get; set; }
+		public DateTime CasVysetrenia { get; set; }
+		public string Poznamka { get; set; }
 		public virtual Pacient Pacient { get; set; }
 		public virtual Zamestnanec Zamestnanec { get; set; }
-		public virtual ICollection<LiekNaRecepte> ObsiahnuteLieky { get; set; }
 	}
 }

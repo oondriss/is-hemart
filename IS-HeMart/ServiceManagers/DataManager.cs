@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using IS_HeMart.DataModel;
 using IS_HeMart.DataModel.DTO;
+using IS_HeMart.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace IS_HeMart.ServiceManagers
 		public List<ZamestnanecDTO> GetZamestnanecDTO()
 		{
 			var dat = GetContext()
-						.Zamestnaneci
+						.Zamestnanec
 						.ToList();
 			return dat.Select(i => Mapper.Map<ZamestnanecDTO>(i)).ToList();
 		}
@@ -35,7 +36,7 @@ namespace IS_HeMart.ServiceManagers
 		public ZamestnanecDTO GetZamestnanecDTO(int ID)
 		{
 			return GetContext()
-					.Zamestnaneci
+					.Zamestnanec
 					.Where(i => i.ZamestnanecID == ID)
 					.Select(i => Mapper.Map<ZamestnanecDTO>(i))
 					.SingleOrDefault();
@@ -44,14 +45,14 @@ namespace IS_HeMart.ServiceManagers
 		public List<Zamestnanec> GetZamestnanec()
 		{
 			return GetContext()
-					.Zamestnaneci
+					.Zamestnanec
 					.ToList();
 		}
 
 		public Zamestnanec GetZamestnanec(int ID)
 		{
 			return GetContext()
-					.Zamestnaneci
+					.Zamestnanec
 					.Where(i => i.ZamestnanecID == ID)
 					.SingleOrDefault();
 		}
@@ -59,13 +60,13 @@ namespace IS_HeMart.ServiceManagers
 		public bool InsertZamestnanec(ZamestnanecDTO item)
 		{
 
-			var newItem = GetContext().Zamestnaneci.Add(new Zamestnanec()
+			var newItem = GetContext().Zamestnanec.Add(new Zamestnanec()
 			{
 				Cislo = item.Cislo,
 				Meno = item.Meno,
 				Mesto = item.Mesto,
 				Priezvisko = item.Priezvisko,
-				PSC = item.PSC,
+				Psc = item.PSC,
 				Ulica = item.Ulica,
 				Zmazany = item.Zmazany
 			});
@@ -76,7 +77,7 @@ namespace IS_HeMart.ServiceManagers
 		public List<PacientDTO> GetPacient()
 		{
 			return GetContext()
-					.Pacienti
+					.Pacient
 					.ToList()
 					.Select(i => Mapper.Map<PacientDTO>(i))
 					.ToList();
@@ -85,7 +86,7 @@ namespace IS_HeMart.ServiceManagers
 		public PacientDTO GetPacient(int ID)
 		{
 			return GetContext()
-					.Pacienti
+					.Pacient
 					.Where(i => i.PacientID == ID)
 					.Select(i => Mapper.Map<PacientDTO>(i))
 					.SingleOrDefault();
@@ -93,9 +94,10 @@ namespace IS_HeMart.ServiceManagers
 
 		public ZamestnanecDTO AuthorizeNamePass(string name, string pass)
 		{
-			if (GetContext().Zamestnaneci.Any(i => i.Meno == name && i.Cislo == pass))
+			var encPassword = ShaEncrypter.Hash(pass);
+			if (GetContext().Zamestnanec.Any(i => i.Login == name && i.Heslo == encPassword))
 			{
-				return Mapper.Map<ZamestnanecDTO>(GetContext().Zamestnaneci.First(i => i.Meno == name && i.Cislo == pass));
+				return Mapper.Map<ZamestnanecDTO>(GetContext().Zamestnanec.First(i => i.Login == name && i.Heslo == encPassword));
 			}
 			return null;
 		}
@@ -103,7 +105,7 @@ namespace IS_HeMart.ServiceManagers
 		public bool InsertPacient(PacientDTO item)
 		{
 
-			var newItem = GetContext().Pacienti.Add(new Pacient()
+			var newItem = GetContext().Pacient.Add(new Pacient()
 			{
 				Cislo = item.Cislo,
 				Meno = item.Meno,

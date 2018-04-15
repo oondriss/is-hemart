@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace IS_HeMart.DataModel
 {
-	public class Ukon
+	public class Ziadanky
 	{
 		[Key]
-		public int UkonID { get; set; }
-		public string Nazov { get; set; }
+		public int ZiadankyID { get; set; }
+		public DateTime DatumVystavenia { get; set; }
 		public string Popis { get; set; }
-		public Decimal Cena { get; set; }
-		public bool Zmazany { get; set; }
-		public virtual Zamestnanec Vytvoril { get; set; }
+		public string Typ { get; set; }
+		public virtual Pacient Pacient { get; set; }
+		public virtual Zamestnanec Zamestnanec { get; set; }
 	}
 }

@@ -16,14 +16,19 @@ namespace IS_HeMart.DataModel
 		{
 		}
 
-		public DbSet<Faktura> Faktury { get; set; }
-		public DbSet<Liek> Liek { get; set; }
-		public DbSet<LiekNaRecepte> LiekyNaReceptoch { get; set; }
-		public DbSet<Pacient> Pacienti { get; set; }
-		public DbSet<Recept> Recepty { get; set; }
-		public DbSet<Ukon> Ukony { get; set; }
-		public DbSet<UkonPacient> UkonyPacientov { get; set; }
-		public DbSet<Zamestnanec> Zamestnaneci { get; set; }
+		public DbSet<Faktury> Faktury { get; set; }
+		public DbSet<LiekyNaRecepte> LiekyNaRecepte { get; set; }
+		public DbSet<Pacient> Pacient { get; set; }
+		public DbSet<Recepty> Recepty { get; set; }
+		public DbSet<TerminVysetrenia> TerminVysetrenia { get; set; }
+		public DbSet<UkonyNaFakture> UkonyNaFakture { get; set; }
+		public DbSet<UkonyPacienta> UkonyPacienta { get; set; }
+		public DbSet<VysledkyLaboratorneVysetrenie> VysledkyLaboratorneVysetrenie { get; set; }
+		public DbSet<Zamestnanec> Zamestnanec { get; set; }
+		public DbSet<ZdravotnaPoistovna> ZdravotnaPoistovna { get; set; }
+		public DbSet<Ziadanky> Ziadanky { get; set; }
+		public DbSet<ZoznamLiekov> ZoznamLiekov { get; set; }
+		public DbSet<ZoznamUkonov> ZoznamUkonov { get; set; }
 
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)

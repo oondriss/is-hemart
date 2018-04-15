@@ -15,7 +15,7 @@ namespace IS_HeMart.DataModel.DTO
 		public string Popis { get; set; }
 		public virtual Zamestnanec Zamestnanec { get; set; }
 		public virtual Pacient Pacient { get; set; }
-		public virtual Ukon Ukon { get; set; }
+		public virtual ZoznamUkonov Ukon { get; set; }
 
 	}
 }

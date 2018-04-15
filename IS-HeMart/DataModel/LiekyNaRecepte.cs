@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IS_HeMart.DataModel.DTO
+namespace IS_HeMart.DataModel
 {
-	public class LiekNaRecepteDTO
+	public class LiekyNaRecepte
 	{
-		public int ID { get; set; }
+		[Key]
+		public int LiekyNaRecepteID { get; set; }
 		public int Mnozstvo { get; set; }
 		public virtual Recepty Recept { get; set; }
 		public virtual ZoznamLiekov Liek { get; set; }

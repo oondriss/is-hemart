@@ -8,28 +8,28 @@ using System.Threading.Tasks;
 
 namespace IS_HeMart.DataModel
 {
-	public class Faktura
+	public class Faktury
 	{
 		[Key]
-		public int FakturaID { get; set; }
+		public int FakturyID { get; set; }
 		public DateTime DatumVystavenia { get; set; }
 		public DateTime DatumSplatnosti { get; set; }
-		public Decimal Suma { get; set; }
-		public bool Zmazana { get; set; }
+		public string VarSymbol { get; set; }
+		public string KonSymbol { get; set; }
+		public virtual ZdravotnaPoistovna Poistovna { get; set; }
 		public virtual Zamestnanec Vystavil { get; set; }
-		public virtual Pacient Pacient { get; set; }
-		//public virtual ICollection<UkonPacient> Ukony { get; set; }
-		public static implicit operator Faktura(FakturaDTO v)
+		public virtual ICollection<UkonyNaFakture> Ukony { get; set; }
+		public static implicit operator Faktury(FakturaDTO v)
 		{
-			return new Faktura()
+			return new Faktury()
 			{
 				DatumSplatnosti = v.DatumSplatnosti,
 				DatumVystavenia = v.DatumVystavenia,
-				FakturaID = v.FakturaID,
-				Pacient = v.Pacient,
-				Suma = v.Suma,
-				Vystavil = v.Vystavil,
-				Zmazana = v.Zmazana
+				FakturyID = v.FakturaID,
+				
+
+				Vystavil = v.Vystavil
+
 			};
 		}
 	}

@@ -78,14 +78,20 @@
     <Compile Include="DataModel\DTO\UkonPacientDTO.cs" />
     <Compile Include="DataModel\DTO\ZamestnanecDTO.cs" />
     <Compile Include="DataModel\Faktura.cs" />
-    <Compile Include="DataModel\Liek.cs" />
-    <Compile Include="DataModel\LiekNaRecepte.cs" />
+    <Compile Include="DataModel\LiekyNaRecepte.cs" />
+    <Compile Include="DataModel\Opravnenie.cs" />
     <Compile Include="DataModel\Pacient.cs" />
-    <Compile Include="DataModel\Recept.cs" />
-    <Compile Include="DataModel\Ukon.cs" />
-    <Compile Include="DataModel\UkonPacient.cs" />
+    <Compile Include="DataModel\Recepty.cs" />
+    <Compile Include="DataModel\TerminVysetrenia.cs" />
+    <Compile Include="DataModel\UkonyNaFakture.cs" />
+    <Compile Include="DataModel\UkonyPacienta.cs" />
+    <Compile Include="DataModel\VysledkyLaboratorneVysetrenie.cs" />
     <Compile Include="DataModel\Zamestnanec.cs" />
     <Compile Include="DataModel\DbContext.cs" />
+    <Compile Include="DataModel\ZdravotnaPoistovna.cs" />
+    <Compile Include="DataModel\Ziadanky.cs" />
+    <Compile Include="DataModel\ZoznamLiekov.cs" />
+    <Compile Include="DataModel\ZoznamUkonov.cs" />
     <Compile Include="Forms\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +234,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utils\DbLogger.cs" />
+    <Compile Include="Utils\ShaEncrypter.cs" />
     <EmbeddedResource Include="Forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
