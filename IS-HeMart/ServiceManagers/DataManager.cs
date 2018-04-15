@@ -102,6 +102,31 @@ namespace IS_HeMart.ServiceManagers
 			return null;
 		}
 
+		public IQueryable<ZoznamUkonov> GetZoznamUkonov()
+		{
+			return GetContext()
+					.ZoznamUkonov;
+		}
+
+		public IQueryable<ZoznamLiekov> GetZoznamLiekov()
+		{
+			return GetContext()
+					.ZoznamLiekov;
+		}
+
+		public IQueryable<ZoznamLiekov> GetZoznamLiekov(string searchValue)
+		{
+			if (string.IsNullOrWhiteSpace(searchValue))
+			{
+				return GetZoznamLiekov();
+			}
+			return GetContext()
+					.ZoznamLiekov
+					.Where(i => i.Nazov.Contains(searchValue) ||
+							   i.Sukl_kod.Contains(searchValue) ||
+							   i.Doplnok.Contains(searchValue));
+		}
+
 		public bool InsertPacient(PacientDTO item)
 		{
 

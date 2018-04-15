@@ -1,4 +1,6 @@
-﻿namespace IS_HeMart.Forms
+﻿using IS_HeMart.Utils;
+
+namespace IS_HeMart.Forms
 {
     partial class LiekyForm
     {
@@ -28,93 +30,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.vyhladajButton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.nazovText = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-4, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(784, 401);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(312, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Zoznam liekov";
-            // 
-            // vyhladajButton
-            // 
-            this.vyhladajButton.Location = new System.Drawing.Point(540, 462);
-            this.vyhladajButton.Name = "vyhladajButton";
-            this.vyhladajButton.Size = new System.Drawing.Size(202, 45);
-            this.vyhladajButton.TabIndex = 33;
-            this.vyhladajButton.Text = "Vyhľadaj liek";
-            this.vyhladajButton.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.nazovText);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 452);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(475, 62);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vyhľadávanie ";
-            // 
-            // nazovText
-            // 
-            this.nazovText.Location = new System.Drawing.Point(184, 23);
-            this.nazovText.Name = "nazovText";
-            this.nazovText.Size = new System.Drawing.Size(187, 20);
-            this.nazovText.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Názov lieku :";
-            // 
-            // LiekyForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 516);
-            this.Controls.Add(this.vyhladajButton);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "LiekyForm";
-            this.Text = "LiekyForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			this.dataGridView1 = new CustomDataGridView();
+			this.label1 = new System.Windows.Forms.Label();
+			this.vyhladajButton = new System.Windows.Forms.Button();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.nazovText = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			this.groupBox1.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(-5, 55);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(1045, 494);
+			this.dataGridView1.TabIndex = 0;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.label1.Location = new System.Drawing.Point(416, 11);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(189, 31);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "Zoznam liekov";
+			// 
+			// vyhladajButton
+			// 
+			this.vyhladajButton.Location = new System.Drawing.Point(720, 569);
+			this.vyhladajButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.vyhladajButton.Name = "vyhladajButton";
+			this.vyhladajButton.Size = new System.Drawing.Size(269, 55);
+			this.vyhladajButton.TabIndex = 33;
+			this.vyhladajButton.Text = "Vyhľadaj liek";
+			this.vyhladajButton.UseVisualStyleBackColor = true;
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.nazovText);
+			this.groupBox1.Controls.Add(this.label2);
+			this.groupBox1.Location = new System.Drawing.Point(16, 556);
+			this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.groupBox1.Size = new System.Drawing.Size(633, 76);
+			this.groupBox1.TabIndex = 32;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Vyhľadávanie ";
+			// 
+			// nazovText
+			// 
+			this.nazovText.Location = new System.Drawing.Point(245, 28);
+			this.nazovText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.nazovText.Name = "nazovText";
+			this.nazovText.Size = new System.Drawing.Size(248, 22);
+			this.nazovText.TabIndex = 1;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(121, 32);
+			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(89, 17);
+			this.label2.TabIndex = 0;
+			this.label2.Text = "Názov lieku :";
+			// 
+			// LiekyForm
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(1045, 635);
+			this.Controls.Add(this.vyhladajButton);
+			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.dataGridView1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Name = "LiekyForm";
+			this.Text = "LiekyForm";
+			this.Load += new System.EventHandler(this.LiekyForm_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private CustomDataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button vyhladajButton;
         private System.Windows.Forms.GroupBox groupBox1;

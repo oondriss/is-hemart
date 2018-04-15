@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IS_HeMart.ServiceManagers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,5 +22,11 @@ namespace IS_HeMart.Forms
         {
 
         }
-    }
+
+		private void UkonyForm_Load(object sender, EventArgs e)
+		{
+			var data = (new DataManager()).GetZoznamUkonov().ToList();
+			dataGridView1.DataSource = data;
+		}
+	}
 }

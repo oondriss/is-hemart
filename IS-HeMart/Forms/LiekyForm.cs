@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IS_HeMart.ServiceManagers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,12 @@ namespace IS_HeMart.Forms
         {
             InitializeComponent();
         }
-    }
+
+		private void LiekyForm_Load(object sender, EventArgs e)
+		{
+			var search = nazovText.Text;
+			var data = (new DataManager()).GetZoznamLiekov(search);
+			dataGridView1.DataSource = data.ToList();
+		}
+	}
 }
