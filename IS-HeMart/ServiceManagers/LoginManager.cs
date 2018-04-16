@@ -1,4 +1,4 @@
-﻿using IS_HeMart.DataModel.DTO;
+﻿using IS_HeMart.DataModel;
 using IS_HeMart.Forms;
 using IS_HeMart.Forms.Parameters;
 using System;
@@ -13,7 +13,7 @@ namespace IS_HeMart.ServiceManagers
 	{
 		private DataManager _dataManager = new DataManager();
 		private static readonly LoginManager instance = new LoginManager();
-		public ZamestnanecDTO LoggedUser { get; set; } = null;
+		public Zamestnanec LoggedUser { get; set; } = null;
 
 		public static LoginManager Instance
 		{
@@ -38,7 +38,7 @@ namespace IS_HeMart.ServiceManagers
 			return LoggedUser != null;
 		}
 
-		public ZamestnanecDTO CheckLogin()
+		public Zamestnanec CheckLogin()
 		{
 			if (LoggedUser != null)
 			{
@@ -60,7 +60,7 @@ namespace IS_HeMart.ServiceManagers
 			return LoggedUser;
 		}
 
-		public ZamestnanecDTO GetLoggedUser()
+		public Zamestnanec GetLoggedUser()
 		{
 			return  LoggedUser;
 		}

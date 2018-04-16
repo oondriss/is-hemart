@@ -50,6 +50,8 @@ namespace IS_HeMart
 			this.zmenitButton = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
+			this.poisťovneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.termínyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.flowLayoutPanel1.SuspendLayout();
@@ -76,7 +78,9 @@ namespace IS_HeMart
             this.zamestnancovToolStripMenuItem,
             this.faktúrToolStripMenuItem,
             this.liekovToolStripMenuItem,
-            this.úkonovToolStripMenuItem});
+            this.úkonovToolStripMenuItem,
+            this.poisťovneToolStripMenuItem,
+            this.termínyToolStripMenuItem});
 			this.prehľadyToolStripMenuItem.Name = "prehľadyToolStripMenuItem";
 			this.prehľadyToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
 			this.prehľadyToolStripMenuItem.Text = "Prehľady";
@@ -121,14 +125,14 @@ namespace IS_HeMart
 			// koniecToolStripMenuItem1
 			// 
 			this.koniecToolStripMenuItem1.Name = "koniecToolStripMenuItem1";
-			this.koniecToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+			this.koniecToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
 			this.koniecToolStripMenuItem1.Text = "Koniec";
 			this.koniecToolStripMenuItem1.Click += new System.EventHandler(this.koniecToolStripMenuItem1_Click);
 			// 
 			// informácieToolStripMenuItem
 			// 
 			this.informácieToolStripMenuItem.Name = "informácieToolStripMenuItem";
-			this.informácieToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.informácieToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
 			this.informácieToolStripMenuItem.Text = "Informácie";
 			this.informácieToolStripMenuItem.Click += new System.EventHandler(this.informácieToolStripMenuItem_Click);
 			// 
@@ -285,6 +289,19 @@ namespace IS_HeMart
 			this.button5.Text = "button5";
 			this.button5.UseVisualStyleBackColor = true;
 			// 
+			// poisťovneToolStripMenuItem
+			// 
+			this.poisťovneToolStripMenuItem.Name = "poisťovneToolStripMenuItem";
+			this.poisťovneToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.poisťovneToolStripMenuItem.Text = "Poisťovne";
+			this.poisťovneToolStripMenuItem.Click += new System.EventHandler(this.poisťovneToolStripMenuItem_Click);
+			// 
+			// termínyToolStripMenuItem
+			// 
+			this.termínyToolStripMenuItem.Name = "termínyToolStripMenuItem";
+			this.termínyToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.termínyToolStripMenuItem.Text = "Termíny";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -333,6 +350,8 @@ namespace IS_HeMart
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button zmenitButton;
-    }
+		private System.Windows.Forms.ToolStripMenuItem poisťovneToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem termínyToolStripMenuItem;
+	}
 }
 

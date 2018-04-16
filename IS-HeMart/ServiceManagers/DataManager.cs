@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using IS_HeMart.DataModel;
-using IS_HeMart.DataModel.DTO;
 using IS_HeMart.Utils;
 using System;
 using System.Collections.Generic;
@@ -28,11 +27,25 @@ namespace IS_HeMart.ServiceManagers
 			return ctx;
 		}
 
+		public BindingList<ZoznamUkonov> GetUkonyBindingSource()
+		{
+			var data = GetContext();
+			data.ZoznamUkonov.Load();
+			return data.ZoznamUkonov.Local.ToBindingList();
+		}
+
 		public BindingList<ZoznamLiekov> GetZoznamLiekovBindingSource()
 		{
 			var data = GetContext();
 			data.ZoznamLiekov.Load();
 			return data.ZoznamLiekov.Local.ToBindingList();
+		}
+
+		public BindingList<ZdravotnaPoistovna> GetPoistovneBindingSource()
+		{
+			var data = GetContext();
+			data.ZdravotnaPoistovna.Load();
+			return data.ZdravotnaPoistovna.Local.ToBindingList();
 		}
 
 		public BindingList<TerminVysetrenia> GetTerminyBindingSource()
@@ -67,13 +80,13 @@ namespace IS_HeMart.ServiceManagers
 					.ZdravotnaPoistovna;
 		}
 
-		public List<ZamestnanecDTO> GetZamestnanecDTO()
-		{
-			var dat = GetContext()
-						.Zamestnanec
-						.ToList();
-			return dat.Select(i => Mapper.Map<ZamestnanecDTO>(i)).ToList();
-		}
+		//public List<ZamestnanecDTO> GetZamestnanecDTO()
+		//{
+		//	var dat = GetContext()
+		//				.Zamestnanec
+		//				.ToList();
+		//	return dat.Select(i => Mapper.Map<ZamestnanecDTO>(i)).ToList();
+		//}
 
 		public IQueryable<Recepty> GetPacientRecept(Pacient pacient)
 		{
@@ -95,14 +108,14 @@ namespace IS_HeMart.ServiceManagers
 					.Faktury;
 		}
 
-		public ZamestnanecDTO GetZamestnanecDTO(int ID)
-		{
-			return GetContext()
-					.Zamestnanec
-					.Where(i => i.ZamestnanecID == ID)
-					.Select(i => Mapper.Map<ZamestnanecDTO>(i))
-					.SingleOrDefault();
-		}
+		//public ZamestnanecDTO GetZamestnanecDTO(int ID)
+		//{
+		//	return GetContext()
+		//			.Zamestnanec
+		//			.Where(i => i.ZamestnanecID == ID)
+		//			.Select(i => Mapper.Map<ZamestnanecDTO>(i))
+		//			.SingleOrDefault();
+		//}
 
 		public IQueryable<Ziadanky> GetPacientZiadanky(Pacient pacient)
 		{
@@ -133,31 +146,31 @@ namespace IS_HeMart.ServiceManagers
 					.SingleOrDefault();
 		}
 
-		public bool InsertZamestnanec(ZamestnanecDTO item)
-		{
+		//public bool InsertZamestnanec(ZamestnanecDTO item)
+		//{
 
-			var newItem = GetContext().Zamestnanec.Add(new Zamestnanec()
-			{
-				Cislo = item.Cislo,
-				Meno = item.Meno,
-				Mesto = item.Mesto,
-				Priezvisko = item.Priezvisko,
-				Psc = item.PSC,
-				Ulica = item.Ulica,
-				Zmazany = item.Zmazany
-			});
+		//	var newItem = GetContext().Zamestnanec.Add(new Zamestnanec()
+		//	{
+		//		Cislo = item.Cislo,
+		//		Meno = item.Meno,
+		//		Mesto = item.Mesto,
+		//		Priezvisko = item.Priezvisko,
+		//		Psc = item.Psc,
+		//		Ulica = item.Ulica,
+		//		Zmazany = item.Zmazany
+		//	});
 
-			return newItem == null ? false : true;
-		}
+		//	return newItem == null ? false : true;
+		//}
 
-		public List<PacientDTO> GetPacient()
-		{
-			return GetContext()
-					.Pacient
-					.ToList()
-					.Select(i => Mapper.Map<PacientDTO>(i))
-					.ToList();
-		}
+		//public List<PacientDTO> GetPacient()
+		//{
+		//	return GetContext()
+		//			.Pacient
+		//			.ToList()
+		//			.Select(i => Mapper.Map<PacientDTO>(i))
+		//			.ToList();
+		//}
 
 		public Pacient GetPacient(int ID)
 		{
@@ -167,12 +180,13 @@ namespace IS_HeMart.ServiceManagers
 					.SingleOrDefault();
 		}
 
-		public ZamestnanecDTO AuthorizeNamePass(string name, string pass)
+		public Zamestnanec AuthorizeNamePass(string name, string pass)
 		{
 			var encPassword = ShaEncrypter.Hash(pass);
-			if (GetContext().Zamestnanec.Any(i => i.Login == name && i.Heslo == encPassword))
+			var data = GetContext();
+			if (data.Zamestnanec.Any(i => i.Login == name && i.Heslo == encPassword))
 			{
-				return Mapper.Map<ZamestnanecDTO>(GetContext().Zamestnanec.First(i => i.Login == name && i.Heslo == encPassword));
+				return data.Zamestnanec.First(i => i.Login == name && i.Heslo == encPassword);
 			}
 			return null;
 		}
@@ -202,25 +216,25 @@ namespace IS_HeMart.ServiceManagers
 							   i.Doplnok.Contains(searchValue));
 		}
 
-		public bool InsertPacient(PacientDTO item)
-		{
+		//public bool InsertPacient(PacientDTO item)
+		//{
 
-			var newItem = GetContext().Pacient.Add(new Pacient()
-			{
-				Cislo = item.Cislo,
-				Meno = item.Meno,
-				Mesto = item.Mesto,
-				Priezvisko = item.Priezvisko,
-				PSC = item.PSC,
-				Ulica = item.Ulica,
-				Zmazany = item.Zmazany,
-				DatumNarodenia = item.DatumNarodenia,
-				DatumVytvorenia = item.DatumVytvorenia,
-				EvidujuciZamestnanec = item.EvidujuciZamestnanec,
-				RodneCislo = item.RodneCislo
-			});
-			GetContext().SaveChanges();
-			return newItem == null ? false : true;
-		}
+		//	var newItem = GetContext().Pacient.Add(new Pacient()
+		//	{
+		//		Cislo = item.Cislo,
+		//		Meno = item.Meno,
+		//		Mesto = item.Mesto,
+		//		Priezvisko = item.Priezvisko,
+		//		PSC = item.PSC,
+		//		Ulica = item.Ulica,
+		//		Zmazany = item.Zmazany,
+		//		DatumNarodenia = item.DatumNarodenia,
+		//		DatumVytvorenia = item.DatumVytvorenia,
+		//		EvidujuciZamestnanec = item.EvidujuciZamestnanec,
+		//		RodneCislo = item.RodneCislo
+		//	});
+		//	GetContext().SaveChanges();
+		//	return newItem == null ? false : true;
+		//}
 	}
 }

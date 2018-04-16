@@ -20,6 +20,7 @@ namespace IS_HeMart.DataModel
 		public string DIC { get; set; }
 		public string IC_DPH { get; set; }
 		public string CisloUctu { get; set; }
+		public string Kod_ZP { get; set; }
 		public virtual Zamestnanec Zamestnanec { get; set; }
 		public virtual ICollection<Pacient> Pacienti { get; set; }
 		public virtual ICollection<Faktury> Faktury { get; set; }

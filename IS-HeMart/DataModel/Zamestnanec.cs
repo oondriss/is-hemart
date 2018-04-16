@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IS_HeMart.DataModel.DTO;
 
 namespace IS_HeMart.DataModel
 {
@@ -36,26 +35,5 @@ namespace IS_HeMart.DataModel
 		public virtual ICollection<TerminVysetrenia> ZaevidovaneVysetrenia { get; set; }
 		public virtual ICollection<UkonyPacienta> ZaevidovaneUkonyPacientov { get; set; }
 		public virtual ICollection<ZdravotnaPoistovna> ZaevidovaneZdravotnePoistovne { get; set; }
-
-		public static implicit operator Zamestnanec(ZamestnanecDTO v)
-		{
-			return new Zamestnanec()
-			{
-				Meno = v.Meno,
-				Priezvisko = v.Priezvisko,
-				Ulica = v.Ulica,
-				Cislo = v.Cislo,
-				Mesto = v.Mesto,
-				Psc = v.PSC,
-				Zmazany = v.Zmazany,
-				ZamestnanecID = v.ZamestnanecID,
-				ZaevidovaneFaktury = v.ZaevidovaneFaktury,
-				ZaevidovaneLieky = v.ZaevidovaneLieky,
-				ZaevidovaneRecepty = v.ZaevidovaneRecepty,
-				ZaevidovaneUkony = v.ZaevidovaneUkony,
-				ZaevidovaneUkonyPacientov = v.ZaevidovaneUkonyPacientov,
-				ZaevidovanyPacienti = v.ZaevidovanyPacienti
-			};
-		}
 	}
 }

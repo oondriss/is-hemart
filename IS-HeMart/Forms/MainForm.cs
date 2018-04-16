@@ -1,6 +1,5 @@
 ﻿using Equin.ApplicationFramework;
 using IS_HeMart.DataModel;
-using IS_HeMart.DataModel.DTO;
 using IS_HeMart.Forms;
 using IS_HeMart.Forms.Parameters;
 using IS_HeMart.ServiceManagers;
@@ -113,6 +112,12 @@ namespace IS_HeMart
 		private void informácieToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			var frm = FormManager.Current.CreateForm<InfoForm>();
+			frm.ShowDialog();
+		}
+
+		private void poisťovneToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<PoistovneForm>();
 			frm.ShowDialog();
 		}
 	}

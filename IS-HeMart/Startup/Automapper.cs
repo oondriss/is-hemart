@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using IS_HeMart.DataModel;
-using IS_HeMart.DataModel.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +14,13 @@ namespace IS_HeMart.Startup
 		{
 			Mapper.Initialize(cfg =>
 			{
-				cfg.CreateMap<Faktury, FakturaDTO>();
-				cfg.CreateMap<ZoznamLiekov, LiekDTO>();
-				cfg.CreateMap<LiekyNaRecepte, LiekNaRecepteDTO>();
-				cfg.CreateMap<Pacient, PacientDTO>();
-				cfg.CreateMap<ZoznamUkonov, UkonDTO>();
-				cfg.CreateMap<UkonyPacienta, UkonPacientDTO>();
-				cfg.CreateMap<Zamestnanec, ZamestnanecDTO>();
+				//cfg.CreateMap<Faktury, FakturaDTO>();
+				//cfg.CreateMap<ZoznamLiekov, LiekDTO>();
+				//cfg.CreateMap<LiekyNaRecepte, LiekNaRecepteDTO>();
+				//cfg.CreateMap<Pacient, PacientDTO>();
+				//cfg.CreateMap<ZoznamUkonov, UkonDTO>();
+				//cfg.CreateMap<UkonyPacienta, UkonPacientDTO>();
+				//cfg.CreateMap<Zamestnanec, ZamestnanecDTO>();
 			});
 		}
 	}

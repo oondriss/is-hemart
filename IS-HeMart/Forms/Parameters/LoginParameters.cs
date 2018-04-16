@@ -1,4 +1,4 @@
-﻿using IS_HeMart.DataModel.DTO;
+﻿using IS_HeMart.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,11 @@ namespace IS_HeMart.Forms.Parameters
 {
 	public class LoginParameters : Parameters
 	{
-		public LoginParameters(ZamestnanecDTO user)
+		public LoginParameters(Zamestnanec user)
 		{
 			User = user;
 		}
 		
-		public ZamestnanecDTO User { get; set; }
+		public Zamestnanec User { get; set; }
 	}
 }

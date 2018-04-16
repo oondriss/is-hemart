@@ -73,14 +73,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataModel\DTO\FakturaDTO.cs" />
-    <Compile Include="DataModel\DTO\LiekDTO.cs" />
-    <Compile Include="DataModel\DTO\LiekNaRecepteDTO.cs" />
-    <Compile Include="DataModel\DTO\PacientDTO.cs" />
-    <Compile Include="DataModel\DTO\ReceptDTO.cs" />
-    <Compile Include="DataModel\DTO\UkonDTO.cs" />
-    <Compile Include="DataModel\DTO\UkonPacientDTO.cs" />
-    <Compile Include="DataModel\DTO\ZamestnanecDTO.cs" />
     <Compile Include="DataModel\Faktura.cs" />
     <Compile Include="DataModel\LiekyNaRecepte.cs" />
     <Compile Include="DataModel\Opravnenie.cs" />

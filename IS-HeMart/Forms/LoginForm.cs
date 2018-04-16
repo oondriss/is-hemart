@@ -1,4 +1,4 @@
-﻿using IS_HeMart.DataModel.DTO;
+﻿using IS_HeMart.DataModel;
 using IS_HeMart.Forms.Parameters;
 using IS_HeMart.ServiceManagers;
 using System;
@@ -17,7 +17,7 @@ namespace IS_HeMart.Forms
 	{
 		private DataManager _dataManager = new DataManager();
 		private LoginManager _loginManager = LoginManager.Instance;
-		private ZamestnanecDTO _loggedUser = null;
+		private Zamestnanec _loggedUser = null;
 
 		public LoginForm()
 		{

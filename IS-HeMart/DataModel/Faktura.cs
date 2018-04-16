@@ -1,5 +1,4 @@
-﻿using IS_HeMart.DataModel.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,18 +18,18 @@ namespace IS_HeMart.DataModel
 		public virtual ZdravotnaPoistovna Poistovna { get; set; }
 		public virtual Zamestnanec Vystavil { get; set; }
 		public virtual ICollection<UkonyNaFakture> Ukony { get; set; }
-		public static implicit operator Faktury(FakturaDTO v)
-		{
-			return new Faktury()
-			{
-				DatumSplatnosti = v.DatumSplatnosti,
-				DatumVystavenia = v.DatumVystavenia,
-				FakturyID = v.FakturaID,
+		//public static implicit operator Faktury(FakturaDTO v)
+		//{
+		//	return new Faktury()
+		//	{
+		//		DatumSplatnosti = v.DatumSplatnosti,
+		//		DatumVystavenia = v.DatumVystavenia,
+		//		FakturyID = v.FakturaID,
 				
 
-				Vystavil = v.Vystavil
+		//		Vystavil = v.Vystavil
 
-			};
-		}
+		//	};
+		//}
 	}
 }

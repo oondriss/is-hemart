@@ -52,7 +52,7 @@ namespace IS_HeMart.Forms
 			else
 			{
 				view.RemoveFilter();
-				zoznamLiekovBindingSource.RemoveFilter();
+				//zoznamLiekovBindingSource.RemoveFilter();
 			}
 		}
 	}
