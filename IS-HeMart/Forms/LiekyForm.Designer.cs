@@ -40,7 +40,6 @@ namespace IS_HeMart.Forms
 			this.receptyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.zoznamLiekovBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.label1 = new System.Windows.Forms.Label();
-			this.vyhladajButton = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.nazovText = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
@@ -129,16 +128,6 @@ namespace IS_HeMart.Forms
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Zoznam liekov";
 			// 
-			// vyhladajButton
-			// 
-			this.vyhladajButton.Location = new System.Drawing.Point(720, 569);
-			this.vyhladajButton.Margin = new System.Windows.Forms.Padding(4);
-			this.vyhladajButton.Name = "vyhladajButton";
-			this.vyhladajButton.Size = new System.Drawing.Size(269, 55);
-			this.vyhladajButton.TabIndex = 33;
-			this.vyhladajButton.Text = "Vyhľadaj liek";
-			this.vyhladajButton.UseVisualStyleBackColor = true;
-			// 
 			// groupBox1
 			// 
 			this.groupBox1.Controls.Add(this.nazovText);
@@ -177,7 +166,6 @@ namespace IS_HeMart.Forms
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1045, 635);
-			this.Controls.Add(this.vyhladajButton);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.dataGridView1);
@@ -199,7 +187,6 @@ namespace IS_HeMart.Forms
 
         private CustomDataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button vyhladajButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox nazovText;
         private System.Windows.Forms.Label label2;

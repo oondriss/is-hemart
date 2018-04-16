@@ -1,4 +1,5 @@
-﻿using IS_HeMart.DataModel;
+﻿using Equin.ApplicationFramework;
+using IS_HeMart.DataModel;
 using IS_HeMart.DataModel.DTO;
 using IS_HeMart.Forms;
 using IS_HeMart.Forms.Parameters;
@@ -18,6 +19,8 @@ namespace IS_HeMart
 	public partial class MainForm : BaseForm
 	{
 		private DataManager _dataManager = new DataManager();
+		private BindingListView<Pacient> view;
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -31,8 +34,8 @@ namespace IS_HeMart
 
 		private void LoadData()
 		{
-			var items = _dataManager.GetPacient();//.GetZamestnanecDTO();
-			pacientGrid.DataSource = items;
+			view = new BindingListView<Pacient>(_dataManager.GetPacientBindingSource());
+			pacientGrid.DataSource = view;
 		}
 
 		private void Form1_Load(object sender, EventArgs e)

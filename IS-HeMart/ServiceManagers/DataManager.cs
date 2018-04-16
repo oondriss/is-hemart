@@ -10,7 +10,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Collections;
 
 namespace IS_HeMart.ServiceManagers
 {
@@ -40,6 +40,13 @@ namespace IS_HeMart.ServiceManagers
 			var data = GetContext();
 			data.TerminVysetrenia.Load();
 			return data.TerminVysetrenia.Local.ToBindingList();
+		}
+
+		public BindingList<Pacient> GetPacientBindingSource()
+		{
+			var data = GetContext();
+			data.Pacient.Load();
+			return data.Pacient.Local.ToBindingList();
 		}
 
 		public IQueryable<TerminVysetrenia> GetTerminy()
@@ -73,6 +80,13 @@ namespace IS_HeMart.ServiceManagers
 			return GetContext()
 					.Recepty
 					.Where(i => i.Pacient == pacient);
+		}
+
+		public BindingList<Faktury> GetFakturyBindingList()
+		{
+			var data = GetContext();
+			data.Faktury.Load();
+			return data.Faktury.Local.ToBindingList();
 		}
 
 		public IQueryable<Faktury> GetFaktury()

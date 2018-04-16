@@ -1,4 +1,6 @@
-﻿using IS_HeMart.Forms.NewForms;
+﻿using Equin.ApplicationFramework;
+using IS_HeMart.DataModel;
+using IS_HeMart.Forms.NewForms;
 using IS_HeMart.ServiceManagers;
 using System;
 using System.Collections.Generic;
@@ -15,7 +17,9 @@ namespace IS_HeMart.Forms
     public partial class FakturyForm : BaseForm
     {
 		private DataManager _dataManager;
-        public FakturyForm()
+		private BindingListView<Faktury> view;
+
+		public FakturyForm()
         {
             InitializeComponent();
 			_dataManager = new DataManager();
@@ -29,8 +33,9 @@ namespace IS_HeMart.Forms
 
         private void FakturyForm_Load(object sender, EventArgs e)
         {
-			var data = _dataManager.GetFaktury();
-			fakturyBindingSource.DataSource = data.ToList(); 
+			view = new BindingListView<Faktury>(_dataManager.GetFakturyBindingList());
+
+			fakturyBindingSource.DataSource = view;
 		}
     }
 }
