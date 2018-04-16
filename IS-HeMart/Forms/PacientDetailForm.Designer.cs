@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.dataGridView2 = new System.Windows.Forms.DataGridView();
 			this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -73,6 +74,13 @@
 			this.zmazanyCheck = new System.Windows.Forms.CheckBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label14 = new System.Windows.Forms.Label();
+			this.ziadankyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.ziadankyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.datumVystaveniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.popisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.typDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.pacientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.zamestnanecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -85,6 +93,7 @@
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.ziadankyBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dataGridView1
@@ -92,7 +101,7 @@
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.Location = new System.Drawing.Point(4, 4);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.Size = new System.Drawing.Size(897, 250);
 			this.dataGridView1.TabIndex = 0;
@@ -102,25 +111,43 @@
 			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-			this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGridView2.Name = "dataGridView2";
 			this.dataGridView2.Size = new System.Drawing.Size(905, 258);
 			this.dataGridView2.TabIndex = 1;
 			// 
 			// dataGridView3
 			// 
+			this.dataGridView3.AllowUserToAddRows = false;
+			this.dataGridView3.AllowUserToDeleteRows = false;
+			this.dataGridView3.AllowUserToResizeRows = false;
+			this.dataGridView3.AutoGenerateColumns = false;
+			this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ziadankyIDDataGridViewTextBoxColumn,
+            this.datumVystaveniaDataGridViewTextBoxColumn,
+            this.popisDataGridViewTextBoxColumn,
+            this.typDataGridViewTextBoxColumn,
+            this.pacientDataGridViewTextBoxColumn,
+            this.zamestnanecDataGridViewTextBoxColumn});
+			this.dataGridView3.DataSource = this.ziadankyBindingSource;
 			this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView3.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dataGridView3.Location = new System.Drawing.Point(4, 4);
-			this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridView3.MultiSelect = false;
 			this.dataGridView3.Name = "dataGridView3";
+			this.dataGridView3.RowHeadersVisible = false;
+			this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView3.Size = new System.Drawing.Size(897, 250);
 			this.dataGridView3.TabIndex = 2;
+			this.dataGridView3.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellDoubleClick);
 			// 
 			// receptButton
 			// 
 			this.receptButton.Location = new System.Drawing.Point(104, 604);
-			this.receptButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.receptButton.Margin = new System.Windows.Forms.Padding(4);
 			this.receptButton.Name = "receptButton";
 			this.receptButton.Size = new System.Drawing.Size(100, 28);
 			this.receptButton.TabIndex = 3;
@@ -130,7 +157,7 @@
 			// ziadankaButton
 			// 
 			this.ziadankaButton.Location = new System.Drawing.Point(295, 604);
-			this.ziadankaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ziadankaButton.Margin = new System.Windows.Forms.Padding(4);
 			this.ziadankaButton.Name = "ziadankaButton";
 			this.ziadankaButton.Size = new System.Drawing.Size(100, 28);
 			this.ziadankaButton.TabIndex = 4;
@@ -140,7 +167,7 @@
 			// ukonButton
 			// 
 			this.ukonButton.Location = new System.Drawing.Point(503, 604);
-			this.ukonButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ukonButton.Margin = new System.Windows.Forms.Padding(4);
 			this.ukonButton.Name = "ukonButton";
 			this.ukonButton.Size = new System.Drawing.Size(100, 28);
 			this.ukonButton.TabIndex = 5;
@@ -150,7 +177,7 @@
 			// terminButton
 			// 
 			this.terminButton.Location = new System.Drawing.Point(700, 604);
-			this.terminButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.terminButton.Margin = new System.Windows.Forms.Padding(4);
 			this.terminButton.Name = "terminButton";
 			this.terminButton.Size = new System.Drawing.Size(100, 28);
 			this.terminButton.TabIndex = 6;
@@ -212,7 +239,7 @@
 			// menoText
 			// 
 			this.menoText.Location = new System.Drawing.Point(113, 23);
-			this.menoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.menoText.Margin = new System.Windows.Forms.Padding(4);
 			this.menoText.Name = "menoText";
 			this.menoText.Size = new System.Drawing.Size(132, 22);
 			this.menoText.TabIndex = 12;
@@ -220,7 +247,7 @@
 			// priezviskoText
 			// 
 			this.priezviskoText.Location = new System.Drawing.Point(113, 55);
-			this.priezviskoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.priezviskoText.Margin = new System.Windows.Forms.Padding(4);
 			this.priezviskoText.Name = "priezviskoText";
 			this.priezviskoText.Size = new System.Drawing.Size(132, 22);
 			this.priezviskoText.TabIndex = 13;
@@ -228,7 +255,7 @@
 			// rcText
 			// 
 			this.rcText.Location = new System.Drawing.Point(113, 87);
-			this.rcText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.rcText.Margin = new System.Windows.Forms.Padding(4);
 			this.rcText.Name = "rcText";
 			this.rcText.Size = new System.Drawing.Size(132, 22);
 			this.rcText.TabIndex = 14;
@@ -236,7 +263,7 @@
 			// telcText
 			// 
 			this.telcText.Location = new System.Drawing.Point(113, 119);
-			this.telcText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.telcText.Margin = new System.Windows.Forms.Padding(4);
 			this.telcText.Name = "telcText";
 			this.telcText.Size = new System.Drawing.Size(132, 22);
 			this.telcText.TabIndex = 15;
@@ -244,7 +271,7 @@
 			// Dat_narText
 			// 
 			this.Dat_narText.Location = new System.Drawing.Point(457, 55);
-			this.Dat_narText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Dat_narText.Margin = new System.Windows.Forms.Padding(4);
 			this.Dat_narText.Name = "Dat_narText";
 			this.Dat_narText.Size = new System.Drawing.Size(160, 22);
 			this.Dat_narText.TabIndex = 16;
@@ -253,7 +280,7 @@
 			// 
 			this.zpCombo.FormattingEnabled = true;
 			this.zpCombo.Location = new System.Drawing.Point(457, 22);
-			this.zpCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.zpCombo.Margin = new System.Windows.Forms.Padding(4);
 			this.zpCombo.Name = "zpCombo";
 			this.zpCombo.Size = new System.Drawing.Size(160, 24);
 			this.zpCombo.TabIndex = 17;
@@ -331,7 +358,7 @@
 			// dat_pos_zmText
 			// 
 			this.dat_pos_zmText.Location = new System.Drawing.Point(457, 87);
-			this.dat_pos_zmText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dat_pos_zmText.Margin = new System.Windows.Forms.Padding(4);
 			this.dat_pos_zmText.Name = "dat_pos_zmText";
 			this.dat_pos_zmText.Size = new System.Drawing.Size(160, 22);
 			this.dat_pos_zmText.TabIndex = 27;
@@ -339,7 +366,7 @@
 			// dat_vytText
 			// 
 			this.dat_vytText.Location = new System.Drawing.Point(457, 119);
-			this.dat_vytText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dat_vytText.Margin = new System.Windows.Forms.Padding(4);
 			this.dat_vytText.Name = "dat_vytText";
 			this.dat_vytText.Size = new System.Drawing.Size(160, 22);
 			this.dat_vytText.TabIndex = 28;
@@ -347,7 +374,7 @@
 			// mestoText
 			// 
 			this.mestoText.Location = new System.Drawing.Point(765, 23);
-			this.mestoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.mestoText.Margin = new System.Windows.Forms.Padding(4);
 			this.mestoText.Name = "mestoText";
 			this.mestoText.Size = new System.Drawing.Size(132, 22);
 			this.mestoText.TabIndex = 29;
@@ -355,7 +382,7 @@
 			// ulicaText
 			// 
 			this.ulicaText.Location = new System.Drawing.Point(765, 55);
-			this.ulicaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ulicaText.Margin = new System.Windows.Forms.Padding(4);
 			this.ulicaText.Name = "ulicaText";
 			this.ulicaText.Size = new System.Drawing.Size(132, 22);
 			this.ulicaText.TabIndex = 30;
@@ -363,7 +390,7 @@
 			// cisloText
 			// 
 			this.cisloText.Location = new System.Drawing.Point(765, 87);
-			this.cisloText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cisloText.Margin = new System.Windows.Forms.Padding(4);
 			this.cisloText.Name = "cisloText";
 			this.cisloText.Size = new System.Drawing.Size(132, 22);
 			this.cisloText.TabIndex = 31;
@@ -371,7 +398,7 @@
 			// pscText
 			// 
 			this.pscText.Location = new System.Drawing.Point(765, 119);
-			this.pscText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pscText.Margin = new System.Windows.Forms.Padding(4);
 			this.pscText.Name = "pscText";
 			this.pscText.Size = new System.Drawing.Size(132, 22);
 			this.pscText.TabIndex = 32;
@@ -391,7 +418,7 @@
 			this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-			this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGridView4.Name = "dataGridView4";
 			this.dataGridView4.Size = new System.Drawing.Size(905, 258);
 			this.dataGridView4.TabIndex = 36;
@@ -404,7 +431,7 @@
 			this.tabControl1.Controls.Add(this.terminy);
 			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Location = new System.Drawing.Point(12, 310);
-			this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
 			this.tabControl1.Size = new System.Drawing.Size(913, 287);
@@ -414,9 +441,9 @@
 			// 
 			this.recepty.Controls.Add(this.dataGridView1);
 			this.recepty.Location = new System.Drawing.Point(4, 25);
-			this.recepty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.recepty.Margin = new System.Windows.Forms.Padding(4);
 			this.recepty.Name = "recepty";
-			this.recepty.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.recepty.Padding = new System.Windows.Forms.Padding(4);
 			this.recepty.Size = new System.Drawing.Size(905, 258);
 			this.recepty.TabIndex = 0;
 			this.recepty.Text = "Vypísané recepty";
@@ -426,9 +453,9 @@
 			// 
 			this.ziadanky.Controls.Add(this.dataGridView3);
 			this.ziadanky.Location = new System.Drawing.Point(4, 25);
-			this.ziadanky.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ziadanky.Margin = new System.Windows.Forms.Padding(4);
 			this.ziadanky.Name = "ziadanky";
-			this.ziadanky.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ziadanky.Padding = new System.Windows.Forms.Padding(4);
 			this.ziadanky.Size = new System.Drawing.Size(905, 258);
 			this.ziadanky.TabIndex = 1;
 			this.ziadanky.Text = "Vystavené žiadanky";
@@ -438,7 +465,7 @@
 			// 
 			this.ukony.Controls.Add(this.dataGridView2);
 			this.ukony.Location = new System.Drawing.Point(4, 25);
-			this.ukony.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ukony.Margin = new System.Windows.Forms.Padding(4);
 			this.ukony.Name = "ukony";
 			this.ukony.Size = new System.Drawing.Size(905, 258);
 			this.ukony.TabIndex = 2;
@@ -449,7 +476,7 @@
 			// 
 			this.terminy.Controls.Add(this.dataGridView4);
 			this.terminy.Location = new System.Drawing.Point(4, 25);
-			this.terminy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.terminy.Margin = new System.Windows.Forms.Padding(4);
 			this.terminy.Name = "terminy";
 			this.terminy.Size = new System.Drawing.Size(905, 258);
 			this.terminy.TabIndex = 3;
@@ -460,7 +487,7 @@
 			// 
 			this.tabPage1.Controls.Add(this.dataGridView5);
 			this.tabPage1.Location = new System.Drawing.Point(4, 25);
-			this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Size = new System.Drawing.Size(905, 258);
 			this.tabPage1.TabIndex = 4;
@@ -472,7 +499,7 @@
 			this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView5.Location = new System.Drawing.Point(0, 0);
-			this.dataGridView5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView5.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGridView5.Name = "dataGridView5";
 			this.dataGridView5.Size = new System.Drawing.Size(905, 258);
 			this.dataGridView5.TabIndex = 0;
@@ -507,9 +534,9 @@
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Location = new System.Drawing.Point(7, 46);
-			this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
 			this.groupBox1.Size = new System.Drawing.Size(913, 241);
 			this.groupBox1.TabIndex = 40;
 			this.groupBox1.TabStop = false;
@@ -518,7 +545,7 @@
 			// ulozitButton
 			// 
 			this.ulozitButton.Location = new System.Drawing.Point(388, 183);
-			this.ulozitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ulozitButton.Margin = new System.Windows.Forms.Padding(4);
 			this.ulozitButton.Name = "ulozitButton";
 			this.ulozitButton.Size = new System.Drawing.Size(100, 28);
 			this.ulozitButton.TabIndex = 35;
@@ -529,7 +556,7 @@
 			// 
 			this.zmazanyCheck.AutoSize = true;
 			this.zmazanyCheck.Location = new System.Drawing.Point(849, 161);
-			this.zmazanyCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.zmazanyCheck.Margin = new System.Windows.Forms.Padding(4);
 			this.zmazanyCheck.Name = "zmazanyCheck";
 			this.zmazanyCheck.Size = new System.Drawing.Size(18, 17);
 			this.zmazanyCheck.TabIndex = 34;
@@ -556,6 +583,48 @@
 			this.label14.TabIndex = 41;
 			this.label14.Text = "Detaily pacienta\r\n";
 			// 
+			// ziadankyBindingSource
+			// 
+			this.ziadankyBindingSource.DataSource = typeof(IS_HeMart.DataModel.Ziadanky);
+			// 
+			// ziadankyIDDataGridViewTextBoxColumn
+			// 
+			this.ziadankyIDDataGridViewTextBoxColumn.DataPropertyName = "ZiadankyID";
+			this.ziadankyIDDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.ziadankyIDDataGridViewTextBoxColumn.Name = "ziadankyIDDataGridViewTextBoxColumn";
+			// 
+			// datumVystaveniaDataGridViewTextBoxColumn
+			// 
+			this.datumVystaveniaDataGridViewTextBoxColumn.DataPropertyName = "DatumVystavenia";
+			this.datumVystaveniaDataGridViewTextBoxColumn.HeaderText = "DatumVystavenia";
+			this.datumVystaveniaDataGridViewTextBoxColumn.Name = "datumVystaveniaDataGridViewTextBoxColumn";
+			// 
+			// popisDataGridViewTextBoxColumn
+			// 
+			this.popisDataGridViewTextBoxColumn.DataPropertyName = "Popis";
+			this.popisDataGridViewTextBoxColumn.HeaderText = "Popis";
+			this.popisDataGridViewTextBoxColumn.Name = "popisDataGridViewTextBoxColumn";
+			// 
+			// typDataGridViewTextBoxColumn
+			// 
+			this.typDataGridViewTextBoxColumn.DataPropertyName = "Typ";
+			this.typDataGridViewTextBoxColumn.HeaderText = "Typ";
+			this.typDataGridViewTextBoxColumn.Name = "typDataGridViewTextBoxColumn";
+			// 
+			// pacientDataGridViewTextBoxColumn
+			// 
+			this.pacientDataGridViewTextBoxColumn.DataPropertyName = "Pacient";
+			this.pacientDataGridViewTextBoxColumn.HeaderText = "Pacient";
+			this.pacientDataGridViewTextBoxColumn.Name = "pacientDataGridViewTextBoxColumn";
+			this.pacientDataGridViewTextBoxColumn.Visible = false;
+			// 
+			// zamestnanecDataGridViewTextBoxColumn
+			// 
+			this.zamestnanecDataGridViewTextBoxColumn.DataPropertyName = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn.HeaderText = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn.Name = "zamestnanecDataGridViewTextBoxColumn";
+			this.zamestnanecDataGridViewTextBoxColumn.Visible = false;
+			// 
 			// PacientDetailForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -570,7 +639,7 @@
 			this.Controls.Add(this.ziadankaButton);
 			this.Controls.Add(this.receptButton);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "PacientDetailForm";
 			this.Text = "PacientDetailForm";
 			this.Load += new System.EventHandler(this.PacientDetailForm_Load);
@@ -587,6 +656,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.ziadankyBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -639,5 +709,12 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView5;
-    }
+		private System.Windows.Forms.DataGridViewTextBoxColumn ziadankyIDDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn datumVystaveniaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn popisDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn typDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn pacientDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn zamestnanecDataGridViewTextBoxColumn;
+		private System.Windows.Forms.BindingSource ziadankyBindingSource;
+	}
 }

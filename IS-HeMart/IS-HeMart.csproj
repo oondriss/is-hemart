@@ -39,6 +39,7 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DelegateDecompiler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=93b26a10a04705bd, processorArchitecture=MSIL">
       <HintPath>..\packages\DelegateDecompiler.0.23.0\lib\net40-client\DelegateDecompiler.dll</HintPath>
     </Reference>
@@ -55,13 +56,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Equin.ApplicationFramework.BindingListView.dll</HintPath>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Mono.Reflection, Version=1.1.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\packages\Mono.Reflection.1.1.0.0\lib\Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -172,11 +177,18 @@
     <Compile Include="Forms\Parameters\LoginParameters.cs" />
     <Compile Include="Forms\Parameters\PacientDetailParameters.cs" />
     <Compile Include="Forms\Parameters\Parameters.cs" />
+    <Compile Include="Forms\Parameters\ReportPreviewParameter.cs" />
     <Compile Include="Forms\PoistovneForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\PoistovneForm.Designer.cs">
       <DependentUpon>PoistovneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportPreviewForm.Designer.cs">
+      <DependentUpon>ReportPreviewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TerminyForm.cs">
       <SubType>Form</SubType>
@@ -221,7 +233,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Ziadanka.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="ServiceManagers\ConfigManager.cs" />
     <Compile Include="ServiceManagers\DataManager.cs" />
     <Compile Include="ServiceManagers\FormManager.cs" />
     <Compile Include="ServiceManagers\LoginManager.cs" />
@@ -277,6 +291,9 @@
     <EmbeddedResource Include="Forms\PoistovneForm.resx">
       <DependentUpon>PoistovneForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportPreviewForm.resx">
+      <DependentUpon>ReportPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TerminyForm.resx">
       <DependentUpon>TerminyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,12 +327,14 @@
     <EmbeddedResource Include="Reports\Ziadanka.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Ziadanka.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.Faktury.datasource" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.TerminVysetrenia.datasource" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.Zamestnanec.datasource" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.ZdravotnaPoistovna.datasource" />
+    <None Include="Properties\DataSources\IS_HeMart.DataModel.Ziadanky.datasource" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.ZoznamLiekov.datasource" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.ZoznamUkonov.datasource" />
     <None Include="Properties\Settings.settings">

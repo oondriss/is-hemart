@@ -55,6 +55,13 @@ namespace IS_HeMart.ServiceManagers
 			return data.TerminVysetrenia.Local.ToBindingList();
 		}
 
+		public BindingList<Ziadanky> GetZiadankyBindingSource()
+		{
+			var data = GetContext();
+			data.Ziadanky.Load();
+			return data.Ziadanky.Local.ToBindingList();
+		}
+
 		public BindingList<Pacient> GetPacientBindingSource()
 		{
 			var data = GetContext();
