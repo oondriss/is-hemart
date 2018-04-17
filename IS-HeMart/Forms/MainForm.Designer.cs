@@ -30,32 +30,54 @@ namespace IS_HeMart
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.prehľadyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.zamestnancovToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.faktúrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.liekovToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.úkonovToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.poisťovneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.termínyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aplikáciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.koniecToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.informácieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			this.UserLabel = new System.Windows.Forms.Label();
-			this.PermisionLabel = new System.Windows.Forms.Label();
 			this.pacientGrid = new IS_HeMart.Utils.CustomDataGridView();
+			this.pacientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.menoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.priezviskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.rodneCisloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.datumNarodeniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.datumVytvoreniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.datumPoslednejZmenyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.mobilneCisloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.pridruzenaDiagnozaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.mestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ulicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cisloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.pSCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.zmazanyDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+			this.zdravotnaPoistovnaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.receptyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ukonyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ziadankyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.vysledkyVysetreniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.vysetreniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.evidujuciZamestnanecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.pacientBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.zmenitButton = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.poisťovneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.termínyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.PermisionLabel = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.flowLayoutPanel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pacientGrid)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).BeginInit();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -68,7 +90,7 @@ namespace IS_HeMart
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-			this.menuStrip1.Size = new System.Drawing.Size(915, 28);
+			this.menuStrip1.Size = new System.Drawing.Size(1012, 28);
 			this.menuStrip1.TabIndex = 1;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -88,30 +110,43 @@ namespace IS_HeMart
 			// zamestnancovToolStripMenuItem
 			// 
 			this.zamestnancovToolStripMenuItem.Name = "zamestnancovToolStripMenuItem";
-			this.zamestnancovToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.zamestnancovToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
 			this.zamestnancovToolStripMenuItem.Text = "Zamestnancov";
 			this.zamestnancovToolStripMenuItem.Click += new System.EventHandler(this.zamestnancovToolStripMenuItem_Click);
 			// 
 			// faktúrToolStripMenuItem
 			// 
 			this.faktúrToolStripMenuItem.Name = "faktúrToolStripMenuItem";
-			this.faktúrToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.faktúrToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
 			this.faktúrToolStripMenuItem.Text = "Faktúr";
 			this.faktúrToolStripMenuItem.Click += new System.EventHandler(this.faktúrToolStripMenuItem_Click);
 			// 
 			// liekovToolStripMenuItem
 			// 
 			this.liekovToolStripMenuItem.Name = "liekovToolStripMenuItem";
-			this.liekovToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.liekovToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
 			this.liekovToolStripMenuItem.Text = "Liekov";
 			this.liekovToolStripMenuItem.Click += new System.EventHandler(this.liekovToolStripMenuItem_Click);
 			// 
 			// úkonovToolStripMenuItem
 			// 
 			this.úkonovToolStripMenuItem.Name = "úkonovToolStripMenuItem";
-			this.úkonovToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.úkonovToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
 			this.úkonovToolStripMenuItem.Text = "Úkonov";
 			this.úkonovToolStripMenuItem.Click += new System.EventHandler(this.úkonovToolStripMenuItem_Click);
+			// 
+			// poisťovneToolStripMenuItem
+			// 
+			this.poisťovneToolStripMenuItem.Name = "poisťovneToolStripMenuItem";
+			this.poisťovneToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+			this.poisťovneToolStripMenuItem.Text = "Poisťovne";
+			this.poisťovneToolStripMenuItem.Click += new System.EventHandler(this.poisťovneToolStripMenuItem_Click);
+			// 
+			// termínyToolStripMenuItem
+			// 
+			this.termínyToolStripMenuItem.Name = "termínyToolStripMenuItem";
+			this.termínyToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+			this.termínyToolStripMenuItem.Text = "Termíny";
 			// 
 			// aplikáciaToolStripMenuItem
 			// 
@@ -152,7 +187,7 @@ namespace IS_HeMart
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(915, 614);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(1012, 614);
 			this.tableLayoutPanel1.TabIndex = 2;
 			this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
 			// 
@@ -162,10 +197,10 @@ namespace IS_HeMart
 			this.flowLayoutPanel1.Controls.Add(this.PermisionLabel);
 			this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(826, 2);
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(913, 2);
 			this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(86, 57);
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(96, 57);
 			this.flowLayoutPanel1.TabIndex = 0;
 			// 
 			// UserLabel
@@ -177,22 +212,37 @@ namespace IS_HeMart
 			this.UserLabel.TabIndex = 0;
 			this.UserLabel.Text = "UserLabel";
 			// 
-			// PermisionLabel
-			// 
-			this.PermisionLabel.AutoSize = true;
-			this.PermisionLabel.Location = new System.Drawing.Point(3, 17);
-			this.PermisionLabel.Name = "PermisionLabel";
-			this.PermisionLabel.Size = new System.Drawing.Size(78, 34);
-			this.PermisionLabel.TabIndex = 1;
-			this.PermisionLabel.Text = "PermisionLabel";
-			// 
 			// pacientGrid
 			// 
 			this.pacientGrid.AllowUserToAddRows = false;
 			this.pacientGrid.AllowUserToDeleteRows = false;
 			this.pacientGrid.AllowUserToResizeRows = false;
+			this.pacientGrid.AutoGenerateColumns = false;
 			this.pacientGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.pacientGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.pacientGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pacientIDDataGridViewTextBoxColumn,
+            this.menoDataGridViewTextBoxColumn,
+            this.priezviskoDataGridViewTextBoxColumn,
+            this.rodneCisloDataGridViewTextBoxColumn,
+            this.datumNarodeniaDataGridViewTextBoxColumn,
+            this.datumVytvoreniaDataGridViewTextBoxColumn,
+            this.datumPoslednejZmenyDataGridViewTextBoxColumn,
+            this.mobilneCisloDataGridViewTextBoxColumn,
+            this.pridruzenaDiagnozaDataGridViewTextBoxColumn,
+            this.mestoDataGridViewTextBoxColumn,
+            this.ulicaDataGridViewTextBoxColumn,
+            this.cisloDataGridViewTextBoxColumn,
+            this.pSCDataGridViewTextBoxColumn,
+            this.zmazanyDataGridViewCheckBoxColumn,
+            this.zdravotnaPoistovnaDataGridViewTextBoxColumn,
+            this.receptyDataGridViewTextBoxColumn,
+            this.ukonyDataGridViewTextBoxColumn,
+            this.ziadankyDataGridViewTextBoxColumn,
+            this.vysledkyVysetreniDataGridViewTextBoxColumn,
+            this.vysetreniaDataGridViewTextBoxColumn,
+            this.evidujuciZamestnanecDataGridViewTextBoxColumn});
+			this.pacientGrid.DataSource = this.pacientBindingSource;
 			this.pacientGrid.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pacientGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.pacientGrid.Location = new System.Drawing.Point(3, 2);
@@ -204,10 +254,196 @@ namespace IS_HeMart
 			this.tableLayoutPanel1.SetRowSpan(this.pacientGrid, 3);
 			this.pacientGrid.RowTemplate.Height = 24;
 			this.pacientGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.pacientGrid.Size = new System.Drawing.Size(817, 610);
+			this.pacientGrid.Size = new System.Drawing.Size(904, 610);
 			this.pacientGrid.TabIndex = 1;
 			this.pacientGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pacientGrid_CellContentClick);
 			this.pacientGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pacientGrid_CellContentDoubleClick);
+			// 
+			// pacientIDDataGridViewTextBoxColumn
+			// 
+			this.pacientIDDataGridViewTextBoxColumn.DataPropertyName = "PacientID";
+			this.pacientIDDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.pacientIDDataGridViewTextBoxColumn.Name = "pacientIDDataGridViewTextBoxColumn";
+			this.pacientIDDataGridViewTextBoxColumn.ReadOnly = true;
+			this.pacientIDDataGridViewTextBoxColumn.Width = 50;
+			// 
+			// menoDataGridViewTextBoxColumn
+			// 
+			this.menoDataGridViewTextBoxColumn.DataPropertyName = "Meno";
+			this.menoDataGridViewTextBoxColumn.HeaderText = "Meno";
+			this.menoDataGridViewTextBoxColumn.Name = "menoDataGridViewTextBoxColumn";
+			this.menoDataGridViewTextBoxColumn.ReadOnly = true;
+			this.menoDataGridViewTextBoxColumn.Width = 72;
+			// 
+			// priezviskoDataGridViewTextBoxColumn
+			// 
+			this.priezviskoDataGridViewTextBoxColumn.DataPropertyName = "Priezvisko";
+			this.priezviskoDataGridViewTextBoxColumn.HeaderText = "Priezvisko";
+			this.priezviskoDataGridViewTextBoxColumn.Name = "priezviskoDataGridViewTextBoxColumn";
+			this.priezviskoDataGridViewTextBoxColumn.ReadOnly = true;
+			this.priezviskoDataGridViewTextBoxColumn.Width = 101;
+			// 
+			// rodneCisloDataGridViewTextBoxColumn
+			// 
+			this.rodneCisloDataGridViewTextBoxColumn.DataPropertyName = "RodneCislo";
+			this.rodneCisloDataGridViewTextBoxColumn.HeaderText = "RodneCislo";
+			this.rodneCisloDataGridViewTextBoxColumn.Name = "rodneCisloDataGridViewTextBoxColumn";
+			this.rodneCisloDataGridViewTextBoxColumn.ReadOnly = true;
+			this.rodneCisloDataGridViewTextBoxColumn.Width = 109;
+			// 
+			// datumNarodeniaDataGridViewTextBoxColumn
+			// 
+			this.datumNarodeniaDataGridViewTextBoxColumn.DataPropertyName = "DatumNarodenia";
+			this.datumNarodeniaDataGridViewTextBoxColumn.HeaderText = "DatumNarodenia";
+			this.datumNarodeniaDataGridViewTextBoxColumn.Name = "datumNarodeniaDataGridViewTextBoxColumn";
+			this.datumNarodeniaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.datumNarodeniaDataGridViewTextBoxColumn.Width = 144;
+			// 
+			// datumVytvoreniaDataGridViewTextBoxColumn
+			// 
+			this.datumVytvoreniaDataGridViewTextBoxColumn.DataPropertyName = "DatumVytvorenia";
+			this.datumVytvoreniaDataGridViewTextBoxColumn.HeaderText = "DatumVytvorenia";
+			this.datumVytvoreniaDataGridViewTextBoxColumn.Name = "datumVytvoreniaDataGridViewTextBoxColumn";
+			this.datumVytvoreniaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.datumVytvoreniaDataGridViewTextBoxColumn.Visible = false;
+			this.datumVytvoreniaDataGridViewTextBoxColumn.Width = 145;
+			// 
+			// datumPoslednejZmenyDataGridViewTextBoxColumn
+			// 
+			this.datumPoslednejZmenyDataGridViewTextBoxColumn.DataPropertyName = "DatumPoslednejZmeny";
+			this.datumPoslednejZmenyDataGridViewTextBoxColumn.HeaderText = "DatumPoslednejZmeny";
+			this.datumPoslednejZmenyDataGridViewTextBoxColumn.Name = "datumPoslednejZmenyDataGridViewTextBoxColumn";
+			this.datumPoslednejZmenyDataGridViewTextBoxColumn.ReadOnly = true;
+			this.datumPoslednejZmenyDataGridViewTextBoxColumn.Visible = false;
+			this.datumPoslednejZmenyDataGridViewTextBoxColumn.Width = 183;
+			// 
+			// mobilneCisloDataGridViewTextBoxColumn
+			// 
+			this.mobilneCisloDataGridViewTextBoxColumn.DataPropertyName = "MobilneCislo";
+			this.mobilneCisloDataGridViewTextBoxColumn.HeaderText = "MobilneCislo";
+			this.mobilneCisloDataGridViewTextBoxColumn.Name = "mobilneCisloDataGridViewTextBoxColumn";
+			this.mobilneCisloDataGridViewTextBoxColumn.ReadOnly = true;
+			this.mobilneCisloDataGridViewTextBoxColumn.Width = 116;
+			// 
+			// pridruzenaDiagnozaDataGridViewTextBoxColumn
+			// 
+			this.pridruzenaDiagnozaDataGridViewTextBoxColumn.DataPropertyName = "PridruzenaDiagnoza";
+			this.pridruzenaDiagnozaDataGridViewTextBoxColumn.HeaderText = "PridruzenaDiagnoza";
+			this.pridruzenaDiagnozaDataGridViewTextBoxColumn.Name = "pridruzenaDiagnozaDataGridViewTextBoxColumn";
+			this.pridruzenaDiagnozaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.pridruzenaDiagnozaDataGridViewTextBoxColumn.Visible = false;
+			this.pridruzenaDiagnozaDataGridViewTextBoxColumn.Width = 166;
+			// 
+			// mestoDataGridViewTextBoxColumn
+			// 
+			this.mestoDataGridViewTextBoxColumn.DataPropertyName = "Mesto";
+			this.mestoDataGridViewTextBoxColumn.HeaderText = "Mesto";
+			this.mestoDataGridViewTextBoxColumn.Name = "mestoDataGridViewTextBoxColumn";
+			this.mestoDataGridViewTextBoxColumn.ReadOnly = true;
+			this.mestoDataGridViewTextBoxColumn.Width = 75;
+			// 
+			// ulicaDataGridViewTextBoxColumn
+			// 
+			this.ulicaDataGridViewTextBoxColumn.DataPropertyName = "Ulica";
+			this.ulicaDataGridViewTextBoxColumn.HeaderText = "Ulica";
+			this.ulicaDataGridViewTextBoxColumn.Name = "ulicaDataGridViewTextBoxColumn";
+			this.ulicaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.ulicaDataGridViewTextBoxColumn.Visible = false;
+			this.ulicaDataGridViewTextBoxColumn.Width = 68;
+			// 
+			// cisloDataGridViewTextBoxColumn
+			// 
+			this.cisloDataGridViewTextBoxColumn.DataPropertyName = "Cislo";
+			this.cisloDataGridViewTextBoxColumn.HeaderText = "Cislo";
+			this.cisloDataGridViewTextBoxColumn.Name = "cisloDataGridViewTextBoxColumn";
+			this.cisloDataGridViewTextBoxColumn.ReadOnly = true;
+			this.cisloDataGridViewTextBoxColumn.Visible = false;
+			this.cisloDataGridViewTextBoxColumn.Width = 67;
+			// 
+			// pSCDataGridViewTextBoxColumn
+			// 
+			this.pSCDataGridViewTextBoxColumn.DataPropertyName = "PSC";
+			this.pSCDataGridViewTextBoxColumn.HeaderText = "PSC";
+			this.pSCDataGridViewTextBoxColumn.Name = "pSCDataGridViewTextBoxColumn";
+			this.pSCDataGridViewTextBoxColumn.ReadOnly = true;
+			this.pSCDataGridViewTextBoxColumn.Visible = false;
+			this.pSCDataGridViewTextBoxColumn.Width = 64;
+			// 
+			// zmazanyDataGridViewCheckBoxColumn
+			// 
+			this.zmazanyDataGridViewCheckBoxColumn.DataPropertyName = "Zmazany";
+			this.zmazanyDataGridViewCheckBoxColumn.HeaderText = "Zmazany";
+			this.zmazanyDataGridViewCheckBoxColumn.Name = "zmazanyDataGridViewCheckBoxColumn";
+			this.zmazanyDataGridViewCheckBoxColumn.ReadOnly = true;
+			this.zmazanyDataGridViewCheckBoxColumn.Visible = false;
+			this.zmazanyDataGridViewCheckBoxColumn.Width = 72;
+			// 
+			// zdravotnaPoistovnaDataGridViewTextBoxColumn
+			// 
+			this.zdravotnaPoistovnaDataGridViewTextBoxColumn.DataPropertyName = "ZdravotnaPoistovna";
+			this.zdravotnaPoistovnaDataGridViewTextBoxColumn.HeaderText = "ZdravotnaPoistovna";
+			this.zdravotnaPoistovnaDataGridViewTextBoxColumn.Name = "zdravotnaPoistovnaDataGridViewTextBoxColumn";
+			this.zdravotnaPoistovnaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.zdravotnaPoistovnaDataGridViewTextBoxColumn.Visible = false;
+			this.zdravotnaPoistovnaDataGridViewTextBoxColumn.Width = 164;
+			// 
+			// receptyDataGridViewTextBoxColumn
+			// 
+			this.receptyDataGridViewTextBoxColumn.DataPropertyName = "Recepty";
+			this.receptyDataGridViewTextBoxColumn.HeaderText = "Recepty";
+			this.receptyDataGridViewTextBoxColumn.Name = "receptyDataGridViewTextBoxColumn";
+			this.receptyDataGridViewTextBoxColumn.ReadOnly = true;
+			this.receptyDataGridViewTextBoxColumn.Visible = false;
+			this.receptyDataGridViewTextBoxColumn.Width = 89;
+			// 
+			// ukonyDataGridViewTextBoxColumn
+			// 
+			this.ukonyDataGridViewTextBoxColumn.DataPropertyName = "Ukony";
+			this.ukonyDataGridViewTextBoxColumn.HeaderText = "Ukony";
+			this.ukonyDataGridViewTextBoxColumn.Name = "ukonyDataGridViewTextBoxColumn";
+			this.ukonyDataGridViewTextBoxColumn.ReadOnly = true;
+			this.ukonyDataGridViewTextBoxColumn.Visible = false;
+			this.ukonyDataGridViewTextBoxColumn.Width = 77;
+			// 
+			// ziadankyDataGridViewTextBoxColumn
+			// 
+			this.ziadankyDataGridViewTextBoxColumn.DataPropertyName = "Ziadanky";
+			this.ziadankyDataGridViewTextBoxColumn.HeaderText = "Ziadanky";
+			this.ziadankyDataGridViewTextBoxColumn.Name = "ziadankyDataGridViewTextBoxColumn";
+			this.ziadankyDataGridViewTextBoxColumn.ReadOnly = true;
+			this.ziadankyDataGridViewTextBoxColumn.Visible = false;
+			this.ziadankyDataGridViewTextBoxColumn.Width = 95;
+			// 
+			// vysledkyVysetreniDataGridViewTextBoxColumn
+			// 
+			this.vysledkyVysetreniDataGridViewTextBoxColumn.DataPropertyName = "VysledkyVysetreni";
+			this.vysledkyVysetreniDataGridViewTextBoxColumn.HeaderText = "VysledkyVysetreni";
+			this.vysledkyVysetreniDataGridViewTextBoxColumn.Name = "vysledkyVysetreniDataGridViewTextBoxColumn";
+			this.vysledkyVysetreniDataGridViewTextBoxColumn.ReadOnly = true;
+			this.vysledkyVysetreniDataGridViewTextBoxColumn.Visible = false;
+			this.vysledkyVysetreniDataGridViewTextBoxColumn.Width = 152;
+			// 
+			// vysetreniaDataGridViewTextBoxColumn
+			// 
+			this.vysetreniaDataGridViewTextBoxColumn.DataPropertyName = "Vysetrenia";
+			this.vysetreniaDataGridViewTextBoxColumn.HeaderText = "Vysetrenia";
+			this.vysetreniaDataGridViewTextBoxColumn.Name = "vysetreniaDataGridViewTextBoxColumn";
+			this.vysetreniaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.vysetreniaDataGridViewTextBoxColumn.Visible = false;
+			this.vysetreniaDataGridViewTextBoxColumn.Width = 104;
+			// 
+			// evidujuciZamestnanecDataGridViewTextBoxColumn
+			// 
+			this.evidujuciZamestnanecDataGridViewTextBoxColumn.DataPropertyName = "EvidujuciZamestnanec";
+			this.evidujuciZamestnanecDataGridViewTextBoxColumn.HeaderText = "EvidujuciZamestnanec";
+			this.evidujuciZamestnanecDataGridViewTextBoxColumn.Name = "evidujuciZamestnanecDataGridViewTextBoxColumn";
+			this.evidujuciZamestnanecDataGridViewTextBoxColumn.ReadOnly = true;
+			this.evidujuciZamestnanecDataGridViewTextBoxColumn.Visible = false;
+			this.evidujuciZamestnanecDataGridViewTextBoxColumn.Width = 179;
+			// 
+			// pacientBindingSource
+			// 
+			this.pacientBindingSource.DataSource = typeof(IS_HeMart.DataModel.Pacient);
 			// 
 			// tableLayoutPanel2
 			// 
@@ -216,10 +452,8 @@ namespace IS_HeMart
 			this.tableLayoutPanel2.Controls.Add(this.button1, 0, 1);
 			this.tableLayoutPanel2.Controls.Add(this.button2, 0, 2);
 			this.tableLayoutPanel2.Controls.Add(this.zmenitButton, 0, 3);
-			this.tableLayoutPanel2.Controls.Add(this.button4, 0, 4);
-			this.tableLayoutPanel2.Controls.Add(this.button5, 0, 5);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(826, 63);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(913, 63);
 			this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
 			this.tableLayoutPanel2.RowCount = 7;
@@ -230,7 +464,7 @@ namespace IS_HeMart
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(86, 425);
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(96, 425);
 			this.tableLayoutPanel2.TabIndex = 3;
 			// 
 			// button1
@@ -239,10 +473,11 @@ namespace IS_HeMart
 			this.button1.Location = new System.Drawing.Point(3, 52);
 			this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(80, 61);
+			this.button1.Size = new System.Drawing.Size(90, 61);
 			this.button1.TabIndex = 0;
 			this.button1.Text = "Nový pacient";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// button2
 			// 
@@ -250,7 +485,7 @@ namespace IS_HeMart
 			this.button2.Location = new System.Drawing.Point(3, 117);
 			this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(80, 61);
+			this.button2.Size = new System.Drawing.Size(90, 61);
 			this.button2.TabIndex = 1;
 			this.button2.Text = "Detail pacienta";
 			this.button2.UseVisualStyleBackColor = true;
@@ -262,56 +497,30 @@ namespace IS_HeMart
 			this.zmenitButton.Location = new System.Drawing.Point(3, 182);
 			this.zmenitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.zmenitButton.Name = "zmenitButton";
-			this.zmenitButton.Size = new System.Drawing.Size(80, 61);
+			this.zmenitButton.Size = new System.Drawing.Size(90, 61);
 			this.zmenitButton.TabIndex = 2;
 			this.zmenitButton.Text = "Zmeniť heslo";
 			this.zmenitButton.UseVisualStyleBackColor = true;
 			// 
-			// button4
+			// PermisionLabel
 			// 
-			this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button4.Location = new System.Drawing.Point(3, 247);
-			this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(80, 61);
-			this.button4.TabIndex = 3;
-			this.button4.Text = "button4";
-			this.button4.UseVisualStyleBackColor = true;
-			// 
-			// button5
-			// 
-			this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button5.Location = new System.Drawing.Point(3, 312);
-			this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(80, 61);
-			this.button5.TabIndex = 4;
-			this.button5.Text = "button5";
-			this.button5.UseVisualStyleBackColor = true;
-			// 
-			// poisťovneToolStripMenuItem
-			// 
-			this.poisťovneToolStripMenuItem.Name = "poisťovneToolStripMenuItem";
-			this.poisťovneToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-			this.poisťovneToolStripMenuItem.Text = "Poisťovne";
-			this.poisťovneToolStripMenuItem.Click += new System.EventHandler(this.poisťovneToolStripMenuItem_Click);
-			// 
-			// termínyToolStripMenuItem
-			// 
-			this.termínyToolStripMenuItem.Name = "termínyToolStripMenuItem";
-			this.termínyToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-			this.termínyToolStripMenuItem.Text = "Termíny";
+			this.PermisionLabel.AutoSize = true;
+			this.PermisionLabel.Location = new System.Drawing.Point(3, 17);
+			this.PermisionLabel.Name = "PermisionLabel";
+			this.PermisionLabel.Size = new System.Drawing.Size(86, 34);
+			this.PermisionLabel.TabIndex = 1;
+			this.PermisionLabel.Text = "PermisionLabel";
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(915, 642);
+			this.ClientSize = new System.Drawing.Size(1012, 642);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.MinimumSize = new System.Drawing.Size(930, 678);
+			this.MinimumSize = new System.Drawing.Size(1030, 678);
 			this.Name = "MainForm";
 			this.Text = "IS-HeMart";
 			this.Load += new System.EventHandler(this.Form1_Load);
@@ -322,6 +531,7 @@ namespace IS_HeMart
 			this.flowLayoutPanel1.ResumeLayout(false);
 			this.flowLayoutPanel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pacientGrid)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pacientBindingSource)).EndInit();
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -342,16 +552,36 @@ namespace IS_HeMart
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 		private System.Windows.Forms.Label UserLabel;
-		private System.Windows.Forms.Label PermisionLabel;
 		private CustomDataGridView pacientGrid;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button zmenitButton;
 		private System.Windows.Forms.ToolStripMenuItem poisťovneToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem termínyToolStripMenuItem;
+		private System.Windows.Forms.DataGridViewTextBoxColumn pacientIDDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn menoDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn priezviskoDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn rodneCisloDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn datumNarodeniaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn datumVytvoreniaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn datumPoslednejZmenyDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn mobilneCisloDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn pridruzenaDiagnozaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn mestoDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ulicaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cisloDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn pSCDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewCheckBoxColumn zmazanyDataGridViewCheckBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn zdravotnaPoistovnaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn receptyDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ukonyDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ziadankyDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn vysledkyVysetreniDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn vysetreniaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn evidujuciZamestnanecDataGridViewTextBoxColumn;
+		private System.Windows.Forms.BindingSource pacientBindingSource;
+		private System.Windows.Forms.Label PermisionLabel;
 	}
 }
 

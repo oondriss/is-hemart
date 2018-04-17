@@ -244,6 +244,17 @@ namespace IS_HeMart.ServiceManagers
 							   i.Doplnok.Contains(searchValue));
 		}
 
+		public DbContext GetDbContext()
+		{
+			return GetContext();
+		}
+
+		public ZdravotnaPoistovna GetPoistovnaById(int poistovnaId)
+		{
+			var data = GetContext();
+			return data.ZdravotnaPoistovna.Single(i => i.ZdravotnaPoistovnaID == poistovnaId);
+		}
+
 		//public bool InsertPacient(PacientDTO item)
 		//{
 

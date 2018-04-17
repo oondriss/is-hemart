@@ -483,6 +483,7 @@
 			this.rcText.Location = new System.Drawing.Point(113, 87);
 			this.rcText.Margin = new System.Windows.Forms.Padding(4);
 			this.rcText.Name = "rcText";
+			this.rcText.ReadOnly = true;
 			this.rcText.Size = new System.Drawing.Size(132, 22);
 			this.rcText.TabIndex = 14;
 			// 
@@ -499,6 +500,7 @@
 			this.Dat_narText.Location = new System.Drawing.Point(457, 55);
 			this.Dat_narText.Margin = new System.Windows.Forms.Padding(4);
 			this.Dat_narText.Name = "Dat_narText";
+			this.Dat_narText.ReadOnly = true;
 			this.Dat_narText.Size = new System.Drawing.Size(160, 22);
 			this.Dat_narText.TabIndex = 16;
 			// 
@@ -586,6 +588,7 @@
 			this.dat_pos_zmText.Location = new System.Drawing.Point(457, 87);
 			this.dat_pos_zmText.Margin = new System.Windows.Forms.Padding(4);
 			this.dat_pos_zmText.Name = "dat_pos_zmText";
+			this.dat_pos_zmText.ReadOnly = true;
 			this.dat_pos_zmText.Size = new System.Drawing.Size(160, 22);
 			this.dat_pos_zmText.TabIndex = 27;
 			// 
@@ -594,6 +597,7 @@
 			this.dat_vytText.Location = new System.Drawing.Point(457, 119);
 			this.dat_vytText.Margin = new System.Windows.Forms.Padding(4);
 			this.dat_vytText.Name = "dat_vytText";
+			this.dat_vytText.ReadOnly = true;
 			this.dat_vytText.Size = new System.Drawing.Size(160, 22);
 			this.dat_vytText.TabIndex = 28;
 			// 
@@ -883,6 +887,7 @@
 			this.ulozitButton.TabIndex = 35;
 			this.ulozitButton.Text = "Uložiť zmeny";
 			this.ulozitButton.UseVisualStyleBackColor = true;
+			this.ulozitButton.Click += new System.EventHandler(this.ulozitButton_Click);
 			// 
 			// zmazanyCheck
 			// 

@@ -52,7 +52,9 @@ namespace IS_HeMart.Forms
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AllowUserToResizeRows = false;
 			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.zoznamLiekovIDDataGridViewTextBoxColumn,
@@ -62,10 +64,13 @@ namespace IS_HeMart.Forms
             this.zamestnanecDataGridViewTextBoxColumn,
             this.receptyDataGridViewTextBoxColumn});
 			this.dataGridView1.DataSource = this.zoznamLiekovBindingSource;
+			this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dataGridView1.Location = new System.Drawing.Point(-5, 55);
 			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridView1.MultiSelect = false;
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
+			this.dataGridView1.RowHeadersVisible = false;
 			this.dataGridView1.Size = new System.Drawing.Size(1045, 494);
 			this.dataGridView1.TabIndex = 0;
 			// 
@@ -75,6 +80,7 @@ namespace IS_HeMart.Forms
 			this.zoznamLiekovIDDataGridViewTextBoxColumn.HeaderText = "ID";
 			this.zoznamLiekovIDDataGridViewTextBoxColumn.Name = "zoznamLiekovIDDataGridViewTextBoxColumn";
 			this.zoznamLiekovIDDataGridViewTextBoxColumn.ReadOnly = true;
+			this.zoznamLiekovIDDataGridViewTextBoxColumn.Width = 50;
 			// 
 			// suklkodDataGridViewTextBoxColumn
 			// 
@@ -82,6 +88,7 @@ namespace IS_HeMart.Forms
 			this.suklkodDataGridViewTextBoxColumn.HeaderText = "Sukl_kod";
 			this.suklkodDataGridViewTextBoxColumn.Name = "suklkodDataGridViewTextBoxColumn";
 			this.suklkodDataGridViewTextBoxColumn.ReadOnly = true;
+			this.suklkodDataGridViewTextBoxColumn.Width = 95;
 			// 
 			// nazovDataGridViewTextBoxColumn
 			// 
@@ -89,6 +96,7 @@ namespace IS_HeMart.Forms
 			this.nazovDataGridViewTextBoxColumn.HeaderText = "Nazov";
 			this.nazovDataGridViewTextBoxColumn.Name = "nazovDataGridViewTextBoxColumn";
 			this.nazovDataGridViewTextBoxColumn.ReadOnly = true;
+			this.nazovDataGridViewTextBoxColumn.Width = 77;
 			// 
 			// doplnokDataGridViewTextBoxColumn
 			// 
@@ -96,6 +104,7 @@ namespace IS_HeMart.Forms
 			this.doplnokDataGridViewTextBoxColumn.HeaderText = "Doplnok";
 			this.doplnokDataGridViewTextBoxColumn.Name = "doplnokDataGridViewTextBoxColumn";
 			this.doplnokDataGridViewTextBoxColumn.ReadOnly = true;
+			this.doplnokDataGridViewTextBoxColumn.Width = 89;
 			// 
 			// zamestnanecDataGridViewTextBoxColumn
 			// 

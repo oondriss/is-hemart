@@ -167,5 +167,23 @@ namespace IS_HeMart.Forms
 			frm.SetParameters(null);
 			frm.ShowDialog();
 		}
+
+		private void ulozitButton_Click(object sender, EventArgs e)
+		{
+			//pacient objekt mame
+			//len mu nastavit hodnoty z textboxov
+			//a dako vymysliet ako zavolat savechanges
+			pacient.Cislo = cisloText.Text;
+			pacient.DatumPoslednejZmeny = DateTime.Now;
+			pacient.Meno = menoText.Text;
+			pacient.Mesto = mestoText.Text;
+			pacient.MobilneCislo = telcText.Text;
+			pacient.Priezvisko = priezviskoText.Text;
+			pacient.PSC = pscText.Text;
+			pacient.Ulica = ulicaText.Text;
+			pacient.ZdravotnaPoistovna = _dataManager.GetPoistovnaById((int)zpCombo.SelectedValue);
+			pacient.Zmazany = zmazanyCheck.Checked;
+			_dataManager.GetDbContext().SaveChanges();
+		}
 	}
 }

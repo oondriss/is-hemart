@@ -1,6 +1,7 @@
 ﻿using Equin.ApplicationFramework;
 using IS_HeMart.DataModel;
 using IS_HeMart.Forms;
+using IS_HeMart.Forms.NewForms;
 using IS_HeMart.Forms.Parameters;
 using IS_HeMart.ServiceManagers;
 using System;
@@ -34,7 +35,7 @@ namespace IS_HeMart
 		private void LoadData()
 		{
 			view = new BindingListView<Pacient>(_dataManager.GetPacientBindingSource());
-			pacientGrid.DataSource = view;
+			pacientBindingSource.DataSource = view;
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -44,7 +45,9 @@ namespace IS_HeMart
 
 		private void FrmMain_Shown(object sender, EventArgs e)
 		{
-			
+			var user = LoginManager.Instance.LoggedUser;
+			UserLabel.Text = user.Meno + " " + user.Priezvisko;
+			PermisionLabel.Text = user.Opravnenie.ToString();
 		}
 
 		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -54,8 +57,10 @@ namespace IS_HeMart
 
 		private void pacientGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
 		{
+			if (pacientGrid.SelectedRows.Count < 1)
+				return;
 			var selectedId = pacientGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-			MessageBox.Show(selectedId);
+			//MessageBox.Show(selectedId);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -118,6 +123,12 @@ namespace IS_HeMart
 		private void poisťovneToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			var frm = FormManager.Current.CreateForm<PoistovneForm>();
+			frm.ShowDialog();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<NovyPacientForm>();
 			frm.ShowDialog();
 		}
 	}
