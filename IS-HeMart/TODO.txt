@@ -1,4 +1,28 @@
-﻿spravit design vsetkych okien
+﻿OSTAVA:
+pacientdetailform
+	-ukladania
+vkladanie novych entit
+	-vsetky formy
+reporty
+	-faktura
+	-recept
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spravit design vsetkych okien
 formborderstyle = fixedtoolwindow
 
 
