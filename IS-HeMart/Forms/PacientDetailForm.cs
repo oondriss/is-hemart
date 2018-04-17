@@ -23,8 +23,11 @@ namespace IS_HeMart.Forms
 		private PacientDetailOperation _operation;
 
 		private BindingListView<Ziadanky> _ziadankyView;
-
-
+		private BindingListView<Recepty> _receptyView;
+		private BindingListView<ZoznamUkonov> _ukonyView;
+		private BindingListView<TerminVysetrenia> _terminyView;
+		private BindingListView<VysledkyLaboratorneVysetrenie> _vysledkyView;
+		private BindingListView<ZdravotnaPoistovna> _poistovnaView;
 
 		public PacientDetailForm()
 		{
@@ -41,8 +44,12 @@ namespace IS_HeMart.Forms
 
 		private void ConfigureForm()
 		{
-			//var pacientReceptyData = _dataManager.GetPacientRecept(pacient).ToList();
-			//dataGridView1.DataSource = pacientReceptyData;
+			_receptyView = new BindingListView<Recepty>(_dataManager.GetReceptyBindingSource());
+			_receptyView.ApplyFilter(delegate(Recepty recept)
+			{
+					return recept.Pacient == pacient;
+			});
+			receptyBindingSource.DataSource = _receptyView;
 
 			_ziadankyView = new BindingListView<Ziadanky>(_dataManager.GetZiadankyBindingSource());
 			_ziadankyView.ApplyFilter(delegate (Ziadanky ziadanky)
@@ -51,14 +58,45 @@ namespace IS_HeMart.Forms
 			});
 			ziadankyBindingSource.DataSource = _ziadankyView;
 
-			//var pacientZiadankyData = _dataManager.GetPacientZiadanky(pacient).ToList();
-			//dataGridView2.DataSource = pacientZiadankyData;
+			_ukonyView = new BindingListView<ZoznamUkonov>(_dataManager.GetZoznamUkonovBindingSource());
+			_ukonyView.ApplyFilter(delegate (ZoznamUkonov ukony)
+			{
+				return ukony.UkonyPacienta.Any(i => i.Pacient == pacient);
+			});
+			zoznamUkonovBindingSource.DataSource = _ukonyView;
 
-			//var pacientUkonyData = _dataManager.GetPacientUkony(pacient).ToList();
-			//dataGridView3.DataSource = pacientUkonyData;
-			//todo
-			//nacitanie detailov o pacientovy, vykreslenie gridov o fakturach/receptoch atd
-			//upravenie formy podla operacie = detail/edit
+			_terminyView = new BindingListView<TerminVysetrenia>(_dataManager.GetTerminyBindingSource());
+			_terminyView.ApplyFilter(delegate (TerminVysetrenia termin)
+			{
+				return termin.Pacient == pacient;
+			});
+			terminVysetreniaBindingSource.DataSource = _terminyView;
+
+			_vysledkyView = new BindingListView<VysledkyLaboratorneVysetrenie>(_dataManager.GetVysledkyBindingSource());
+			_vysledkyView.ApplyFilter(delegate (VysledkyLaboratorneVysetrenie vysledok)
+			{
+				return vysledok.Pacient == pacient;
+			});
+			vysledkyLaboratorneVysetrenieBindingSource.DataSource = _vysledkyView;
+
+			_poistovnaView = new BindingListView<ZdravotnaPoistovna>(_dataManager.GetPoistovneBindingSource());
+			zpCombo.DataSource = _poistovnaView;
+			zpCombo.DisplayMember = "Nazov";
+			zpCombo.ValueMember = "ZdravotnaPoistovnaID";
+
+			menoText.Text = pacient.Meno;
+			priezviskoText.Text = pacient.Priezvisko;
+			rcText.Text = pacient.RodneCislo;
+			telcText.Text = pacient.MobilneCislo;
+			Dat_narText.Text = pacient.DatumNarodenia.ToString();
+			dat_pos_zmText.Text = pacient.DatumPoslednejZmeny.ToString();
+			dat_vytText.Text = pacient.DatumVytvorenia.ToString();
+			mestoText.Text = pacient.Mesto;
+			ulicaText.Text = pacient.Ulica;
+			cisloText.Text = pacient.Cislo;
+			pscText.Text = pacient.PSC;
+			zmazanyCheck.Checked = pacient.Zmazany;
+			zpCombo.SelectedValue = pacient.ZdravotnaPoistovna.ZdravotnaPoistovnaID;
 		}
 
 		public override Parameters.Parameters GetParameters()
@@ -99,6 +137,34 @@ namespace IS_HeMart.Forms
 				ReportPath = "Reports\\Ziadanka.rpt",
 				ReportType = typeof(Ziadanka)
 			});
+			frm.ShowDialog();
+		}
+
+		private void receptButton_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<NewForms.NovyReceptForm>();
+			frm.SetParameters(null);
+			frm.ShowDialog();
+		}
+
+		private void ziadankaButton_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<NewForms.NovaZiadankaForm>();
+			frm.SetParameters(null);
+			frm.ShowDialog();
+		}
+
+		private void ukonButton_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<NewForms.NovyUkonPacientForm>();
+			frm.SetParameters(null);
+			frm.ShowDialog();
+		}
+
+		private void terminButton_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<NewForms.NovyTerminForm>();
+			frm.SetParameters(null);
 			frm.ShowDialog();
 		}
 	}

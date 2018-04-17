@@ -331,7 +331,9 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.Faktury.datasource" />
+    <None Include="Properties\DataSources\IS_HeMart.DataModel.Recepty.datasource" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.TerminVysetrenia.datasource" />
+    <None Include="Properties\DataSources\IS_HeMart.DataModel.VysledkyLaboratorneVysetrenie.datasource" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.Zamestnanec.datasource" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.ZdravotnaPoistovna.datasource" />
     <None Include="Properties\DataSources\IS_HeMart.DataModel.Ziadanky.datasource" />

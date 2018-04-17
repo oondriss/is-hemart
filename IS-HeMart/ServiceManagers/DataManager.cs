@@ -55,6 +55,13 @@ namespace IS_HeMart.ServiceManagers
 			return data.TerminVysetrenia.Local.ToBindingList();
 		}
 
+		public BindingList<Recepty> GetReceptyBindingSource()
+		{
+			var data = GetContext();
+			data.Recepty.Load();
+			return data.Recepty.Local.ToBindingList();
+		}
+
 		public BindingList<Ziadanky> GetZiadankyBindingSource()
 		{
 			var data = GetContext();
@@ -67,6 +74,13 @@ namespace IS_HeMart.ServiceManagers
 			var data = GetContext();
 			data.Pacient.Load();
 			return data.Pacient.Local.ToBindingList();
+		}
+
+		public BindingList<ZoznamUkonov> GetZoznamUkonovBindingSource()
+		{
+			var data = GetContext();
+			data.ZoznamUkonov.Load();
+			return data.ZoznamUkonov.Local.ToBindingList();
 		}
 
 		public IQueryable<TerminVysetrenia> GetTerminy()
@@ -85,6 +99,13 @@ namespace IS_HeMart.ServiceManagers
 		{
 			return GetContext()
 					.ZdravotnaPoistovna;
+		}
+
+		public BindingList<VysledkyLaboratorneVysetrenie> GetVysledkyBindingSource()
+		{
+			var data = GetContext();
+			data.VysledkyLaboratorneVysetrenie.Load();
+			return data.VysledkyLaboratorneVysetrenie.Local.ToBindingList();
 		}
 
 		//public List<ZamestnanecDTO> GetZamestnanecDTO()

@@ -30,8 +30,31 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.receptyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cisloreceptuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.datumVydaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.datumSplatnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.pacientDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.zamestnanecDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.obsiahnuteLiekyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.receptyBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dataGridView2 = new System.Windows.Forms.DataGridView();
+			this.zoznamUkonovIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.nazovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.popisDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.bodyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.kodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.zamestnanecDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ukonyPacientaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.zoznamUkonovBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dataGridView3 = new System.Windows.Forms.DataGridView();
+			this.ziadankyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.datumVystaveniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.popisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.typDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.pacientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.zamestnanecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ziadankyBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.receptButton = new System.Windows.Forms.Button();
 			this.ziadankaButton = new System.Windows.Forms.Button();
 			this.ukonButton = new System.Windows.Forms.Button();
@@ -62,6 +85,12 @@
 			this.pscText = new System.Windows.Forms.TextBox();
 			this.label16 = new System.Windows.Forms.Label();
 			this.dataGridView4 = new System.Windows.Forms.DataGridView();
+			this.terminVysetreniaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.casVysetreniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.poznamkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.pacientDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.zamestnanecDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.terminVysetreniaBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.recepty = new System.Windows.Forms.TabPage();
 			this.ziadanky = new System.Windows.Forms.TabPage();
@@ -69,22 +98,24 @@
 			this.terminy = new System.Windows.Forms.TabPage();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.dataGridView5 = new System.Windows.Forms.DataGridView();
+			this.vysledkyLaboratorneVysetrenieIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.datumVysledkovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.popisDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.pacientDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.vysledkyLaboratorneVysetrenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.ulozitButton = new System.Windows.Forms.Button();
 			this.zmazanyCheck = new System.Windows.Forms.CheckBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label14 = new System.Windows.Forms.Label();
-			this.ziadankyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.ziadankyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.datumVystaveniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.popisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.typDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.pacientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.zamestnanecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.receptyBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.zoznamUkonovBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.ziadankyBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.terminVysetreniaBindingSource)).BeginInit();
 			this.tabControl1.SuspendLayout();
 			this.recepty.SuspendLayout();
 			this.ziadanky.SuspendLayout();
@@ -92,29 +123,178 @@
 			this.terminy.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.vysledkyLaboratorneVysetrenieBindingSource)).BeginInit();
 			this.groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.ziadankyBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dataGridView1
 			// 
+			this.dataGridView1.AllowUserToAddRows = false;
+			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AllowUserToResizeRows = false;
+			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.receptyIDDataGridViewTextBoxColumn,
+            this.cisloreceptuDataGridViewTextBoxColumn,
+            this.datumVydaniaDataGridViewTextBoxColumn,
+            this.datumSplatnostiDataGridViewTextBoxColumn,
+            this.pacientDataGridViewTextBoxColumn1,
+            this.zamestnanecDataGridViewTextBoxColumn1,
+            this.obsiahnuteLiekyDataGridViewTextBoxColumn});
+			this.dataGridView1.DataSource = this.receptyBindingSource;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dataGridView1.Location = new System.Drawing.Point(4, 4);
 			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridView1.MultiSelect = false;
 			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.ReadOnly = true;
+			this.dataGridView1.RowHeadersVisible = false;
+			this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView1.Size = new System.Drawing.Size(897, 250);
 			this.dataGridView1.TabIndex = 0;
 			// 
+			// receptyIDDataGridViewTextBoxColumn
+			// 
+			this.receptyIDDataGridViewTextBoxColumn.DataPropertyName = "ReceptyID";
+			this.receptyIDDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.receptyIDDataGridViewTextBoxColumn.Name = "receptyIDDataGridViewTextBoxColumn";
+			this.receptyIDDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// cisloreceptuDataGridViewTextBoxColumn
+			// 
+			this.cisloreceptuDataGridViewTextBoxColumn.DataPropertyName = "Cislo_receptu";
+			this.cisloreceptuDataGridViewTextBoxColumn.HeaderText = "Cislo_receptu";
+			this.cisloreceptuDataGridViewTextBoxColumn.Name = "cisloreceptuDataGridViewTextBoxColumn";
+			this.cisloreceptuDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// datumVydaniaDataGridViewTextBoxColumn
+			// 
+			this.datumVydaniaDataGridViewTextBoxColumn.DataPropertyName = "DatumVydania";
+			this.datumVydaniaDataGridViewTextBoxColumn.HeaderText = "DatumVydania";
+			this.datumVydaniaDataGridViewTextBoxColumn.Name = "datumVydaniaDataGridViewTextBoxColumn";
+			this.datumVydaniaDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// datumSplatnostiDataGridViewTextBoxColumn
+			// 
+			this.datumSplatnostiDataGridViewTextBoxColumn.DataPropertyName = "DatumSplatnosti";
+			this.datumSplatnostiDataGridViewTextBoxColumn.HeaderText = "DatumSplatnosti";
+			this.datumSplatnostiDataGridViewTextBoxColumn.Name = "datumSplatnostiDataGridViewTextBoxColumn";
+			this.datumSplatnostiDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// pacientDataGridViewTextBoxColumn1
+			// 
+			this.pacientDataGridViewTextBoxColumn1.DataPropertyName = "Pacient";
+			this.pacientDataGridViewTextBoxColumn1.HeaderText = "Pacient";
+			this.pacientDataGridViewTextBoxColumn1.Name = "pacientDataGridViewTextBoxColumn1";
+			this.pacientDataGridViewTextBoxColumn1.ReadOnly = true;
+			this.pacientDataGridViewTextBoxColumn1.Visible = false;
+			// 
+			// zamestnanecDataGridViewTextBoxColumn1
+			// 
+			this.zamestnanecDataGridViewTextBoxColumn1.DataPropertyName = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn1.HeaderText = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn1.Name = "zamestnanecDataGridViewTextBoxColumn1";
+			this.zamestnanecDataGridViewTextBoxColumn1.ReadOnly = true;
+			this.zamestnanecDataGridViewTextBoxColumn1.Visible = false;
+			// 
+			// obsiahnuteLiekyDataGridViewTextBoxColumn
+			// 
+			this.obsiahnuteLiekyDataGridViewTextBoxColumn.DataPropertyName = "ObsiahnuteLieky";
+			this.obsiahnuteLiekyDataGridViewTextBoxColumn.HeaderText = "ObsiahnuteLieky";
+			this.obsiahnuteLiekyDataGridViewTextBoxColumn.Name = "obsiahnuteLiekyDataGridViewTextBoxColumn";
+			this.obsiahnuteLiekyDataGridViewTextBoxColumn.ReadOnly = true;
+			this.obsiahnuteLiekyDataGridViewTextBoxColumn.Visible = false;
+			// 
+			// receptyBindingSource
+			// 
+			this.receptyBindingSource.DataSource = typeof(IS_HeMart.DataModel.Recepty);
+			// 
 			// dataGridView2
 			// 
+			this.dataGridView2.AllowUserToAddRows = false;
+			this.dataGridView2.AllowUserToDeleteRows = false;
+			this.dataGridView2.AllowUserToResizeRows = false;
+			this.dataGridView2.AutoGenerateColumns = false;
+			this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.zoznamUkonovIDDataGridViewTextBoxColumn,
+            this.nazovDataGridViewTextBoxColumn,
+            this.popisDataGridViewTextBoxColumn1,
+            this.bodyDataGridViewTextBoxColumn,
+            this.kodDataGridViewTextBoxColumn,
+            this.zamestnanecDataGridViewTextBoxColumn2,
+            this.ukonyPacientaDataGridViewTextBoxColumn});
+			this.dataGridView2.DataSource = this.zoznamUkonovBindingSource;
 			this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dataGridView2.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridView2.MultiSelect = false;
 			this.dataGridView2.Name = "dataGridView2";
+			this.dataGridView2.ReadOnly = true;
+			this.dataGridView2.RowHeadersVisible = false;
+			this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView2.Size = new System.Drawing.Size(905, 258);
 			this.dataGridView2.TabIndex = 1;
+			// 
+			// zoznamUkonovIDDataGridViewTextBoxColumn
+			// 
+			this.zoznamUkonovIDDataGridViewTextBoxColumn.DataPropertyName = "ZoznamUkonovID";
+			this.zoznamUkonovIDDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.zoznamUkonovIDDataGridViewTextBoxColumn.Name = "zoznamUkonovIDDataGridViewTextBoxColumn";
+			this.zoznamUkonovIDDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// nazovDataGridViewTextBoxColumn
+			// 
+			this.nazovDataGridViewTextBoxColumn.DataPropertyName = "Nazov";
+			this.nazovDataGridViewTextBoxColumn.HeaderText = "Nazov";
+			this.nazovDataGridViewTextBoxColumn.Name = "nazovDataGridViewTextBoxColumn";
+			this.nazovDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// popisDataGridViewTextBoxColumn1
+			// 
+			this.popisDataGridViewTextBoxColumn1.DataPropertyName = "Popis";
+			this.popisDataGridViewTextBoxColumn1.HeaderText = "Popis";
+			this.popisDataGridViewTextBoxColumn1.Name = "popisDataGridViewTextBoxColumn1";
+			this.popisDataGridViewTextBoxColumn1.ReadOnly = true;
+			// 
+			// bodyDataGridViewTextBoxColumn
+			// 
+			this.bodyDataGridViewTextBoxColumn.DataPropertyName = "Body";
+			this.bodyDataGridViewTextBoxColumn.HeaderText = "Body";
+			this.bodyDataGridViewTextBoxColumn.Name = "bodyDataGridViewTextBoxColumn";
+			this.bodyDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// kodDataGridViewTextBoxColumn
+			// 
+			this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
+			this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
+			this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
+			this.kodDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// zamestnanecDataGridViewTextBoxColumn2
+			// 
+			this.zamestnanecDataGridViewTextBoxColumn2.DataPropertyName = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn2.HeaderText = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn2.Name = "zamestnanecDataGridViewTextBoxColumn2";
+			this.zamestnanecDataGridViewTextBoxColumn2.ReadOnly = true;
+			this.zamestnanecDataGridViewTextBoxColumn2.Visible = false;
+			// 
+			// ukonyPacientaDataGridViewTextBoxColumn
+			// 
+			this.ukonyPacientaDataGridViewTextBoxColumn.DataPropertyName = "UkonyPacienta";
+			this.ukonyPacientaDataGridViewTextBoxColumn.HeaderText = "UkonyPacienta";
+			this.ukonyPacientaDataGridViewTextBoxColumn.Name = "ukonyPacientaDataGridViewTextBoxColumn";
+			this.ukonyPacientaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.ukonyPacientaDataGridViewTextBoxColumn.Visible = false;
+			// 
+			// zoznamUkonovBindingSource
+			// 
+			this.zoznamUkonovBindingSource.DataSource = typeof(IS_HeMart.DataModel.ZoznamUkonov);
 			// 
 			// dataGridView3
 			// 
@@ -144,6 +324,48 @@
 			this.dataGridView3.TabIndex = 2;
 			this.dataGridView3.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellDoubleClick);
 			// 
+			// ziadankyIDDataGridViewTextBoxColumn
+			// 
+			this.ziadankyIDDataGridViewTextBoxColumn.DataPropertyName = "ZiadankyID";
+			this.ziadankyIDDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.ziadankyIDDataGridViewTextBoxColumn.Name = "ziadankyIDDataGridViewTextBoxColumn";
+			// 
+			// datumVystaveniaDataGridViewTextBoxColumn
+			// 
+			this.datumVystaveniaDataGridViewTextBoxColumn.DataPropertyName = "DatumVystavenia";
+			this.datumVystaveniaDataGridViewTextBoxColumn.HeaderText = "DatumVystavenia";
+			this.datumVystaveniaDataGridViewTextBoxColumn.Name = "datumVystaveniaDataGridViewTextBoxColumn";
+			// 
+			// popisDataGridViewTextBoxColumn
+			// 
+			this.popisDataGridViewTextBoxColumn.DataPropertyName = "Popis";
+			this.popisDataGridViewTextBoxColumn.HeaderText = "Popis";
+			this.popisDataGridViewTextBoxColumn.Name = "popisDataGridViewTextBoxColumn";
+			// 
+			// typDataGridViewTextBoxColumn
+			// 
+			this.typDataGridViewTextBoxColumn.DataPropertyName = "Typ";
+			this.typDataGridViewTextBoxColumn.HeaderText = "Typ";
+			this.typDataGridViewTextBoxColumn.Name = "typDataGridViewTextBoxColumn";
+			// 
+			// pacientDataGridViewTextBoxColumn
+			// 
+			this.pacientDataGridViewTextBoxColumn.DataPropertyName = "Pacient";
+			this.pacientDataGridViewTextBoxColumn.HeaderText = "Pacient";
+			this.pacientDataGridViewTextBoxColumn.Name = "pacientDataGridViewTextBoxColumn";
+			this.pacientDataGridViewTextBoxColumn.Visible = false;
+			// 
+			// zamestnanecDataGridViewTextBoxColumn
+			// 
+			this.zamestnanecDataGridViewTextBoxColumn.DataPropertyName = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn.HeaderText = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn.Name = "zamestnanecDataGridViewTextBoxColumn";
+			this.zamestnanecDataGridViewTextBoxColumn.Visible = false;
+			// 
+			// ziadankyBindingSource
+			// 
+			this.ziadankyBindingSource.DataSource = typeof(IS_HeMart.DataModel.Ziadanky);
+			// 
 			// receptButton
 			// 
 			this.receptButton.Location = new System.Drawing.Point(104, 604);
@@ -153,6 +375,7 @@
 			this.receptButton.TabIndex = 3;
 			this.receptButton.Text = "Recept";
 			this.receptButton.UseVisualStyleBackColor = true;
+			this.receptButton.Click += new System.EventHandler(this.receptButton_Click);
 			// 
 			// ziadankaButton
 			// 
@@ -163,6 +386,7 @@
 			this.ziadankaButton.TabIndex = 4;
 			this.ziadankaButton.Text = "Žiadanka";
 			this.ziadankaButton.UseVisualStyleBackColor = true;
+			this.ziadankaButton.Click += new System.EventHandler(this.ziadankaButton_Click);
 			// 
 			// ukonButton
 			// 
@@ -173,6 +397,7 @@
 			this.ukonButton.TabIndex = 5;
 			this.ukonButton.Text = "Úkon";
 			this.ukonButton.UseVisualStyleBackColor = true;
+			this.ukonButton.Click += new System.EventHandler(this.ukonButton_Click);
 			// 
 			// terminButton
 			// 
@@ -183,6 +408,7 @@
 			this.terminButton.TabIndex = 6;
 			this.terminButton.Text = "Termín";
 			this.terminButton.UseVisualStyleBackColor = true;
+			this.terminButton.Click += new System.EventHandler(this.terminButton_Click);
 			// 
 			// label1
 			// 
@@ -415,13 +641,71 @@
 			// 
 			// dataGridView4
 			// 
+			this.dataGridView4.AllowUserToAddRows = false;
+			this.dataGridView4.AllowUserToDeleteRows = false;
+			this.dataGridView4.AllowUserToResizeRows = false;
+			this.dataGridView4.AutoGenerateColumns = false;
+			this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.terminVysetreniaIDDataGridViewTextBoxColumn,
+            this.casVysetreniaDataGridViewTextBoxColumn,
+            this.poznamkaDataGridViewTextBoxColumn,
+            this.pacientDataGridViewTextBoxColumn2,
+            this.zamestnanecDataGridViewTextBoxColumn3});
+			this.dataGridView4.DataSource = this.terminVysetreniaBindingSource;
 			this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView4.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dataGridView4.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridView4.MultiSelect = false;
 			this.dataGridView4.Name = "dataGridView4";
+			this.dataGridView4.ReadOnly = true;
+			this.dataGridView4.RowHeadersVisible = false;
+			this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView4.Size = new System.Drawing.Size(905, 258);
 			this.dataGridView4.TabIndex = 36;
+			// 
+			// terminVysetreniaIDDataGridViewTextBoxColumn
+			// 
+			this.terminVysetreniaIDDataGridViewTextBoxColumn.DataPropertyName = "TerminVysetreniaID";
+			this.terminVysetreniaIDDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.terminVysetreniaIDDataGridViewTextBoxColumn.Name = "terminVysetreniaIDDataGridViewTextBoxColumn";
+			this.terminVysetreniaIDDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// casVysetreniaDataGridViewTextBoxColumn
+			// 
+			this.casVysetreniaDataGridViewTextBoxColumn.DataPropertyName = "CasVysetrenia";
+			this.casVysetreniaDataGridViewTextBoxColumn.HeaderText = "CasVysetrenia";
+			this.casVysetreniaDataGridViewTextBoxColumn.Name = "casVysetreniaDataGridViewTextBoxColumn";
+			this.casVysetreniaDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// poznamkaDataGridViewTextBoxColumn
+			// 
+			this.poznamkaDataGridViewTextBoxColumn.DataPropertyName = "Poznamka";
+			this.poznamkaDataGridViewTextBoxColumn.HeaderText = "Poznamka";
+			this.poznamkaDataGridViewTextBoxColumn.Name = "poznamkaDataGridViewTextBoxColumn";
+			this.poznamkaDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// pacientDataGridViewTextBoxColumn2
+			// 
+			this.pacientDataGridViewTextBoxColumn2.DataPropertyName = "Pacient";
+			this.pacientDataGridViewTextBoxColumn2.HeaderText = "Pacient";
+			this.pacientDataGridViewTextBoxColumn2.Name = "pacientDataGridViewTextBoxColumn2";
+			this.pacientDataGridViewTextBoxColumn2.ReadOnly = true;
+			this.pacientDataGridViewTextBoxColumn2.Visible = false;
+			// 
+			// zamestnanecDataGridViewTextBoxColumn3
+			// 
+			this.zamestnanecDataGridViewTextBoxColumn3.DataPropertyName = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn3.HeaderText = "Zamestnanec";
+			this.zamestnanecDataGridViewTextBoxColumn3.Name = "zamestnanecDataGridViewTextBoxColumn3";
+			this.zamestnanecDataGridViewTextBoxColumn3.ReadOnly = true;
+			this.zamestnanecDataGridViewTextBoxColumn3.Visible = false;
+			// 
+			// terminVysetreniaBindingSource
+			// 
+			this.terminVysetreniaBindingSource.DataSource = typeof(IS_HeMart.DataModel.TerminVysetrenia);
 			// 
 			// tabControl1
 			// 
@@ -496,13 +780,61 @@
 			// 
 			// dataGridView5
 			// 
+			this.dataGridView5.AllowUserToAddRows = false;
+			this.dataGridView5.AllowUserToDeleteRows = false;
+			this.dataGridView5.AllowUserToResizeRows = false;
+			this.dataGridView5.AutoGenerateColumns = false;
+			this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.vysledkyLaboratorneVysetrenieIDDataGridViewTextBoxColumn,
+            this.datumVysledkovDataGridViewTextBoxColumn,
+            this.popisDataGridViewTextBoxColumn2,
+            this.pacientDataGridViewTextBoxColumn3});
+			this.dataGridView5.DataSource = this.vysledkyLaboratorneVysetrenieBindingSource;
 			this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView5.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dataGridView5.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView5.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridView5.MultiSelect = false;
 			this.dataGridView5.Name = "dataGridView5";
+			this.dataGridView5.ReadOnly = true;
+			this.dataGridView5.RowHeadersVisible = false;
+			this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView5.Size = new System.Drawing.Size(905, 258);
 			this.dataGridView5.TabIndex = 0;
+			// 
+			// vysledkyLaboratorneVysetrenieIDDataGridViewTextBoxColumn
+			// 
+			this.vysledkyLaboratorneVysetrenieIDDataGridViewTextBoxColumn.DataPropertyName = "VysledkyLaboratorneVysetrenieID";
+			this.vysledkyLaboratorneVysetrenieIDDataGridViewTextBoxColumn.HeaderText = "VysledkyLaboratorneVysetrenieID";
+			this.vysledkyLaboratorneVysetrenieIDDataGridViewTextBoxColumn.Name = "vysledkyLaboratorneVysetrenieIDDataGridViewTextBoxColumn";
+			this.vysledkyLaboratorneVysetrenieIDDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// datumVysledkovDataGridViewTextBoxColumn
+			// 
+			this.datumVysledkovDataGridViewTextBoxColumn.DataPropertyName = "DatumVysledkov";
+			this.datumVysledkovDataGridViewTextBoxColumn.HeaderText = "DatumVysledkov";
+			this.datumVysledkovDataGridViewTextBoxColumn.Name = "datumVysledkovDataGridViewTextBoxColumn";
+			this.datumVysledkovDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// popisDataGridViewTextBoxColumn2
+			// 
+			this.popisDataGridViewTextBoxColumn2.DataPropertyName = "Popis";
+			this.popisDataGridViewTextBoxColumn2.HeaderText = "Popis";
+			this.popisDataGridViewTextBoxColumn2.Name = "popisDataGridViewTextBoxColumn2";
+			this.popisDataGridViewTextBoxColumn2.ReadOnly = true;
+			// 
+			// pacientDataGridViewTextBoxColumn3
+			// 
+			this.pacientDataGridViewTextBoxColumn3.DataPropertyName = "Pacient";
+			this.pacientDataGridViewTextBoxColumn3.HeaderText = "Pacient";
+			this.pacientDataGridViewTextBoxColumn3.Name = "pacientDataGridViewTextBoxColumn3";
+			this.pacientDataGridViewTextBoxColumn3.ReadOnly = true;
+			// 
+			// vysledkyLaboratorneVysetrenieBindingSource
+			// 
+			this.vysledkyLaboratorneVysetrenieBindingSource.DataSource = typeof(IS_HeMart.DataModel.VysledkyLaboratorneVysetrenie);
 			// 
 			// groupBox1
 			// 
@@ -583,48 +915,6 @@
 			this.label14.TabIndex = 41;
 			this.label14.Text = "Detaily pacienta\r\n";
 			// 
-			// ziadankyBindingSource
-			// 
-			this.ziadankyBindingSource.DataSource = typeof(IS_HeMart.DataModel.Ziadanky);
-			// 
-			// ziadankyIDDataGridViewTextBoxColumn
-			// 
-			this.ziadankyIDDataGridViewTextBoxColumn.DataPropertyName = "ZiadankyID";
-			this.ziadankyIDDataGridViewTextBoxColumn.HeaderText = "ID";
-			this.ziadankyIDDataGridViewTextBoxColumn.Name = "ziadankyIDDataGridViewTextBoxColumn";
-			// 
-			// datumVystaveniaDataGridViewTextBoxColumn
-			// 
-			this.datumVystaveniaDataGridViewTextBoxColumn.DataPropertyName = "DatumVystavenia";
-			this.datumVystaveniaDataGridViewTextBoxColumn.HeaderText = "DatumVystavenia";
-			this.datumVystaveniaDataGridViewTextBoxColumn.Name = "datumVystaveniaDataGridViewTextBoxColumn";
-			// 
-			// popisDataGridViewTextBoxColumn
-			// 
-			this.popisDataGridViewTextBoxColumn.DataPropertyName = "Popis";
-			this.popisDataGridViewTextBoxColumn.HeaderText = "Popis";
-			this.popisDataGridViewTextBoxColumn.Name = "popisDataGridViewTextBoxColumn";
-			// 
-			// typDataGridViewTextBoxColumn
-			// 
-			this.typDataGridViewTextBoxColumn.DataPropertyName = "Typ";
-			this.typDataGridViewTextBoxColumn.HeaderText = "Typ";
-			this.typDataGridViewTextBoxColumn.Name = "typDataGridViewTextBoxColumn";
-			// 
-			// pacientDataGridViewTextBoxColumn
-			// 
-			this.pacientDataGridViewTextBoxColumn.DataPropertyName = "Pacient";
-			this.pacientDataGridViewTextBoxColumn.HeaderText = "Pacient";
-			this.pacientDataGridViewTextBoxColumn.Name = "pacientDataGridViewTextBoxColumn";
-			this.pacientDataGridViewTextBoxColumn.Visible = false;
-			// 
-			// zamestnanecDataGridViewTextBoxColumn
-			// 
-			this.zamestnanecDataGridViewTextBoxColumn.DataPropertyName = "Zamestnanec";
-			this.zamestnanecDataGridViewTextBoxColumn.HeaderText = "Zamestnanec";
-			this.zamestnanecDataGridViewTextBoxColumn.Name = "zamestnanecDataGridViewTextBoxColumn";
-			this.zamestnanecDataGridViewTextBoxColumn.Visible = false;
-			// 
 			// PacientDetailForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -644,9 +934,13 @@
 			this.Text = "PacientDetailForm";
 			this.Load += new System.EventHandler(this.PacientDetailForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.receptyBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.zoznamUkonovBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.ziadankyBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.terminVysetreniaBindingSource)).EndInit();
 			this.tabControl1.ResumeLayout(false);
 			this.recepty.ResumeLayout(false);
 			this.ziadanky.ResumeLayout(false);
@@ -654,9 +948,9 @@
 			this.terminy.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.vysledkyLaboratorneVysetrenieBindingSource)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.ziadankyBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -716,5 +1010,32 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn pacientDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn zamestnanecDataGridViewTextBoxColumn;
 		private System.Windows.Forms.BindingSource ziadankyBindingSource;
+		private System.Windows.Forms.DataGridViewTextBoxColumn receptyIDDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cisloreceptuDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn datumVydaniaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn datumSplatnostiDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn pacientDataGridViewTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn zamestnanecDataGridViewTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn obsiahnuteLiekyDataGridViewTextBoxColumn;
+		private System.Windows.Forms.BindingSource receptyBindingSource;
+		private System.Windows.Forms.DataGridViewTextBoxColumn zoznamUkonovIDDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn nazovDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn popisDataGridViewTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn bodyDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn kodDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn zamestnanecDataGridViewTextBoxColumn2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ukonyPacientaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.BindingSource zoznamUkonovBindingSource;
+		private System.Windows.Forms.DataGridViewTextBoxColumn terminVysetreniaIDDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn casVysetreniaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn poznamkaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn pacientDataGridViewTextBoxColumn2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn zamestnanecDataGridViewTextBoxColumn3;
+		private System.Windows.Forms.BindingSource terminVysetreniaBindingSource;
+		private System.Windows.Forms.DataGridViewTextBoxColumn vysledkyLaboratorneVysetrenieIDDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn datumVysledkovDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn popisDataGridViewTextBoxColumn2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn pacientDataGridViewTextBoxColumn3;
+		private System.Windows.Forms.BindingSource vysledkyLaboratorneVysetrenieBindingSource;
 	}
 }
