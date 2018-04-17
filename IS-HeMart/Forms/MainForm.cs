@@ -120,5 +120,11 @@ namespace IS_HeMart
 			var frm = FormManager.Current.CreateForm<PoistovneForm>();
 			frm.ShowDialog();
 		}
-	}
+
+        private void termínyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = FormManager.Current.CreateForm<TerminyForm>();
+            frm.ShowDialog();
+        }
+    }
 }

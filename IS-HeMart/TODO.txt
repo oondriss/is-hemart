@@ -1,6 +1,18 @@
-﻿OSTAVA:
-pacientdetailform
-	-ukladania
+﻿priority:
+mainform - vyhladavanie
+		- pridanie pacienta
+
+pridavanie vsetkeho z detailpacienta
+
+
+
+
+
+
+
+
+
+OSTAVA:
 vkladanie novych entit
 	-vsetky formy
 reporty
