@@ -59,8 +59,14 @@ namespace IS_HeMart
 		{
 			if (pacientGrid.SelectedRows.Count < 1)
 				return;
-			var selectedId = pacientGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-			//MessageBox.Show(selectedId);
+			var pacientId = (int)pacientGrid.SelectedRows[0].Cells[0].Value;
+			var frm = FormManager.Current.CreateForm<PacientDetailForm>();
+			frm.SetParameters(new PacientDetailParameters()
+			{
+				Operation = PacientDetailOperation.Detail,
+				PacientID = pacientId
+			});
+			frm.Show();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -130,6 +136,24 @@ namespace IS_HeMart
 		{
 			var frm = FormManager.Current.CreateForm<NovyPacientForm>();
 			frm.ShowDialog();
+		}
+
+		private void findText_TextChanged(object sender, EventArgs e)
+		{
+			var searchTerm = findText.Text;
+			if (!string.IsNullOrWhiteSpace(searchTerm))
+			{
+				view.ApplyFilter(delegate (Pacient pacient)
+				{
+					return pacient.RodneCislo.Contains(searchTerm)
+						|| pacient.Priezvisko.ToLower().Contains(searchTerm.ToLower())
+						|| pacient.Meno.ToLower().Contains(searchTerm.ToLower());
+				});
+			}
+			else
+			{
+				view.RemoveFilter();
+			}
 		}
 	}
 }

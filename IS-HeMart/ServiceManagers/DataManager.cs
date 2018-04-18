@@ -34,6 +34,18 @@ namespace IS_HeMart.ServiceManagers
 			return data.ZoznamUkonov.Local.ToBindingList();
 		}
 
+		public ZoznamLiekov UpdateLiekWithDescription(ZoznamLiekov liek)
+		{
+			liek.Nazov = liek.Sukl_kod + "- " + liek.Nazov;
+			return liek;
+		}
+
+		public List<ZoznamLiekov> GetLiekyDescBindingSource()
+		{
+			var data = GetContext();
+			return data.ZoznamLiekov.ToList().Select(i => UpdateLiekWithDescription(i)).ToList();
+		}
+
 		public BindingList<ZoznamLiekov> GetZoznamLiekovBindingSource()
 		{
 			var data = GetContext();
@@ -247,6 +259,13 @@ namespace IS_HeMart.ServiceManagers
 		public DbContext GetDbContext()
 		{
 			return GetContext();
+		}
+
+		public void AddNewPacient(Pacient newPacient)
+		{
+			var data = GetContext();
+			data.Pacient.Add(newPacient);
+			data.SaveChanges();
 		}
 
 		public ZdravotnaPoistovna GetPoistovnaById(int poistovnaId)

@@ -1,10 +1,11 @@
 ﻿priority:
-mainform - vyhladavanie
-		 - pridanie pacienta
-		 - chybova hlaska -nezadane vsetky povinne udaje 
+mainform - vyhladavanieDONE
+		 - pridanie pacientaDONE
+		 - chybova hlaska -nezadane vsetky povinne udaje DONE
 
 ofotit maintenace plan wizard - mamagement studio
 pridavanie vsetkeho z detailpacienta
+	novyrecept-ROZROBENE
 
 
 OSTAVA:
