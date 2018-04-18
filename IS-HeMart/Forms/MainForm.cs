@@ -155,5 +155,11 @@ namespace IS_HeMart
 				view.RemoveFilter();
 			}
 		}
-	}
+
+        private void termínyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = FormManager.Current.CreateForm<TerminyForm>();
+            frm.ShowDialog();
+        }
+    }
 }

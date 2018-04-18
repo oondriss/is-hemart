@@ -76,6 +76,7 @@ namespace IS_HeMart.Forms
             // zoznamLiekovIDDataGridViewTextBoxColumn
             // 
             this.zoznamLiekovIDDataGridViewTextBoxColumn.DataPropertyName = "ZoznamLiekovID";
+            this.zoznamLiekovIDDataGridViewTextBoxColumn.FillWeight = 36.19078F;
             this.zoznamLiekovIDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.zoznamLiekovIDDataGridViewTextBoxColumn.Name = "zoznamLiekovIDDataGridViewTextBoxColumn";
             this.zoznamLiekovIDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -83,6 +84,7 @@ namespace IS_HeMart.Forms
             // suklkodDataGridViewTextBoxColumn
             // 
             this.suklkodDataGridViewTextBoxColumn.DataPropertyName = "Sukl_kod";
+            this.suklkodDataGridViewTextBoxColumn.FillWeight = 71.06599F;
             this.suklkodDataGridViewTextBoxColumn.HeaderText = "Sukl_kod";
             this.suklkodDataGridViewTextBoxColumn.Name = "suklkodDataGridViewTextBoxColumn";
             this.suklkodDataGridViewTextBoxColumn.ReadOnly = true;
@@ -90,6 +92,7 @@ namespace IS_HeMart.Forms
             // nazovDataGridViewTextBoxColumn
             // 
             this.nazovDataGridViewTextBoxColumn.DataPropertyName = "Nazov";
+            this.nazovDataGridViewTextBoxColumn.FillWeight = 146.3716F;
             this.nazovDataGridViewTextBoxColumn.HeaderText = "Nazov";
             this.nazovDataGridViewTextBoxColumn.Name = "nazovDataGridViewTextBoxColumn";
             this.nazovDataGridViewTextBoxColumn.ReadOnly = true;
@@ -97,6 +100,7 @@ namespace IS_HeMart.Forms
             // doplnokDataGridViewTextBoxColumn
             // 
             this.doplnokDataGridViewTextBoxColumn.DataPropertyName = "Doplnok";
+            this.doplnokDataGridViewTextBoxColumn.FillWeight = 146.3716F;
             this.doplnokDataGridViewTextBoxColumn.HeaderText = "Doplnok";
             this.doplnokDataGridViewTextBoxColumn.Name = "doplnokDataGridViewTextBoxColumn";
             this.doplnokDataGridViewTextBoxColumn.ReadOnly = true;
@@ -135,7 +139,7 @@ namespace IS_HeMart.Forms
             // 
             this.groupBox1.Controls.Add(this.nazovText);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 452);
+            this.groupBox1.Location = new System.Drawing.Point(145, 444);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(475, 62);
             this.groupBox1.TabIndex = 32;
@@ -144,7 +148,7 @@ namespace IS_HeMart.Forms
             // 
             // nazovText
             // 
-            this.nazovText.Location = new System.Drawing.Point(184, 23);
+            this.nazovText.Location = new System.Drawing.Point(196, 23);
             this.nazovText.Name = "nazovText";
             this.nazovText.Size = new System.Drawing.Size(187, 20);
             this.nazovText.TabIndex = 1;
@@ -156,9 +160,9 @@ namespace IS_HeMart.Forms
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(91, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Názov lieku :";
+            this.label2.Text = "Názov / Kód lieku :";
             // 
             // LiekyForm
             // 
@@ -188,12 +192,12 @@ namespace IS_HeMart.Forms
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox nazovText;
         private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn zoznamLiekovIDDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn suklkodDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn nazovDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn doplnokDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn zamestnanecDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn receptyDataGridViewTextBoxColumn;
 		private System.Windows.Forms.BindingSource zoznamLiekovBindingSource;
-	}
+        private System.Windows.Forms.DataGridViewTextBoxColumn zoznamLiekovIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn suklkodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazovDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doplnokDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zamestnanecDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn receptyDataGridViewTextBoxColumn;
+    }
 }

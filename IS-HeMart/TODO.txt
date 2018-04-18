@@ -7,6 +7,8 @@ ofotit maintenace plan wizard - mamagement studio
 pridavanie vsetkeho z detailpacienta
 	novyrecept-ROZROBENE
 
+Nove
+predpis receptu - zmenit kombo na vyhladavanie
 
 OSTAVA:
 loginForm
