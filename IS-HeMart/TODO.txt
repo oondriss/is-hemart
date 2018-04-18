@@ -1,69 +1,25 @@
 ﻿priority:
 mainform - vyhladavanie
-		- pridanie pacienta
+		 - pridanie pacienta
+		 - chybova hlaska -nezadane vsetky povinne udaje 
 
+ofotit maintenace plan wizard - mamagement studio
 pridavanie vsetkeho z detailpacienta
 
 
-
-
-
-
-
-
-
 OSTAVA:
+loginForm
+-zamietnutie pristupu -zle meno heslo
+zamestanecForm
+-tlacitka- uloz, pridaj
+poistovneForm
+-tlacitka
+-nacitanie udajov do datagrid
+terminyForm
+zobrazenie udajov
+
 vkladanie novych entit
 	-vsetky formy
 reporty
 	-faktura
 	-recept
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-spravit design vsetkych okien
-formborderstyle = fixedtoolwindow
-
-
-na tabulky = datagridview
-na popisy = label
-na editovacie polia = textbox
-tlacitka = button
-combobox
-
-good luck
-change2
-
-prehlady
-	-zamestnancov - pridat hladanie
-	-faktury
-	-lieky
-	-ukony
-	-recepty
-	-poistovne
-
-info
-
-novy 
-	-pacient
-	-faktura
-	-liek
-	-ukon
-	-recept
-	-ukonpacient
-	-zamestnanec
-	-poistovne
-	-ziadanka
