@@ -1,9 +1,13 @@
 ﻿Priority:
 ZamestnanciForm - uptava zamestnanca
 		        - pridanie zamestnanaca
+				- nacitanie udajov do textboxov
 		        - chybova hlaska - nezadane vsetky povinne udaje 
 
 TerminyForm - meno pacienta 
+
+Positovne form - Uprav 
+			   - Pridaj
 
 recepty,ziadanky,terminy,ukony - pridavanie
 							   - vytvorenie reportu
