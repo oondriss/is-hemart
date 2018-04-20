@@ -1,28 +1,18 @@
-﻿priority:
-mainform - vyhladavanieDONE
-		 - pridanie pacientaDONE
-		 - chybova hlaska -nezadane vsetky povinne udaje DONE
+﻿Priority:
+ZamestnanciForm - uptava zamestnanca
+		        - pridanie zamestnanaca
+				- nacitanie udajov do textboxov
+		        - chybova hlaska - nezadane vsetky povinne udaje 
 
-ofotit maintenace plan wizard - mamagement studio
-pridavanie vsetkeho z detailpacienta
-	novyrecept-ROZROBENE
+TerminyForm - meno pacienta 
 
-Nove
-predpis receptu - zmenit kombo na vyhladavanie
+Positovne form - Uprav 
+			   - Pridaj
 
-OSTAVA:
-loginForm
--zamietnutie pristupu -zle meno heslo
-zamestanecForm
--tlacitka- uloz, pridaj
-poistovneForm
--tlacitka
--nacitanie udajov do datagrid
-terminyForm
-zobrazenie udajov
+recepty,ziadanky,terminy,ukony - pridavanie
+							   - vytvorenie reportu
 
-vkladanie novych entit
-	-vsetky formy
-reporty
-	-faktura
-	-recept
+mamagement studio - ofotit maintenace plan wizard 
+				  - aky interval ?
+
+Vytvorenie tabuliek - nie cez NewQuery ale cez Entity framevork - kratky popis
