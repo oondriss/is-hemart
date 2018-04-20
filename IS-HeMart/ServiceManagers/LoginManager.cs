@@ -48,10 +48,6 @@ namespace IS_HeMart.ServiceManagers
 				{
 					var param = (LoginParameters)logForm.GetParameters();
 					LoggedUser = param.User;
-					if (LoggedUser == null)
-					{
-						MessageBox.Show("Nespravne meno alebo heslo");
-					}
 					logForm.Close();
 				}
 				else

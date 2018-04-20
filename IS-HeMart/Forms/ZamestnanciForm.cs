@@ -73,7 +73,25 @@ namespace IS_HeMart.Forms
 
 		private void ulozitButton_Click(object sender, EventArgs e)
 		{
-
+			var result = DateTime.Today;
+			var zam = _dataManager.GetZamestnanec((int)dataGridView1.SelectedRows[0].Cells[0].Value);
+			zam.Titul = titulText.Text;
+			zam.Meno = menoText.Text;
+			zam.Priezvisko = priezviskoText.Text;
+			zam.Datum_narodenia = DateTime.TryParse(textBox4.Text, out result) ? result : result;
+			zam.Rodne_cislo = rod_cisText.Text;
+			zam.Login = loginText.Text;
+			zam.Kod = kodText.Text;
+			zam.Email = emailText.Text;
+			zam.Cislo = cisloText.Text;
+			zam.Mesto = mestoText.Text;
+			zam.Psc = pscText.Text;
+			zam.Ulica = ulicaText.Text;
+			zam.Cislo_uctu = cislo_ucText.Text;
+			zam.Mobilne_cislo = tel_cisText.Text;
+			zam.Zmazany = zmazanyCheck.Checked;
+			_dataManager.GetDbContext().SaveChanges();
+			_view = new BindingListView<Zamestnanec>(_dataManager.GetZamestnanecBindingSource());
 		}
 	}
 }

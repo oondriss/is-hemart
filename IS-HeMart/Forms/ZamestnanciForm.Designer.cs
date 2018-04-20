@@ -113,7 +113,7 @@
 			// pridatButton
 			// 
 			this.pridatButton.Location = new System.Drawing.Point(933, 372);
-			this.pridatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pridatButton.Margin = new System.Windows.Forms.Padding(4);
 			this.pridatButton.Name = "pridatButton";
 			this.pridatButton.Size = new System.Drawing.Size(100, 47);
 			this.pridatButton.TabIndex = 28;
@@ -155,9 +155,9 @@
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Location = new System.Drawing.Point(3, 268);
-			this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
 			this.groupBox1.Size = new System.Drawing.Size(908, 336);
 			this.groupBox1.TabIndex = 27;
 			this.groupBox1.TabStop = false;
@@ -166,7 +166,7 @@
 			// kodText
 			// 
 			this.kodText.Location = new System.Drawing.Point(163, 300);
-			this.kodText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.kodText.Margin = new System.Windows.Forms.Padding(4);
 			this.kodText.Name = "kodText";
 			this.kodText.Size = new System.Drawing.Size(247, 22);
 			this.kodText.TabIndex = 38;
@@ -185,7 +185,7 @@
 			// 
 			this.zmazanyCheck.AutoSize = true;
 			this.zmazanyCheck.Location = new System.Drawing.Point(725, 304);
-			this.zmazanyCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.zmazanyCheck.Margin = new System.Windows.Forms.Padding(4);
 			this.zmazanyCheck.Name = "zmazanyCheck";
 			this.zmazanyCheck.Size = new System.Drawing.Size(18, 17);
 			this.zmazanyCheck.TabIndex = 32;
@@ -214,7 +214,7 @@
 			// opravnenieText
 			// 
 			this.opravnenieText.Location = new System.Drawing.Point(163, 263);
-			this.opravnenieText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.opravnenieText.Margin = new System.Windows.Forms.Padding(4);
 			this.opravnenieText.Name = "opravnenieText";
 			this.opravnenieText.Size = new System.Drawing.Size(245, 22);
 			this.opravnenieText.TabIndex = 29;
@@ -222,7 +222,7 @@
 			// tel_cisText
 			// 
 			this.tel_cisText.Location = new System.Drawing.Point(573, 263);
-			this.tel_cisText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tel_cisText.Margin = new System.Windows.Forms.Padding(4);
 			this.tel_cisText.Name = "tel_cisText";
 			this.tel_cisText.Size = new System.Drawing.Size(245, 22);
 			this.tel_cisText.TabIndex = 28;
@@ -230,7 +230,7 @@
 			// cislo_ucText
 			// 
 			this.cislo_ucText.Location = new System.Drawing.Point(572, 223);
-			this.cislo_ucText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cislo_ucText.Margin = new System.Windows.Forms.Padding(4);
 			this.cislo_ucText.Name = "cislo_ucText";
 			this.cislo_ucText.Size = new System.Drawing.Size(247, 22);
 			this.cislo_ucText.TabIndex = 27;
@@ -238,7 +238,7 @@
 			// ulicaText
 			// 
 			this.ulicaText.Location = new System.Drawing.Point(573, 100);
-			this.ulicaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ulicaText.Margin = new System.Windows.Forms.Padding(4);
 			this.ulicaText.Name = "ulicaText";
 			this.ulicaText.Size = new System.Drawing.Size(245, 22);
 			this.ulicaText.TabIndex = 26;
@@ -247,7 +247,7 @@
 			// mestoText
 			// 
 			this.mestoText.Location = new System.Drawing.Point(573, 57);
-			this.mestoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.mestoText.Margin = new System.Windows.Forms.Padding(4);
 			this.mestoText.Name = "mestoText";
 			this.mestoText.Size = new System.Drawing.Size(245, 22);
 			this.mestoText.TabIndex = 25;
@@ -297,7 +297,7 @@
 			// pscText
 			// 
 			this.pscText.Location = new System.Drawing.Point(572, 183);
-			this.pscText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pscText.Margin = new System.Windows.Forms.Padding(4);
 			this.pscText.Name = "pscText";
 			this.pscText.Size = new System.Drawing.Size(247, 22);
 			this.pscText.TabIndex = 20;
@@ -305,7 +305,7 @@
 			// cisloText
 			// 
 			this.cisloText.Location = new System.Drawing.Point(572, 140);
-			this.cisloText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cisloText.Margin = new System.Windows.Forms.Padding(4);
 			this.cisloText.Name = "cisloText";
 			this.cisloText.Size = new System.Drawing.Size(247, 22);
 			this.cisloText.TabIndex = 19;
@@ -313,7 +313,7 @@
 			// loginText
 			// 
 			this.loginText.Location = new System.Drawing.Point(163, 223);
-			this.loginText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.loginText.Margin = new System.Windows.Forms.Padding(4);
 			this.loginText.Name = "loginText";
 			this.loginText.Size = new System.Drawing.Size(245, 22);
 			this.loginText.TabIndex = 17;
@@ -321,7 +321,7 @@
 			// emailText
 			// 
 			this.emailText.Location = new System.Drawing.Point(572, 16);
-			this.emailText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.emailText.Margin = new System.Windows.Forms.Padding(4);
 			this.emailText.Name = "emailText";
 			this.emailText.Size = new System.Drawing.Size(247, 22);
 			this.emailText.TabIndex = 16;
@@ -329,7 +329,7 @@
 			// rod_cisText
 			// 
 			this.rod_cisText.Location = new System.Drawing.Point(163, 183);
-			this.rod_cisText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.rod_cisText.Margin = new System.Windows.Forms.Padding(4);
 			this.rod_cisText.Name = "rod_cisText";
 			this.rod_cisText.Size = new System.Drawing.Size(245, 22);
 			this.rod_cisText.TabIndex = 15;
@@ -338,7 +338,7 @@
 			// textBox4
 			// 
 			this.textBox4.Location = new System.Drawing.Point(163, 140);
-			this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox4.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox4.Name = "textBox4";
 			this.textBox4.Size = new System.Drawing.Size(245, 22);
 			this.textBox4.TabIndex = 14;
@@ -346,7 +346,7 @@
 			// priezviskoText
 			// 
 			this.priezviskoText.Location = new System.Drawing.Point(163, 100);
-			this.priezviskoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.priezviskoText.Margin = new System.Windows.Forms.Padding(4);
 			this.priezviskoText.Name = "priezviskoText";
 			this.priezviskoText.Size = new System.Drawing.Size(245, 22);
 			this.priezviskoText.TabIndex = 13;
@@ -354,7 +354,7 @@
 			// menoText
 			// 
 			this.menoText.Location = new System.Drawing.Point(163, 57);
-			this.menoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.menoText.Margin = new System.Windows.Forms.Padding(4);
 			this.menoText.Name = "menoText";
 			this.menoText.Size = new System.Drawing.Size(245, 22);
 			this.menoText.TabIndex = 12;
@@ -362,7 +362,7 @@
 			// titulText
 			// 
 			this.titulText.Location = new System.Drawing.Point(163, 16);
-			this.titulText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.titulText.Margin = new System.Windows.Forms.Padding(4);
 			this.titulText.Name = "titulText";
 			this.titulText.Size = new System.Drawing.Size(245, 22);
 			this.titulText.TabIndex = 11;
@@ -460,7 +460,7 @@
 			// ulozitButton
 			// 
 			this.ulozitButton.Location = new System.Drawing.Point(933, 439);
-			this.ulozitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ulozitButton.Margin = new System.Windows.Forms.Padding(4);
 			this.ulozitButton.Name = "ulozitButton";
 			this.ulozitButton.Size = new System.Drawing.Size(100, 57);
 			this.ulozitButton.TabIndex = 26;
@@ -472,7 +472,9 @@
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AllowUserToResizeRows = false;
 			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.zamestnanecIDDataGridViewTextBoxColumn,
@@ -505,12 +507,12 @@
 			this.dataGridView1.DataSource = this.zamestnanecBindingSource;
 			this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dataGridView1.Location = new System.Drawing.Point(3, 46);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGridView1.MultiSelect = false;
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.RowHeadersVisible = false;
-			this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+			this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView1.Size = new System.Drawing.Size(1061, 215);
 			this.dataGridView1.TabIndex = 0;
 			this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -521,6 +523,7 @@
 			this.zamestnanecIDDataGridViewTextBoxColumn.HeaderText = "ID";
 			this.zamestnanecIDDataGridViewTextBoxColumn.Name = "zamestnanecIDDataGridViewTextBoxColumn";
 			this.zamestnanecIDDataGridViewTextBoxColumn.ReadOnly = true;
+			this.zamestnanecIDDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// titulDataGridViewTextBoxColumn
 			// 
@@ -528,6 +531,7 @@
 			this.titulDataGridViewTextBoxColumn.HeaderText = "Titul";
 			this.titulDataGridViewTextBoxColumn.Name = "titulDataGridViewTextBoxColumn";
 			this.titulDataGridViewTextBoxColumn.ReadOnly = true;
+			this.titulDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// menoDataGridViewTextBoxColumn
 			// 
@@ -535,6 +539,7 @@
 			this.menoDataGridViewTextBoxColumn.HeaderText = "Meno";
 			this.menoDataGridViewTextBoxColumn.Name = "menoDataGridViewTextBoxColumn";
 			this.menoDataGridViewTextBoxColumn.ReadOnly = true;
+			this.menoDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// priezviskoDataGridViewTextBoxColumn
 			// 
@@ -542,6 +547,7 @@
 			this.priezviskoDataGridViewTextBoxColumn.HeaderText = "Priezvisko";
 			this.priezviskoDataGridViewTextBoxColumn.Name = "priezviskoDataGridViewTextBoxColumn";
 			this.priezviskoDataGridViewTextBoxColumn.ReadOnly = true;
+			this.priezviskoDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// loginDataGridViewTextBoxColumn
 			// 
@@ -565,6 +571,7 @@
 			this.datumnarodeniaDataGridViewTextBoxColumn.HeaderText = "Datum_narodenia";
 			this.datumnarodeniaDataGridViewTextBoxColumn.Name = "datumnarodeniaDataGridViewTextBoxColumn";
 			this.datumnarodeniaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.datumnarodeniaDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// mobilnecisloDataGridViewTextBoxColumn
 			// 
@@ -572,6 +579,7 @@
 			this.mobilnecisloDataGridViewTextBoxColumn.HeaderText = "Mobilne_cislo";
 			this.mobilnecisloDataGridViewTextBoxColumn.Name = "mobilnecisloDataGridViewTextBoxColumn";
 			this.mobilnecisloDataGridViewTextBoxColumn.ReadOnly = true;
+			this.mobilnecisloDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// emailDataGridViewTextBoxColumn
 			// 
@@ -579,6 +587,7 @@
 			this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
 			this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
 			this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+			this.emailDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// opravnenieDataGridViewTextBoxColumn
 			// 
@@ -586,6 +595,7 @@
 			this.opravnenieDataGridViewTextBoxColumn.HeaderText = "Opravnenie";
 			this.opravnenieDataGridViewTextBoxColumn.Name = "opravnenieDataGridViewTextBoxColumn";
 			this.opravnenieDataGridViewTextBoxColumn.ReadOnly = true;
+			this.opravnenieDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// kodDataGridViewTextBoxColumn
 			// 
@@ -593,6 +603,7 @@
 			this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
 			this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
 			this.kodDataGridViewTextBoxColumn.ReadOnly = true;
+			this.kodDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// mestoDataGridViewTextBoxColumn
 			// 
@@ -600,6 +611,7 @@
 			this.mestoDataGridViewTextBoxColumn.HeaderText = "Mesto";
 			this.mestoDataGridViewTextBoxColumn.Name = "mestoDataGridViewTextBoxColumn";
 			this.mestoDataGridViewTextBoxColumn.ReadOnly = true;
+			this.mestoDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// ulicaDataGridViewTextBoxColumn
 			// 
@@ -607,6 +619,7 @@
 			this.ulicaDataGridViewTextBoxColumn.HeaderText = "Ulica";
 			this.ulicaDataGridViewTextBoxColumn.Name = "ulicaDataGridViewTextBoxColumn";
 			this.ulicaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.ulicaDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// cisloDataGridViewTextBoxColumn
 			// 
@@ -614,6 +627,7 @@
 			this.cisloDataGridViewTextBoxColumn.HeaderText = "Cislo";
 			this.cisloDataGridViewTextBoxColumn.Name = "cisloDataGridViewTextBoxColumn";
 			this.cisloDataGridViewTextBoxColumn.ReadOnly = true;
+			this.cisloDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// pscDataGridViewTextBoxColumn
 			// 
@@ -621,6 +635,7 @@
 			this.pscDataGridViewTextBoxColumn.HeaderText = "Psc";
 			this.pscDataGridViewTextBoxColumn.Name = "pscDataGridViewTextBoxColumn";
 			this.pscDataGridViewTextBoxColumn.ReadOnly = true;
+			this.pscDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// rodnecisloDataGridViewTextBoxColumn
 			// 
@@ -628,6 +643,7 @@
 			this.rodnecisloDataGridViewTextBoxColumn.HeaderText = "Rodne_cislo";
 			this.rodnecisloDataGridViewTextBoxColumn.Name = "rodnecisloDataGridViewTextBoxColumn";
 			this.rodnecisloDataGridViewTextBoxColumn.ReadOnly = true;
+			this.rodnecisloDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// cislouctuDataGridViewTextBoxColumn
 			// 
@@ -635,6 +651,7 @@
 			this.cislouctuDataGridViewTextBoxColumn.HeaderText = "Cislo_uctu";
 			this.cislouctuDataGridViewTextBoxColumn.Name = "cislouctuDataGridViewTextBoxColumn";
 			this.cislouctuDataGridViewTextBoxColumn.ReadOnly = true;
+			this.cislouctuDataGridViewTextBoxColumn.Width = 5;
 			// 
 			// zmazanyDataGridViewCheckBoxColumn
 			// 
@@ -730,7 +747,7 @@
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.ulozitButton);
 			this.Controls.Add(this.dataGridView1);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "ZamestnanciForm";
 			this.Text = "ZamestnanciForm";
 			this.groupBox1.ResumeLayout(false);
