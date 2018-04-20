@@ -58,7 +58,7 @@ namespace IS_HeMart.Forms
 			});
 			ziadankyBindingSource.DataSource = _ziadankyView;
 
-			_ukonyView = new BindingListView<ZoznamUkonov>(_dataManager.GetZoznamUkonovBindingSource());
+			_ukonyView = new BindingListView<ZoznamUkonov>(_dataManager.GetZoznamUkonovBindingSource(pacient));
 			_ukonyView.ApplyFilter(delegate (ZoznamUkonov ukony)
 			{
 				return ukony.UkonyPacienta.Any(i => i.Pacient == pacient);
@@ -143,21 +143,30 @@ namespace IS_HeMart.Forms
 		private void receptButton_Click(object sender, EventArgs e)
 		{
 			var frm = FormManager.Current.CreateForm<NewForms.NovyReceptForm>();
-			frm.SetParameters(null);
+			frm.SetParameters(new NovyReceptParameters()
+			{
+				Pacient = pacient
+			});
 			frm.ShowDialog();
 		}
 
 		private void ziadankaButton_Click(object sender, EventArgs e)
 		{
 			var frm = FormManager.Current.CreateForm<NewForms.NovaZiadankaForm>();
-			frm.SetParameters(null);
+			frm.SetParameters(new NovyReceptParameters()
+			{
+				Pacient = pacient
+			});
 			frm.ShowDialog();
 		}
 
 		private void ukonButton_Click(object sender, EventArgs e)
 		{
 			var frm = FormManager.Current.CreateForm<NewForms.NovyUkonPacientForm>();
-			frm.SetParameters(null);
+			frm.SetParameters(new NovyReceptParameters()
+			{
+				Pacient = pacient
+			});
 			frm.ShowDialog();
 		}
 

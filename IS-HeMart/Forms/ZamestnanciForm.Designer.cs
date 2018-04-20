@@ -471,7 +471,9 @@
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AllowUserToResizeRows = false;
 			this.dataGridView1.AutoGenerateColumns = false;
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.zamestnanecIDDataGridViewTextBoxColumn,
@@ -502,10 +504,13 @@
             this.zaevidovaneUkonyPacientovDataGridViewTextBoxColumn,
             this.zaevidovaneZdravotnePoistovneDataGridViewTextBoxColumn});
 			this.dataGridView1.DataSource = this.zamestnanecBindingSource;
+			this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
 			this.dataGridView1.Location = new System.Drawing.Point(3, 46);
 			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridView1.MultiSelect = false;
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
+			this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView1.Size = new System.Drawing.Size(1061, 215);
 			this.dataGridView1.TabIndex = 25;
 			// 
@@ -526,6 +531,7 @@
 			this.titulDataGridViewTextBoxColumn.HeaderText = "Titul";
 			this.titulDataGridViewTextBoxColumn.Name = "titulDataGridViewTextBoxColumn";
 			this.titulDataGridViewTextBoxColumn.ReadOnly = true;
+			this.titulDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// menoDataGridViewTextBoxColumn
 			// 
@@ -563,6 +569,7 @@
 			this.datumnarodeniaDataGridViewTextBoxColumn.HeaderText = "Datum_narodenia";
 			this.datumnarodeniaDataGridViewTextBoxColumn.Name = "datumnarodeniaDataGridViewTextBoxColumn";
 			this.datumnarodeniaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.datumnarodeniaDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// mobilnecisloDataGridViewTextBoxColumn
 			// 
@@ -570,6 +577,7 @@
 			this.mobilnecisloDataGridViewTextBoxColumn.HeaderText = "Mobilne_cislo";
 			this.mobilnecisloDataGridViewTextBoxColumn.Name = "mobilnecisloDataGridViewTextBoxColumn";
 			this.mobilnecisloDataGridViewTextBoxColumn.ReadOnly = true;
+			this.mobilnecisloDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// emailDataGridViewTextBoxColumn
 			// 
@@ -598,6 +606,7 @@
 			this.mestoDataGridViewTextBoxColumn.HeaderText = "Mesto";
 			this.mestoDataGridViewTextBoxColumn.Name = "mestoDataGridViewTextBoxColumn";
 			this.mestoDataGridViewTextBoxColumn.ReadOnly = true;
+			this.mestoDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// ulicaDataGridViewTextBoxColumn
 			// 
@@ -605,6 +614,7 @@
 			this.ulicaDataGridViewTextBoxColumn.HeaderText = "Ulica";
 			this.ulicaDataGridViewTextBoxColumn.Name = "ulicaDataGridViewTextBoxColumn";
 			this.ulicaDataGridViewTextBoxColumn.ReadOnly = true;
+			this.ulicaDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// cisloDataGridViewTextBoxColumn
 			// 
@@ -612,6 +622,7 @@
 			this.cisloDataGridViewTextBoxColumn.HeaderText = "Cislo";
 			this.cisloDataGridViewTextBoxColumn.Name = "cisloDataGridViewTextBoxColumn";
 			this.cisloDataGridViewTextBoxColumn.ReadOnly = true;
+			this.cisloDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// pscDataGridViewTextBoxColumn
 			// 
@@ -619,6 +630,7 @@
 			this.pscDataGridViewTextBoxColumn.HeaderText = "Psc";
 			this.pscDataGridViewTextBoxColumn.Name = "pscDataGridViewTextBoxColumn";
 			this.pscDataGridViewTextBoxColumn.ReadOnly = true;
+			this.pscDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// rodnecisloDataGridViewTextBoxColumn
 			// 
@@ -626,6 +638,7 @@
 			this.rodnecisloDataGridViewTextBoxColumn.HeaderText = "Rodne_cislo";
 			this.rodnecisloDataGridViewTextBoxColumn.Name = "rodnecisloDataGridViewTextBoxColumn";
 			this.rodnecisloDataGridViewTextBoxColumn.ReadOnly = true;
+			this.rodnecisloDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// cislouctuDataGridViewTextBoxColumn
 			// 
@@ -633,6 +646,7 @@
 			this.cislouctuDataGridViewTextBoxColumn.HeaderText = "Cislo_uctu";
 			this.cislouctuDataGridViewTextBoxColumn.Name = "cislouctuDataGridViewTextBoxColumn";
 			this.cislouctuDataGridViewTextBoxColumn.ReadOnly = true;
+			this.cislouctuDataGridViewTextBoxColumn.Visible = false;
 			// 
 			// zmazanyDataGridViewCheckBoxColumn
 			// 

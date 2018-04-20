@@ -175,6 +175,7 @@
       <DependentUpon>PacientDetailForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Parameters\LoginParameters.cs" />
+    <Compile Include="Forms\Parameters\NovyReceptParameters.cs" />
     <Compile Include="Forms\Parameters\PacientDetailParameters.cs" />
     <Compile Include="Forms\Parameters\Parameters.cs" />
     <Compile Include="Forms\Parameters\ReportPreviewParameter.cs" />
@@ -245,6 +246,7 @@
     </Compile>
     <Compile Include="Utils\DbLogger.cs" />
     <Compile Include="Utils\ObservableSourceList.cs" />
+    <Compile Include="Utils\RecipeNumberGenerator.cs" />
     <Compile Include="Utils\ShaEncrypter.cs" />
     <EmbeddedResource Include="Forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>

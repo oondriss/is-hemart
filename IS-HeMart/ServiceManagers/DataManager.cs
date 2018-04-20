@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using Equin.ApplicationFramework;
+using System.Collections.ObjectModel;
 
 namespace IS_HeMart.ServiceManagers
 {
@@ -27,23 +29,36 @@ namespace IS_HeMart.ServiceManagers
 			return ctx;
 		}
 
-		public BindingList<ZoznamUkonov> GetUkonyBindingSource()
-		{
-			var data = GetContext();
-			data.ZoznamUkonov.Load();
-			return data.ZoznamUkonov.Local.ToBindingList();
-		}
+		//public BindingList<ZoznamUkonov> GetUkonyBindingSource()
+		//{
+		//	var data = GetContext();
+		//	data.ZoznamUkonov.Load();
+		//	return data.ZoznamUkonov.Local.ToBindingList();
+		//}
 
-		public ZoznamLiekov UpdateLiekWithDescription(ZoznamLiekov liek)
+		public ZoznamLiekovDTO UpdateLiekWithDescription(ZoznamLiekovDTO liek)
 		{
 			liek.Nazov = liek.Sukl_kod + "- " + liek.Nazov;
 			return liek;
 		}
 
-		public List<ZoznamLiekov> GetLiekyDescBindingSource()
+		public List<ZoznamLiekovDTO> GetLiekyDescBindingSource()
 		{
 			var data = GetContext();
-			return data.ZoznamLiekov.ToList().Select(i => UpdateLiekWithDescription(i)).ToList();
+			return data.ZoznamLiekov.ToList().Select(i => new ZoznamLiekovDTO(i)).Select(i => UpdateLiekWithDescription(i)).ToList();
+		}
+
+		internal ZoznamUkonov GetZoznamUkonovById(int selectedValue)
+		{
+			var data = GetContext();
+			return data.ZoznamUkonov.Single(i => i.ZoznamUkonovID == selectedValue);
+		}
+
+		internal BindingList<ZoznamUkonov> GetUkonyBindingSource()
+		{
+			var data = GetContext();
+			data.ZoznamUkonov.Load();
+			return data.ZoznamUkonov.Local.ToBindingList();
 		}
 
 		public BindingList<ZoznamLiekov> GetZoznamLiekovBindingSource()
@@ -81,6 +96,12 @@ namespace IS_HeMart.ServiceManagers
 			return data.Ziadanky.Local.ToBindingList();
 		}
 
+		internal ZoznamLiekov GetZoznamLiekovById(int selectedValue)
+		{
+			var data = GetContext();
+			return data.ZoznamLiekov.First(i => i.ZoznamLiekovID == selectedValue);
+		}
+
 		public BindingList<Pacient> GetPacientBindingSource()
 		{
 			var data = GetContext();
@@ -88,11 +109,18 @@ namespace IS_HeMart.ServiceManagers
 			return data.Pacient.Local.ToBindingList();
 		}
 
-		public BindingList<ZoznamUkonov> GetZoznamUkonovBindingSource()
+		public BindingList<ZoznamUkonov> GetZoznamUkonovBindingSource(Pacient pacient)
 		{
+			//var data = GetContext();
+			//data.ZoznamUkonov.Load();
+			//return data.ZoznamUkonov.Local.ToBindingList();
+
+
+
 			var data = GetContext();
-			data.ZoznamUkonov.Load();
-			return data.ZoznamUkonov.Local.ToBindingList();
+			var items = data.UkonyPacienta.Where(i => i.Pacient.PacientID == pacient.PacientID)/*.OrderBy(i => i.Datum)*/.Select(i => i.Ukon).ToList();
+			var obc = new ObservableCollection<ZoznamUkonov>(items);
+			return obc.ToBindingList();
 		}
 
 		public IQueryable<TerminVysetrenia> GetTerminy()
