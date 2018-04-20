@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace IS_HeMart.ServiceManagers
 {
@@ -40,23 +41,28 @@ namespace IS_HeMart.ServiceManagers
 
 		public Zamestnanec CheckLogin()
 		{
-			if (LoggedUser != null)
-			{
-				return LoggedUser;
-			}
-			else
+			do
 			{
 				var logForm = new LoginForm();// FormManager.Current.CreateForm<LoginForm>();
 				if (logForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
 				{
 					var param = (LoginParameters)logForm.GetParameters();
 					LoggedUser = param.User;
+					if (LoggedUser == null)
+					{
+						MessageBox.Show("Nespravne meno alebo heslo");
+					}
+					logForm.Close();
 				}
 				else
 				{
-					FormManager.Current.ExitThread();
+					//MessageBox.Show("")
+					logForm.Close();
+					//logForm.Dispose();
+					//FormManager.Current.ExitThread();
 				}
-			}
+			} while (LoggedUser == null);
+
 			return LoggedUser;
 		}
 

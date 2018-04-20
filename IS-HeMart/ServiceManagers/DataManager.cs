@@ -199,11 +199,11 @@ namespace IS_HeMart.ServiceManagers
 					.Where(i => i.Pacient == pacient);
 		}
 
-		public List<Zamestnanec> GetZamestnanec()
+		public BindingList<Zamestnanec> GetZamestnanecBindingSource()
 		{
-			return GetContext()
-					.Zamestnanec
-					.ToList();
+			var data = GetContext();
+			data.Zamestnanec.Load();
+			return data.Zamestnanec.Local.ToBindingList();
 		}
 
 		public Zamestnanec GetZamestnanec(int ID)
