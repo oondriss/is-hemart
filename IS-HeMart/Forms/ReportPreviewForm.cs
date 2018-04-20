@@ -20,7 +20,6 @@ namespace IS_HeMart.Forms
 		private ReportDocument _document;
 		private Dictionary<string, object> _parameters;
 
-
 		public ReportPreviewForm()
 		{
 			InitializeComponent();

@@ -245,6 +245,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utils\DbLogger.cs" />
+    <Compile Include="Utils\EnumHelper.cs" />
     <Compile Include="Utils\ObservableSourceList.cs" />
     <Compile Include="Utils\RecipeNumberGenerator.cs" />
     <Compile Include="Utils\ShaEncrypter.cs" />
