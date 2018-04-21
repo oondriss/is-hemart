@@ -1,8 +1,5 @@
 ﻿using IS_HeMart.ServiceManagers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IS_HeMart

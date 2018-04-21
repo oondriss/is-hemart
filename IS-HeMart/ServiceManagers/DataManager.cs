@@ -1,17 +1,13 @@
-﻿using AutoMapper;
-using IS_HeMart.DataModel;
+﻿using IS_HeMart.DataModel;
 using IS_HeMart.Utils;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity;
 //using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
-using Equin.ApplicationFramework;
 using System.Collections.ObjectModel;
+using System;
+using System.Collections;
 
 namespace IS_HeMart.ServiceManagers
 {
@@ -27,6 +23,13 @@ namespace IS_HeMart.ServiceManagers
 				return ctx;
 			}
 			return ctx;
+		}
+
+		public List<int> GetRokyUkony()
+		{
+			var data = GetContext();
+			var result = data.UkonyPacienta.Select(i => i.Datum).ToList().Select(i => i.Date.Year).Distinct();
+			return result.ToList();
 		}
 
 		//public BindingList<ZoznamUkonov> GetUkonyBindingSource()
@@ -59,6 +62,21 @@ namespace IS_HeMart.ServiceManagers
 			var data = GetContext();
 			data.ZoznamUkonov.Load();
 			return data.ZoznamUkonov.Local.ToBindingList();
+		}
+
+		public IEnumerable<UkonyPacienta> GetNefakturovaneUkony(int poistovnaId, int mesiac, int rok)
+		{
+			var data = GetContext();
+			//var poistovna = GetPoistovnaById(poistovnaId);
+			var result = data.UkonyPacienta.Where(i => i.Pacient.ZdravotnaPoistovna.ZdravotnaPoistovnaID == poistovnaId &&
+														i.Datum.Year == rok &&
+														i.Datum.Month == mesiac);
+			//&&
+			result = result.Where(i=> !data.UkonyNaFakture.Any(j => j.UkonPaciet.UkonyPacientID == i.UkonyPacientID));
+			return result.ToList();
+
+
+			//var res = result.Where(i=>data.UkonyNaFakture.Any(.Select(i=>i..UkonyNaFaktureID))
 		}
 
 		public BindingList<ZoznamLiekov> GetZoznamLiekovBindingSource()
@@ -204,6 +222,13 @@ namespace IS_HeMart.ServiceManagers
 			var data = GetContext();
 			data.Zamestnanec.Load();
 			return data.Zamestnanec.Local.ToBindingList();
+		}
+
+		public ZdravotnaPoistovna GetZdravotnaPoistovna(int id)
+		{
+			return GetContext()
+					.ZdravotnaPoistovna
+					.Single(i => i.ZdravotnaPoistovnaID == id);
 		}
 
 		public Zamestnanec GetZamestnanec(int ID)

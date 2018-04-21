@@ -1,19 +1,12 @@
 ﻿using Equin.ApplicationFramework;
 using IS_HeMart.DataModel;
+using IS_HeMart.Forms.NewForms;
 using IS_HeMart.ServiceManagers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace IS_HeMart.Forms
 {
-    public partial class PoistovneForm : BaseForm
+	public partial class PoistovneForm : BaseForm
     {
 		private DataManager _dataManager;
 		private BindingListView<ZdravotnaPoistovna> view;
@@ -51,6 +44,34 @@ namespace IS_HeMart.Forms
 			}
 
 
+		}
+
+		private void pridatButton_Click(object sender, EventArgs e)
+		{
+			var frm = FormManager.Current.CreateForm<NovaPoistovnaForm>();
+			frm.SetParameters(null);
+			frm.ShowDialog();
+		}
+
+		private void ulozitButton_Click(object sender, EventArgs e)
+		{
+			if (dataGridView1.SelectedRows.Count < 1)
+			{
+				return;
+			}
+			var result = DateTime.Today;
+			var poistovna = _dataManager.GetZdravotnaPoistovna((int)dataGridView1.SelectedRows[0].Cells[0].Value);
+			poistovna.DIC = dicText.Text;
+			poistovna.ICO = icoText.Text;
+			poistovna.IC_DPH = ic_dphText.Text;
+			poistovna.Kod_ZP = kod_zpText.Text;
+			poistovna.Nazov = nazovText.Text;
+			poistovna.Cislo = cisloText.Text;
+			poistovna.Mesto = mestoText.Text;
+			poistovna.Psc = pscText.Text;
+			poistovna.Ulica = ulicaText.Text;
+			poistovna.CisloUctu = cislo_ucText.Text;
+			_dataManager.GetDbContext().SaveChanges();
 		}
 	}
 }

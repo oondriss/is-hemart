@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IS_HeMart.DataModel
+﻿namespace IS_HeMart.DataModel
 {
 	public enum Opravnenie
 	{

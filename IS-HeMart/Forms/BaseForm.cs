@@ -1,10 +1,4 @@
 ﻿using IS_HeMart.ServiceManagers;
-using IS_HeMart.Forms.Parameters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IS_HeMart.Forms

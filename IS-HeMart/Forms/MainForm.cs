@@ -5,13 +5,6 @@ using IS_HeMart.Forms.NewForms;
 using IS_HeMart.Forms.Parameters;
 using IS_HeMart.ServiceManagers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IS_HeMart

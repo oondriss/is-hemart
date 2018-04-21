@@ -1,20 +1,15 @@
 ﻿using Equin.ApplicationFramework;
 using IS_HeMart.DataModel;
 using IS_HeMart.Forms.NewForms;
+using IS_HeMart.Forms.Parameters;
+using IS_HeMart.Reports;
 using IS_HeMart.ServiceManagers;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace IS_HeMart.Forms
 {
-    public partial class FakturyForm : BaseForm
+	public partial class FakturyForm : BaseForm
     {
 		private DataManager _dataManager;
 		private BindingListView<Faktury> view;
@@ -37,5 +32,23 @@ namespace IS_HeMart.Forms
 
 			fakturyBindingSource.DataSource = view;
 		}
-    }
+
+		private void fakturaGrid_CellDoubleClick(object sender, System.Windows.Forms.DataGridViewCellEventArgs e)
+		{
+			var faktura = ((ObjectView<Faktury>)fakturaGrid.SelectedRows[0].DataBoundItem).Object;
+			var frm = FormManager.Current.CreateForm<ReportPreviewForm>();
+			frm.SetParameters(new ReportPreviewParameter()
+			{
+				Parameters = new Dictionary<string, object>()
+				{
+					{"FakturaId", faktura.FakturyID },
+					{"mesiac", faktura.DatumVystavenia.Date.Month },
+					{"rok", faktura.DatumVystavenia.Date.Year }
+				},
+				ReportPath = "Reports\\Faktura.rpt",
+				ReportType = typeof(Faktura)
+			});
+			frm.ShowDialog();
+		}
+	}
 }

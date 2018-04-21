@@ -3,17 +3,11 @@ using IS_HeMart.Forms.Parameters;
 using IS_HeMart.ServiceManagers;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IS_HeMart.Forms.NewForms
 {
-    public partial class NovaZiadankaForm : BaseForm
+	public partial class NovaZiadankaForm : BaseForm
     {
 		private DataManager _dataManager;
 		private Pacient _pacient;
@@ -54,7 +48,7 @@ namespace IS_HeMart.Forms.NewForms
 			var data = (HemartContext)_dataManager.GetDbContext();
 			data.Ziadanky.Add(newZiadanka);
 			data.SaveChanges();
-			this.Close();
+			Close();
 		}
 	}
 }

@@ -5,12 +5,7 @@ using IS_HeMart.Reports;
 using IS_HeMart.ServiceManagers;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IS_HeMart.Forms
@@ -173,7 +168,10 @@ namespace IS_HeMart.Forms
 		private void terminButton_Click(object sender, EventArgs e)
 		{
 			var frm = FormManager.Current.CreateForm<NewForms.NovyTerminForm>();
-			frm.SetParameters(null);
+			frm.SetParameters(new NovyReceptParameters()
+			{
+				Pacient = pacient
+			});
 			frm.ShowDialog();
 		}
 
@@ -193,6 +191,22 @@ namespace IS_HeMart.Forms
 			pacient.ZdravotnaPoistovna = _dataManager.GetPoistovnaById((int)zpCombo.SelectedValue);
 			pacient.Zmazany = zmazanyCheck.Checked;
 			_dataManager.GetDbContext().SaveChanges();
+		}
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			var recept = ((ObjectView<Recepty>)dataGridView1.SelectedRows[0].DataBoundItem).Object;
+			var frm = FormManager.Current.CreateForm<ReportPreviewForm>();
+			frm.SetParameters(new ReportPreviewParameter()
+			{
+				Parameters = new Dictionary<string, object>()
+				{
+					{"ReceptId", recept.ReceptyID }
+				},
+				ReportPath = "Reports\\Recept.rpt",
+				ReportType = typeof(Ziadanka)
+			});
+			frm.ShowDialog();
 		}
 	}
 }

@@ -3,19 +3,12 @@ using IS_HeMart.DataModel;
 using IS_HeMart.ServiceManagers;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using IS_HeMart.Forms.Parameters;
 using IS_HeMart.Utils;
 
 namespace IS_HeMart.Forms.NewForms
 {
-    public partial class NovyReceptForm : BaseForm
+	public partial class NovyReceptForm : BaseForm
     {
 		private BindingListView<ZoznamLiekovDTO> _view;
 		private BindingListView<ZoznamLiekovDTO> _view2;
@@ -79,7 +72,7 @@ namespace IS_HeMart.Forms.NewForms
 			var ctx = (HemartContext)_dataManager.GetDbContext();
 			ctx.Recepty.Add(newRecept);
 			ctx.SaveChanges();
-			this.Close();
+			Close();
 		}
 	}
 }

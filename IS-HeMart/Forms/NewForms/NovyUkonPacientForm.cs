@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using IS_HeMart.Forms.Parameters;
 using IS_HeMart.DataModel;
@@ -14,7 +7,7 @@ using IS_HeMart.ServiceManagers;
 
 namespace IS_HeMart.Forms.NewForms
 {
-    public partial class NovyUkonPacientForm : BaseForm
+	public partial class NovyUkonPacientForm : BaseForm
     {
 		private Pacient _pacient;
 		private BindingListView<ZoznamUkonov> _view;
@@ -47,7 +40,7 @@ namespace IS_HeMart.Forms.NewForms
 				var data = (HemartContext)_dataManager.GetDbContext();
 				data.UkonyPacienta.Add(newUkon);
 				data.SaveChanges();
-				this.Close();
+				Close();
 			}
 			catch (Exception ex)
 			{

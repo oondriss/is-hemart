@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IS_HeMart.DataModel
 {
@@ -31,5 +28,10 @@ namespace IS_HeMart.DataModel
 		public virtual ICollection<VysledkyLaboratorneVysetrenie> VysledkyVysetreni { get; set; }
 		public virtual ICollection<TerminVysetrenia> Vysetrenia { get; set; }
 		public virtual Zamestnanec EvidujuciZamestnanec { get; set; }
+
+		public override string ToString()
+		{
+			return $"{PacientID}-{Meno} {Priezvisko}";
+		}
 	}
 }

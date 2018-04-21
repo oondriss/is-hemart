@@ -1,12 +1,6 @@
 ﻿using IS_HeMart.DataModel;
 using IS_HeMart.Forms;
 using IS_HeMart.Forms.Parameters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace IS_HeMart.ServiceManagers
 {

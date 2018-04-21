@@ -30,9 +30,6 @@
         {
 			this.components = new System.ComponentModel.Container();
 			this.fakturaGrid = new System.Windows.Forms.DataGridView();
-			this.fakturyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.vytvorButton = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
 			this.fakturyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.datumVystaveniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.datumSplatnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +38,9 @@
 			this.poistovnaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.vystavilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ukonyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.fakturyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.vytvorButton = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.fakturaGrid)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fakturyBindingSource)).BeginInit();
 			this.SuspendLayout();
@@ -72,32 +72,7 @@
 			this.fakturaGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.fakturaGrid.Size = new System.Drawing.Size(867, 519);
 			this.fakturaGrid.TabIndex = 0;
-			// 
-			// fakturyBindingSource
-			// 
-			this.fakturyBindingSource.DataSource = typeof(IS_HeMart.DataModel.Faktury);
-			// 
-			// vytvorButton
-			// 
-			this.vytvorButton.Location = new System.Drawing.Point(337, 585);
-			this.vytvorButton.Margin = new System.Windows.Forms.Padding(4);
-			this.vytvorButton.Name = "vytvorButton";
-			this.vytvorButton.Size = new System.Drawing.Size(160, 53);
-			this.vytvorButton.TabIndex = 1;
-			this.vytvorButton.Text = "Vytvor faktúru";
-			this.vytvorButton.UseVisualStyleBackColor = true;
-			this.vytvorButton.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label1.Location = new System.Drawing.Point(349, 11);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(106, 31);
-			this.label1.TabIndex = 2;
-			this.label1.Text = "Faktúry";
+			this.fakturaGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.fakturaGrid_CellDoubleClick);
 			// 
 			// fakturyIDDataGridViewTextBoxColumn
 			// 
@@ -157,6 +132,32 @@
 			this.ukonyDataGridViewTextBoxColumn.Name = "ukonyDataGridViewTextBoxColumn";
 			this.ukonyDataGridViewTextBoxColumn.ReadOnly = true;
 			this.ukonyDataGridViewTextBoxColumn.Visible = false;
+			// 
+			// fakturyBindingSource
+			// 
+			this.fakturyBindingSource.DataSource = typeof(IS_HeMart.DataModel.Faktury);
+			// 
+			// vytvorButton
+			// 
+			this.vytvorButton.Location = new System.Drawing.Point(337, 585);
+			this.vytvorButton.Margin = new System.Windows.Forms.Padding(4);
+			this.vytvorButton.Name = "vytvorButton";
+			this.vytvorButton.Size = new System.Drawing.Size(160, 53);
+			this.vytvorButton.TabIndex = 1;
+			this.vytvorButton.Text = "Vytvor faktúru";
+			this.vytvorButton.UseVisualStyleBackColor = true;
+			this.vytvorButton.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.label1.Location = new System.Drawing.Point(349, 11);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(106, 31);
+			this.label1.TabIndex = 2;
+			this.label1.Text = "Faktúry";
 			// 
 			// FakturyForm
 			// 
